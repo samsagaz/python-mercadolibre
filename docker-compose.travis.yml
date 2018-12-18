@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  pyme:
+    build: .
+    command: ["python", "mercadolibre/pyme.py"]
+    volumes:
+      - .:/code
+    environment:
+      - client_id=foo
+      - client_secret=bar
+      - TEST_CLIENT_ID = id
+      - TEST_CLIENT_SECRET = secret
