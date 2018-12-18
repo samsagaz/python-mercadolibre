@@ -30,7 +30,7 @@ clean: stop
 	docker-compose rm --force -v
 
 only_test:
-	docker-compose run --rm pyme pytest
+	docker-compose run --rm pyme pytest -s
 
 covered_test:
 	docker-compose run --rm pyme pytest --cov=. --cov-config setup.cfg

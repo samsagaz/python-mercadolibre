@@ -4,53 +4,42 @@ import os
 import pprint
 import vcr
 import copy
+import re
 from decorators import ignore_warnings
 from mercadolibre.pyme import PyMe
 
 # replace sensitive data
-def hide_from_response(changes):
+def hide_from_response(fields):
     def before_record_response(response):
         strings = response['body']['string'].decode('utf-8')
         body = json.loads(strings)
-        for key, value in changes:
-            if key in body:
-                body[key] = value
+        for field in fields:
+            if field in body:
+                body[field] = '[HIDDEN]'
         response['body']['string'] = json.dumps(body).encode()
         return response
     return before_record_response
 
+
 def hide_from_request():
     def before_record_request(request):
         request = copy.deepcopy(request)
-        request.uri="https://api.mercadolibre.com/users/me?access_token=APP_USR-HIDDEN-ACCESS-TOKEN"
+        request.uri="https://api.mercadolibre.com/users/me?access_token=[HIDDEN]"
         return request
     return before_record_request
 
 
 custom_vcr = vcr.VCR(
-    filter_headers=[('Authorization', 'Basic HIDDEN-AUTH-TOKEN')],
-    filter_query_parameters=[
-        # ('access_token','1234567890'),
-        # ('user_id','1234567890'),
-        ],
+    filter_headers=[('Authorization', '[HIDDEN]')],
+    filter_query_parameters=[],
     filter_post_data_parameters=[
-        ('client_id','1234567890'),
-        ('client_secret','abcdefghi')
-        ],
+        ('client_id','[HIDDEN]'),
+        ('client_secret','[HIDDEN]')],
     before_record_response=hide_from_response([
-        ('access_token', 'APP_USR-HIDDEN-ACCESS-TOKEN'),
-        ('id', 1234567890),
-        ('user_id', 123456789),
-        ('refresh_token', 'TG-HIDDEN-REFRESH-KEY'),
-        ('nickname', 'HIDDEN-NICKNAME'),
-        ('last_name', 'HIDDEN-LASTNAME'),
-        ('email', 'HIDDEN-EMAIL@gmail.com'),
-        ('number', 11111111),
-        ('address', 'HIDDEN-ADDRESS'),
-        ('permalink', 'http://perfil.mercadolibre.com.ar/')
-        ]),
-    before_record_request=hide_from_request()
-    )
+        'access_token', 'id', 'user_id', 'refresh_token', 'nickname',
+        'phone', 'last_name', 'last_name', 'email', 'number', 'address',
+        'permalink', 'identification', 'phone', 'secure_email']),
+    before_record_request=hide_from_request())
 
 
 def test_env_vars():
@@ -83,7 +72,7 @@ def test_get_myself():
     """
         TODO
     """
-    pyme = PyMe(client_id=os.environ.get("TEST_CLIENT_ID"), client_secret=os.environ.get("TEST_CLIENT_SECRET"))
+    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
     response = pyme.get_myself()
     assert 'id' in response
 
@@ -94,8 +83,8 @@ def test_get_user_info():
     """
         TODO
     """
-    pyme = PyMe(client_id=os.environ.get("TEST_CLIENT_ID"), client_secret=os.environ.get("TEST_CLIENT_SECRET"))
-    response = pyme.get_user_info(387526028)
+    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    response = pyme.get_user_info(os.environ.get("USER_ID"))
     assert 'id' in response
 
 
@@ -105,9 +94,9 @@ def test_update_user_info():
     """
         TODO
     """
-    pyme = PyMe(client_id=os.environ.get("TEST_CLIENT_ID"), client_secret=os.environ.get("TEST_CLIENT_SECRET"))
+    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
     json_data = {'last_name':'new_last_name'}
-    response = pyme.update_user_info(387526028, json_data)
+    response = pyme.update_user_info(os.environ.get("USER_ID"), json_data)
     assert isinstance(response, dict)
     assert 'user_id' in response
 
@@ -120,8 +109,8 @@ def test_get_user_address():
         need to add address to get full working test
     """
 
-    pyme = PyMe(client_id=os.environ.get("TEST_CLIENT_ID"), client_secret=os.environ.get("TEST_CLIENT_SECRET"))
-    response = pyme.get_user_address(387526028)
+    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    response = pyme.get_user_address(os.environ.get("USER_ID"))
     assert isinstance(response, list)
 
 
@@ -132,8 +121,8 @@ def test_get_user_info_accepted_payment_methods():
 
     """
 
-    pyme = PyMe(client_id=os.environ.get("TEST_CLIENT_ID"), client_secret=os.environ.get("TEST_CLIENT_SECRET"))
-    response = pyme.get_user_info_accepted_payment_methods(387526028)
+    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    response = pyme.get_user_info_accepted_payment_methods(os.environ.get("USER_ID"))
     assert isinstance(response, list)
     assert 'id' in response[0]
 
