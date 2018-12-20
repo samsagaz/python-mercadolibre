@@ -7,6 +7,7 @@ def test_env_vars():
     """ Ensure that environment variables are set """
     assert(os.environ['CLIENT_ID'])
     assert(os.environ['CLIENT_SECRET'])
+    assert(os.environ['USER_ID'])
 
 
 def test_init_pyme(mocker):
@@ -42,6 +43,8 @@ def test_get_user_info():
     """
         TODO
     """
+    import pdb
+    pdb.set_trace()
     pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
     response = pyme.get_user_info(os.environ.get("USER_ID"))
     assert isinstance(response, dict)
