@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Thu, 20 Dec 2018 04:12:44 GMT']
-      ETag: [2f2b0d8987189326470ea2f843100523]
+      Date: ['Thu, 20 Dec 2018 18:51:20 GMT']
+      ETag: [6b2e5aa56951d98fedcd7a52ecd23629]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 1282c047ca9a5c069f7bc2082b36a0bb.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [Te5aQkxlrkh-VT_rT1dtqfzOHRplChPg2o2F53p4yQRzaiEt_Lnnvg==]
+      Via: [1.1 1aa2bf2109b471b97d9f7ada4bca1cd4.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [nfaDEAp0jZtmYPc5LD4YDB5Lp-IrejWtUE3gg85v3I1JtgtdLRbtdw==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [4c357970-cef0-4d56-a47e-862d45539a14]
+      X-Request-Id: [3fe4b807-b6f4-4d3d-8c49-c842730095e5]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -56,16 +56,85 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Thu, 20 Dec 2018 04:12:45 GMT']
+      Date: ['Thu, 20 Dec 2018 18:51:21 GMT']
       ETag: [d7f95994b40f4daaea4f663ca2cfecda]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 1282c047ca9a5c069f7bc2082b36a0bb.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [4XD0oU4w1uidyUWfQS6yo8smfWoLWn-iIvq1PNnVHnHA8wH693RSqw==]
+      Via: [1.1 1aa2bf2109b471b97d9f7ada4bca1cd4.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [e4IjdkB0kH2b3X4qYnnvT8OI37jM9J3Wp8-JuCUASVAxebxkxRoaAQ==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [7501fd87-393f-46f3-a88f-a0d9328e7059]
+      X-Request-Id: [06b7eccd-fcc9-4612-85f8-3eca03321935]
+      X-XSS-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: grant_type=client_credentials&client_id=HIDDEN&client_secret=HIDDEN
+    headers:
+      Accept: [application/json]
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [HIDDEN]
+      Connection: [keep-alive]
+      Content-Length: ['103']
+      Content-Type: [application/x-www-form-urlencoded;charset=UTF-8]
+      User-Agent: [python-requests/2.21.0]
+    method: POST
+    uri: https://api.mercadolibre.com/oauth/token
+  response:
+    body: {string: '{"access_token": "HIDDEN", "token_type": "bearer", "expires_in":
+        21600, "scope": "marketplace_off offline_access read reporting_full wallet-payments
+        write", "user_id": "HIDDEN", "refresh_token": "HIDDEN"}'}
+    headers:
+      Access-Control-Allow-Headers: [Content-Type]
+      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Max-Age: ['86400']
+      Cache-Control: [max-age=0]
+      Connection: [keep-alive]
+      Content-Type: [application/json;charset=UTF-8]
+      Date: ['Thu, 20 Dec 2018 18:51:32 GMT']
+      ETag: [9f6f8440d773b0ba1343e0f5eebb0c4c]
+      Strict-Transport-Security: [max-age=15724800]
+      Transfer-Encoding: [chunked]
+      Vary: ['Accept,Accept-Encoding']
+      Via: [1.1 7f7fd2c6f9bce8af70c4739cf3cda4e2.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [YE5VDRNoJRXLBtqgcIl6WijMQPJAFNahp5H8OiIOVI3xrdR2mLIiww==]
+      X-Cache: [Miss from cloudfront]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [DENY]
+      X-Request-Id: [ad27f987-076c-4c02-b394-d7e677363696]
+      X-XSS-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"last_name": "new_last_name"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['30']
+      User-Agent: [python-requests/2.21.0]
+    method: PUT
+    uri: https://api.mercadolibre.com/users/HIDDEN
+  response:
+    body: {string: '{"user_id": "HIDDEN"}'}
+    headers:
+      Access-Control-Allow-Headers: [Content-Type]
+      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Max-Age: ['86400']
+      Cache-Control: [max-age=0]
+      Connection: [keep-alive]
+      Content-Type: [application/json;charset=UTF-8]
+      Date: ['Thu, 20 Dec 2018 18:51:33 GMT']
+      ETag: [d7f95994b40f4daaea4f663ca2cfecda]
+      Transfer-Encoding: [chunked]
+      Vary: ['Accept,Accept-Encoding']
+      Via: [1.1 7f7fd2c6f9bce8af70c4739cf3cda4e2.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [59qnnHy2xC4Uu9SFWfnw6wQLNWjBsGg71cSacNNFGHCD4CyE_yQkZA==]
+      X-Cache: [Miss from cloudfront]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [DENY]
+      X-Request-Id: [9141f982-e03d-4704-be80-dcc7a7500d96]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 version: 1

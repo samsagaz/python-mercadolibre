@@ -9,6 +9,7 @@ def vcr_config():
     return dict(
             record_mode='none',  # Set to NONE in travis
             decode_compressed_response=True,
+            serializer='yaml',
             filter_post_data_parameters=[
                 ('client_id', 'HIDDEN'),
                 ('client_secret', 'HIDDEN'),
@@ -75,7 +76,8 @@ def vcr_custom_response_filter(response):
         'url',
         'test_access_token',
     ]
-    string = response['body']['string'].decode('utf-8')
+
+    string = response['body']['string'].decode()
     body = json.loads(string)
     new_list = []
     if isinstance(body, list):
@@ -86,6 +88,7 @@ def vcr_custom_response_filter(response):
         body = hide_values(body, values_to_hide)
 
     response['body']['string'] = json.dumps(body).encode()
+    # response['body']['string'] = json.dumps(body)
     return response
 
 

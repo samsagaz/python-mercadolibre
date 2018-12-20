@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Thu, 20 Dec 2018 04:12:46 GMT']
-      ETag: [abc0638c1ba14eeb571c928f935f33c2]
+      Date: ['Thu, 20 Dec 2018 18:51:22 GMT']
+      ETag: [d4250d9719ad9f89822746a8a4ddcec9]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
       Via: [1.1 28a30873e1e5b92657cf0bcd1c7e4c84.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [PHobn4nu1SR3dkAe3I84BB931L98BQD4LCC-60l-2tNqxcFU4sKeJw==]
+      X-Amz-Cf-Id: [hy5TfCHXsbZQ-2zxxGdfW0NzzTepimJHH9crraTAKdDJ34C9k44VDQ==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [68502141-c79b-425a-adf1-95ee085910f0]
+      X-Request-Id: [45d16aad-b1b8-463b-9e47-849e15858bbc]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -120,14 +120,145 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['5634']
       Content-Type: [application/json; charset=utf-8]
-      Date: ['Thu, 20 Dec 2018 04:12:46 GMT']
+      Date: ['Thu, 20 Dec 2018 18:51:22 GMT']
       Strict-Transport-Security: [max-age=15724800]
       Via: [1.1 28a30873e1e5b92657cf0bcd1c7e4c84.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [RJzCwaYdPSQBjZqkTvOzwtSTjLeUHHAV5sLZ1aP2L18aQ4VVp8Btjg==]
+      X-Amz-Cf-Id: [-OFZs_k3R4z4vjCrtRykmz4mRoyo9TxJX0JI19YiQud6NcuytEGuDA==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [e0ebd160-2ccc-4a61-928e-22cd6c0a1848]
+      X-Request-Id: [28521848-8ac9-465e-af6f-3a97cf59bf64]
+      X-XSS-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: grant_type=client_credentials&client_id=HIDDEN&client_secret=HIDDEN
+    headers:
+      Accept: [application/json]
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [HIDDEN]
+      Connection: [keep-alive]
+      Content-Length: ['103']
+      Content-Type: [application/x-www-form-urlencoded;charset=UTF-8]
+      User-Agent: [python-requests/2.21.0]
+    method: POST
+    uri: https://api.mercadolibre.com/oauth/token
+  response:
+    body: {string: '{"access_token": "HIDDEN", "token_type": "bearer", "expires_in":
+        21600, "scope": "marketplace_off offline_access read reporting_full wallet-payments
+        write", "user_id": "HIDDEN", "refresh_token": "HIDDEN"}'}
+    headers:
+      Access-Control-Allow-Headers: [Content-Type]
+      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Max-Age: ['86400']
+      Cache-Control: [max-age=0]
+      Connection: [keep-alive]
+      Content-Type: [application/json;charset=UTF-8]
+      Date: ['Thu, 20 Dec 2018 18:51:34 GMT']
+      ETag: [8a3f6f6688ce300fdd6e6aac55eb3db4]
+      Strict-Transport-Security: [max-age=15724800]
+      Transfer-Encoding: [chunked]
+      Vary: ['Accept,Accept-Encoding']
+      Via: [1.1 1282c047ca9a5c069f7bc2082b36a0bb.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [CQn8piQPD_aVgKOqDFUmypHGMYI4ssQkn36-Hm2lXz1_pgj1Cyaa8w==]
+      X-Cache: [Miss from cloudfront]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [DENY]
+      X-Request-Id: [bcf35cc7-32af-4b6f-92e1-c630dca8cd9f]
+      X-XSS-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.21.0]
+    method: GET
+    uri: https://api.mercadolibre.com/users/HIDDEN/accepted_payment_methods
+  response:
+    body: {string: '[{"id": "HIDDEN", "name": "HIDDEN", "payment_type_id": "credit_card",
+        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/visa.gif", "secure_thumbnail":
+        "https://www.mercadopago.com/org-img/MP3/API/logos/visa.gif"}, {"id": "HIDDEN",
+        "name": "HIDDEN", "payment_type_id": "credit_card", "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/master.gif",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/master.gif"},
+        {"id": "HIDDEN", "name": "HIDDEN", "payment_type_id": "credit_card", "thumbnail":
+        "http://img.mlstatic.com/org-img/MP3/API/logos/amex.gif", "secure_thumbnail":
+        "https://www.mercadopago.com/org-img/MP3/API/logos/amex.gif"}, {"id": "HIDDEN",
+        "name": "HIDDEN", "payment_type_id": "credit_card", "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/mercadopago_cc.gif",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/mercadopago_cc.gif"},
+        {"id": "HIDDEN", "name": "HIDDEN", "payment_type_id": "credit_card", "thumbnail":
+        "http://img.mlstatic.com/org-img/MP3/API/logos/naranja.gif", "secure_thumbnail":
+        "https://www.mercadopago.com/org-img/MP3/API/logos/naranja.gif"}, {"id": "HIDDEN",
+        "name": "HIDDEN", "payment_type_id": "credit_card", "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/nativa.gif",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/nativa.gif"},
+        {"id": "HIDDEN", "name": "HIDDEN", "payment_type_id": "credit_card", "thumbnail":
+        "http://img.mlstatic.com/org-img/MP3/API/logos/cabal.gif", "secure_thumbnail":
+        "https://www.mercadopago.com/org-img/MP3/API/logos/cabal.gif"}, {"id": "HIDDEN",
+        "name": "HIDDEN", "payment_type_id": "credit_card", "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/tarshop.gif",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/tarshop.gif"},
+        {"id": "HIDDEN", "name": "HIDDEN", "payment_type_id": "credit_card", "thumbnail":
+        "http://img.mlstatic.com/org-img/MP3/API/logos/cencosud.gif", "secure_thumbnail":
+        "https://www.mercadopago.com/org-img/MP3/API/logos/cencosud.gif"}, {"id":
+        "HIDDEN", "name": "HIDDEN", "payment_type_id": "credit_card", "thumbnail":
+        "http://img.mlstatic.com/org-img/MP3/API/logos/diners.gif", "secure_thumbnail":
+        "https://www.mercadopago.com/org-img/MP3/API/logos/diners.gif"}, {"id": "HIDDEN",
+        "name": "HIDDEN", "payment_type_id": "ticket", "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/11.gif",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/11.gif"},
+        {"id": "HIDDEN", "name": "HIDDEN", "payment_type_id": "credit_card", "thumbnail":
+        "http://img.mlstatic.com/org-img/MP3/API/logos/argencard.gif", "secure_thumbnail":
+        "https://www.mercadopago.com/org-img/MP3/API/logos/argencard.gif"}, {"id":
+        "HIDDEN", "name": "HIDDEN", "payment_type_id": "debit_card", "thumbnail":
+        "http://img.mlstatic.com/org-img/MP3/API/logos/maestro.gif", "secure_thumbnail":
+        "https://www.mercadopago.com/org-img/MP3/API/logos/maestro.gif"}, {"id": "HIDDEN",
+        "name": "HIDDEN", "payment_type_id": "debit_card", "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/debmaster.gif",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/debmaster.gif"},
+        {"id": "HIDDEN", "name": "HIDDEN", "payment_type_id": "debit_card", "thumbnail":
+        "http://img.mlstatic.com/org-img/MP3/API/logos/debcabal.gif", "secure_thumbnail":
+        "https://www.mercadopago.com/org-img/MP3/API/logos/debcabal.gif"}, {"id":
+        "HIDDEN", "name": "HIDDEN", "payment_type_id": "debit_card", "thumbnail":
+        "http://img.mlstatic.com/org-img/MP3/API/logos/debvisa.gif", "secure_thumbnail":
+        "https://www.mercadopago.com/org-img/MP3/API/logos/debvisa.gif"}, {"id": "HIDDEN",
+        "name": "HIDDEN", "payment_type_id": "ticket", "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/2002.gif",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/2002.gif"},
+        {"id": "HIDDEN", "name": "HIDDEN", "payment_type_id": "atm", "thumbnail":
+        "http://img.mlstatic.com/org-img/MP3/API/logos/2003.gif", "secure_thumbnail":
+        "https://www.mercadopago.com/org-img/MP3/API/logos/2003.gif"}, {"id": "HIDDEN",
+        "name": "HIDDEN", "payment_type_id": "ticket", "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/2004.gif",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/2004.gif"},
+        {"id": "HIDDEN", "name": "HIDDEN", "payment_type_id": "account_money", "thumbnail":
+        "http://img.mlstatic.com/org-img/MP3/API/logos/2005.gif", "secure_thumbnail":
+        "https://www.mercadopago.com/org-img/MP3/API/logos/2005.gif"}, {"id": "HIDDEN",
+        "name": "HIDDEN", "payment_type_id": "credit_card", "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/1064.gif",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/1064.gif"},
+        {"id": "HIDDEN", "name": "HIDDEN", "payment_type_id": "credit_card", "thumbnail":
+        "http://img.mlstatic.com/org-img/MP3/API/logos/cordobesa.gif", "secure_thumbnail":
+        "https://www.mercadopago.com/org-img/MP3/API/logos/cordobesa.gif"}, {"id":
+        "HIDDEN", "name": "HIDDEN", "payment_type_id": "credit_card", "thumbnail":
+        "http://img.mlstatic.com/org-img/MP3/API/logos/cmr.gif", "secure_thumbnail":
+        "https://www.mercadopago.com/org-img/MP3/API/logos/cmr.gif"}, {"id": "HIDDEN",
+        "name": "HIDDEN", "payment_type_id": "digital_currency", "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/consumer_credits.gif",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/consumer_credits.gif"},
+        {"id": "HIDDEN", "name": "HIDDEN", "payment_type_id": "ticket", "thumbnail":
+        "http://img.mlstatic.com/org-img/MP3/API/logos/12346.gif", "secure_thumbnail":
+        "https://www.mercadopago.com/org-img/MP3/API/logos/12346.gif"}]'}
+    headers:
+      Access-Control-Allow-Headers: [Content-Type]
+      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Max-Age: ['86400']
+      Cache-Control: ['max-age=900, stale-while-revalidate=450, stale-if-error=1800']
+      Connection: [keep-alive]
+      Content-Length: ['5634']
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Thu, 20 Dec 2018 18:51:34 GMT']
+      Strict-Transport-Security: [max-age=15724800]
+      Via: [1.1 1282c047ca9a5c069f7bc2082b36a0bb.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [vs8Mx5cCTDisZm-hNaDniYeU_45auUoLthNfvScfHGn3exBq9NIt6A==]
+      X-Cache: [Miss from cloudfront]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [DENY]
+      X-Request-Id: [e6f14e89-6c69-4d83-9006-a0502be351c2]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 version: 1

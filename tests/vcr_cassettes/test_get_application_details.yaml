@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Thu, 20 Dec 2018 04:12:47 GMT']
-      ETag: [c2d72863bd7299d941f5874a1378f32c]
+      Date: ['Thu, 20 Dec 2018 18:51:23 GMT']
+      ETag: [fa47088806fe54ba39840358ed917e66]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 c7cc09e0d87c3f80f645f8b78d3512e1.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [iSJYppKoGnaTKprPQe0wTwcy9NFR3GL44iZClaK3Zdazh2OSFVeIsg==]
+      Via: [1.1 655473215401ef909f449b92f216caa1.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [06pUxzY-4g0JZq3p5M6HCDC2BoY-JGSLyWbdZvYa52WHPHhADu2cnQ==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [7e38b591-5172-4fdd-ac84-7e18042b129e]
+      X-Request-Id: [3ed2888d-5f95-47c1-a386-e5ca109fcf6b]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -51,8 +51,8 @@ interactions:
         null, "item_id": null, "price": null, "currency_id": null, "need_authorization":
         true, "short_name": "HIDDEN", "url": "HIDDEN", "callback_url": "https://www.mercadopago.com/",
         "sandbox_mode": true, "is_public": false, "project_id": null, "active": true,
-        "max_requests_per_hour": 18000, "scopes": ["read", "reporting_full", "write",
-        "offline_access", "marketplace_off", "wallet-payments"], "notifications_callback_url":
+        "max_requests_per_hour": 18000, "scopes": ["wallet-payments", "write", "offline_access",
+        "read", "reporting_full", "marketplace_off"], "notifications_callback_url":
         null, "notifications_topics": [], "access_token": "HIDDEN", "test_access_token":
         "HIDDEN", "domains": [], "certification_status": "not_certified"}'}
     headers:
@@ -66,17 +66,97 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['894']
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Thu, 20 Dec 2018 04:12:47 GMT']
-      ETag: [a951878d57f773b91566079f65ec1bf2]
+      Date: ['Thu, 20 Dec 2018 18:51:23 GMT']
+      ETag: [f32aeb58044fe6d2d4b4b23291131793]
       Vary: ['Accept,Accept-Encoding']
-      X-Amz-Cf-Id: [02ve6gIJVfX11wDwPsP9Kdq4f4A2xr5TI0Jcs5aTmHZG4m-YcozutQ==]
+      X-Amz-Cf-Id: [tV4ZeZuKO1ghrrumDhcZ7jySqFG1q4lF5Ws_gRix491eP2k0Q1BQVw==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [da133b80-32df-45fc-a90c-5ab3655478a8]
-      X-Varnish: ['2597567714']
+      X-Request-Id: [e3d8e787-12e0-49c6-a5d6-c8cfe5cdacd8]
+      X-Varnish: ['3580746842']
       X-XSS-Protection: [1; mode=block]
-      via: ['Varnish (e-0001e843), 1.1 c7cc09e0d87c3f80f645f8b78d3512e1.cloudfront.net
+      via: ['Varnish (e-0001e842), 1.1 655473215401ef909f449b92f216caa1.cloudfront.net
+          (CloudFront)']
+    status: {code: 200, message: OK}
+- request:
+    body: grant_type=client_credentials&client_id=HIDDEN&client_secret=HIDDEN
+    headers:
+      Accept: [application/json]
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [HIDDEN]
+      Connection: [keep-alive]
+      Content-Length: ['103']
+      Content-Type: [application/x-www-form-urlencoded;charset=UTF-8]
+      User-Agent: [python-requests/2.21.0]
+    method: POST
+    uri: https://api.mercadolibre.com/oauth/token
+  response:
+    body: {string: '{"access_token": "HIDDEN", "token_type": "bearer", "expires_in":
+        21600, "scope": "marketplace_off offline_access read reporting_full wallet-payments
+        write", "user_id": "HIDDEN", "refresh_token": "HIDDEN"}'}
+    headers:
+      Access-Control-Allow-Headers: [Content-Type]
+      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Max-Age: ['86400']
+      Cache-Control: [max-age=0]
+      Connection: [keep-alive]
+      Content-Type: [application/json;charset=UTF-8]
+      Date: ['Thu, 20 Dec 2018 18:51:35 GMT']
+      ETag: [b75147486982ad2fc70f6865476abf87]
+      Strict-Transport-Security: [max-age=15724800]
+      Transfer-Encoding: [chunked]
+      Vary: ['Accept,Accept-Encoding']
+      Via: [1.1 ee70312564b1ccd144e6421d6ed89810.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [9oXPaHebjh4SG1MPPEXNdvU11bH0VhuuCxLtqS1ScP4uSVjW4uiwxw==]
+      X-Cache: [Miss from cloudfront]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [DENY]
+      X-Request-Id: [13171c3a-671d-4512-a0b0-07f442af7b78]
+      X-XSS-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.21.0]
+    method: GET
+    uri: https://api.mercadolibre.com/applications/HIDDEN
+  response:
+    body: {string: '{"id": "HIDDEN", "site_id": "MLA", "name": "HIDDEN", "description":
+        "Application for MercadoPago", "thumbnail": null, "owner_id": "HIDDEN", "catalog_product_id":
+        null, "item_id": null, "price": null, "currency_id": null, "need_authorization":
+        true, "short_name": "HIDDEN", "url": "HIDDEN", "callback_url": "https://www.mercadopago.com/",
+        "sandbox_mode": true, "is_public": false, "project_id": null, "active": true,
+        "max_requests_per_hour": 18000, "scopes": ["reporting_full", "marketplace_off",
+        "read", "offline_access", "wallet-payments", "write"], "notifications_callback_url":
+        null, "notifications_topics": [], "access_token": "HIDDEN", "test_access_token":
+        "HIDDEN", "domains": [], "certification_status": "not_certified"}'}
+    headers:
+      Accept-Ranges: [bytes]
+      Access-Control-Allow-Headers: [Content-Type]
+      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Max-Age: ['86400']
+      Age: ['0']
+      Cache-Control: [max-age=0]
+      Connection: [keep-alive]
+      Content-Length: ['894']
+      Content-Type: [application/json;charset=UTF-8]
+      Date: ['Thu, 20 Dec 2018 18:51:35 GMT']
+      ETag: [2a99665e244f0866c46003f2955ebca6]
+      Vary: ['Accept,Accept-Encoding']
+      X-Amz-Cf-Id: [uov0ALEeAfFofOkJuKSVFyfaxXmTMe7FpvBJh_VgQau1xNq0gExKTw==]
+      X-Cache: [Miss from cloudfront]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [DENY]
+      X-Request-Id: [c2f56fa0-bb2b-4708-bd31-1b9196d6f240]
+      X-Varnish: ['2635742349']
+      X-XSS-Protection: [1; mode=block]
+      via: ['Varnish (e-0001e843), 1.1 ee70312564b1ccd144e6421d6ed89810.cloudfront.net
           (CloudFront)']
     status: {code: 200, message: OK}
 version: 1
