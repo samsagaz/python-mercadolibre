@@ -1,6 +1,7 @@
 class TokenExpired():
     pass
 
+
 class APIError(Exception):
     """Raised when sending a request to the API failed."""
 

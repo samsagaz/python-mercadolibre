@@ -9,16 +9,16 @@ help:
 	@echo "dockershell -- run bash inside docker"
 
 build:
-	docker-compose build pyme 
+	docker-compose build pyme
 
 start:
-	docker-compose up -d pyme 
+	docker-compose up -d pyme
 
 logs:
-	docker-compose logs -f --tail=30 pyme 
+	docker-compose logs -f --tail=30 pyme
 
 up:
-	docker-compose up pyme 
+	docker-compose up pyme
 
 stop:
 	docker-compose stop
@@ -30,10 +30,10 @@ clean: stop
 	docker-compose rm --force -v
 
 only_test:
-	docker-compose run --rm pyme pytest -s
+	docker-compose run --rm pyme pytest -s --disable-pytest-warnings
 
 covered_test:
-	docker-compose run --rm pyme pytest --cov=. --cov-config setup.cfg
+	docker-compose run --rm pyme pytest --cov=. --cov-config setup.cfg --disable-pytest-warnings
 
 pep8:
 	docker-compose run --rm pyme flake8

@@ -1,0 +1,94 @@
+interactions:
+- request:
+    body: grant_type=client_credentials&client_id=HIDDEN&client_secret=HIDDEN
+    headers:
+      Accept: [application/json]
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [HIDDEN]
+      Connection: [keep-alive]
+      Content-Length: ['103']
+      Content-Type: [application/x-www-form-urlencoded;charset=UTF-8]
+      User-Agent: [python-requests/2.21.0]
+    method: POST
+    uri: https://api.mercadolibre.com/oauth/token
+  response:
+    body: {string: '{"access_token": "HIDDEN", "token_type": "bearer", "expires_in":
+        21600, "scope": "marketplace_off offline_access read reporting_full wallet-payments
+        write", "user_id": "HIDDEN", "refresh_token": "HIDDEN"}'}
+    headers:
+      Access-Control-Allow-Headers: [Content-Type]
+      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Max-Age: ['86400']
+      Cache-Control: [max-age=0]
+      Connection: [keep-alive]
+      Content-Type: [application/json;charset=UTF-8]
+      Date: ['Thu, 20 Dec 2018 02:59:37 GMT']
+      ETag: [dbdb77cebb7ac98c6be059f32a327ecc]
+      Strict-Transport-Security: [max-age=15724800]
+      Transfer-Encoding: [chunked]
+      Vary: ['Accept,Accept-Encoding']
+      Via: [1.1 1282c047ca9a5c069f7bc2082b36a0bb.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [TB2xlhTzSPSDbotECL-_hEsS9m_fL3S-U1TPzOzYNoXr9NFjp9CVmg==]
+      X-Cache: [Miss from cloudfront]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [DENY]
+      X-Request-Id: [4e729580-d91a-426d-9606-dd52b377a235]
+      X-XSS-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.21.0]
+    method: GET
+    uri: https://api.mercadolibre.com/users/387526028/available_listing_types
+  response:
+    body: {string: '{"available": [{"site_id": "MLA", "id": "gold_pro", "name": "Premium",
+        "remaining_listings": null}, {"site_id": "MLA", "id": "gold_premium", "name":
+        "Oro Premium", "remaining_listings": null}, {"site_id": "MLA", "id": "gold_special",
+        "name": "Cl\u00e1sica", "remaining_listings": null}, {"site_id": "MLA", "id":
+        "gold", "name": "Oro", "remaining_listings": null}, {"site_id": "MLA", "id":
+        "silver", "name": "Plata", "remaining_listings": null}, {"site_id": "MLA",
+        "id": "bronze", "name": "Bronce", "remaining_listings": null}, {"site_id":
+        "MLA", "id": "free", "name": "Gratuita", "remaining_listings": 10}], "exceptions_by_category":
+        [{"category_id": "MLA1743", "available": [{"site_id": "MLA", "id": "gold_premium",
+        "name": "Oro Premium", "remaining_listings": null}, {"site_id": "MLA", "id":
+        "gold", "name": "Oro", "remaining_listings": null}, {"site_id": "MLA", "id":
+        "silver", "name": "Plata", "remaining_listings": null}, {"site_id": "MLA",
+        "id": "free", "name": "Gratuita", "remaining_listings": 1}]}, {"category_id":
+        "MLA1459", "available": [{"site_id": "MLA", "id": "gold_premium", "name":
+        "Oro Premium", "remaining_listings": null}, {"site_id": "MLA", "id": "gold",
+        "name": "Oro", "remaining_listings": null}, {"site_id": "MLA", "id": "silver",
+        "name": "Plata", "remaining_listings": null}, {"site_id": "MLA", "id": "free",
+        "name": "Gratuita", "remaining_listings": 1}]}, {"category_id": "MLA1540",
+        "available": [{"site_id": "MLA", "id": "gold_premium", "name": "Platino 180",
+        "remaining_listings": null}, {"site_id": "MLA", "id": "silver", "name": "B\u00e1sico
+        180", "remaining_listings": null}, {"site_id": "MLA", "id": "gold", "name":
+        "Platino 90", "remaining_listings": null}, {"site_id": "MLA", "id": "bronze",
+        "name": "B\u00e1sico 90", "remaining_listings": null}, {"site_id": "MLA",
+        "id": "free", "name": "Gratis", "remaining_listings": 1}]}]}'}
+    headers:
+      Access-Control-Allow-Headers: [Content-Type]
+      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Max-Age: ['86400']
+      Cache-Control: [max-age=0]
+      Connection: [keep-alive]
+      Content-Type: [application/json;charset=UTF-8]
+      Date: ['Thu, 20 Dec 2018 02:59:37 GMT']
+      ETag: [d260a3d7a55152fb27b90eee5e404f10]
+      Last-Modified: ['Wed, 19 Dec 2018 22:49:54 GMT-04:00']
+      Transfer-Encoding: [chunked]
+      Vary: ['Accept,Accept-Encoding']
+      Via: [1.1 1282c047ca9a5c069f7bc2082b36a0bb.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [7XD1H8hJWLQsn5T5Ft0a_1_Z6FE7RubpMBeWThv87Q7n-bQc1biLZA==]
+      X-Cache: [Miss from cloudfront]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [DENY]
+      X-Request-Id: [e7235d17-dfda-4e14-acdd-daa00c71a76a]
+      X-XSS-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+version: 1

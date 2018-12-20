@@ -1,45 +1,6 @@
-import requests_mock
-import json
 import os
-import pprint
-import vcr
-import copy
-import re
-from decorators import ignore_warnings
+import pytest
 from mercadolibre.pyme import PyMe
-
-# replace sensitive data
-def hide_from_response(fields):
-    def before_record_response(response):
-        strings = response['body']['string'].decode('utf-8')
-        body = json.loads(strings)
-        for field in fields:
-            if field in body:
-                body[field] = '[HIDDEN]'
-        response['body']['string'] = json.dumps(body).encode()
-        return response
-    return before_record_response
-
-
-def hide_from_request():
-    def before_record_request(request):
-        request = copy.deepcopy(request)
-        request.uri="https://api.mercadolibre.com/users/me?access_token=[HIDDEN]"
-        return request
-    return before_record_request
-
-
-custom_vcr = vcr.VCR(
-    filter_headers=[('Authorization', '[HIDDEN]')],
-    filter_query_parameters=[],
-    filter_post_data_parameters=[
-        ('client_id','[HIDDEN]'),
-        ('client_secret','[HIDDEN]')],
-    before_record_response=hide_from_response([
-        'access_token', 'id', 'user_id', 'refresh_token', 'nickname',
-        'phone', 'last_name', 'last_name', 'email', 'number', 'address',
-        'permalink', 'identification', 'phone', 'secure_email']),
-    before_record_request=hide_from_request())
 
 
 def test_env_vars():
@@ -58,7 +19,6 @@ def test_init_pyme(mocker):
     assert mocked_get_token.called
 
 
-@vcr.use_cassette('datasets/vcr_cassettes/create_test_user.yaml')
 def test_create_test_user():
     """
         Mercadolibre just allow to create test user from real ones (MOCK)
@@ -66,43 +26,41 @@ def test_create_test_user():
     pass
 
 
-@ignore_warnings
-@custom_vcr.use_cassette('tests/vcr_cassettes/get_myself.yaml')
+@pytest.mark.vcr()
 def test_get_myself():
     """
         TODO
     """
     pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
     response = pyme.get_myself()
-    assert 'id' in response
+    assert isinstance(response, dict)
+    assert 'nickname' in response
 
 
-@ignore_warnings
-@custom_vcr.use_cassette('tests/vcr_cassettes/get_user_info.yaml')
+@pytest.mark.vcr()
 def test_get_user_info():
     """
         TODO
     """
     pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
     response = pyme.get_user_info(os.environ.get("USER_ID"))
-    assert 'id' in response
+    assert isinstance(response, dict)
+    assert 'nickname' in response
 
 
-@ignore_warnings
-@custom_vcr.use_cassette('tests/vcr_cassettes/update_user_info.yaml')
+@pytest.mark.vcr()
 def test_update_user_info():
     """
         TODO
     """
     pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
-    json_data = {'last_name':'new_last_name'}
+    json_data = {'last_name': 'new_last_name'}
     response = pyme.update_user_info(os.environ.get("USER_ID"), json_data)
     assert isinstance(response, dict)
     assert 'user_id' in response
 
 
-@ignore_warnings
-@custom_vcr.use_cassette('tests/vcr_cassettes/get_user_address.yaml')
+@pytest.mark.vcr()
 def test_get_user_address():
     """
         Test user just return empty address list as default
@@ -111,18 +69,68 @@ def test_get_user_address():
 
     pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
     response = pyme.get_user_address(os.environ.get("USER_ID"))
+    keys = []
+    for d in response:
+        for k in d.keys():
+            keys.append(k)
     assert isinstance(response, list)
 
 
-@ignore_warnings
-@custom_vcr.use_cassette('tests/vcr_cassettes/get_user_info_accepted_payment_methods.yaml')
+@pytest.mark.vcr()
 def test_get_user_info_accepted_payment_methods():
     """
-
+        TODO
     """
 
     pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
     response = pyme.get_user_info_accepted_payment_methods(os.environ.get("USER_ID"))
+    keys = []
+    for d in response:
+        for k in d.keys():
+            keys.append(k)
+    assert 'payment_type_id' in keys
     assert isinstance(response, list)
-    assert 'id' in response[0]
 
+
+@pytest.mark.vcr()
+def test_get_application_details():
+    """
+        TODO
+    """
+    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    response = pyme.get_application_details(os.environ.get("CLIENT_ID"))
+    assert isinstance(response, dict)
+    assert 'certification_status' in response
+
+
+@pytest.mark.vcr()
+def test_get_user_brands():
+    """
+        TODO
+    """
+    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    response = pyme.get_user_brands(58715193)
+    assert isinstance(response, dict)
+    assert 'cust_id' in response
+
+
+@pytest.mark.vcr()
+def test_get_available_listing_types():
+    """
+        TODO
+    """
+    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    response = pyme.get_available_listing_types(os.environ.get("USER_ID"))
+    assert isinstance(response, dict)
+    assert 'available' in response
+
+
+@pytest.mark.vcr()
+def test_get_user_feeds():
+    """
+        TODO
+    """
+    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    response = pyme.get_user_feeds(os.environ.get("CLIENT_ID"))
+    assert isinstance(response, dict)
+    assert 'messages' in response
