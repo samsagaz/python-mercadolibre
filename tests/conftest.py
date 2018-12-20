@@ -6,7 +6,7 @@ from urllib import parse
 @pytest.fixture(scope="module")
 def vcr_config():
     return dict(
-            record_mode='none',  # Set to NONE in travis
+            record_mode='once',  # Set to NONE in travis
             decode_compressed_response=True,
             filter_post_data_parameters=[
                 ('client_id', 'HIDDEN'),
