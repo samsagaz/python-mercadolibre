@@ -88,7 +88,6 @@ def vcr_custom_response_filter(response):
         body = hide_values(body, values_to_hide)
 
     response['body']['string'] = json.dumps(body).encode()
-    # response['body']['string'] = json.dumps(body)
     return response
 
 
