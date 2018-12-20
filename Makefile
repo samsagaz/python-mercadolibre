@@ -53,8 +53,8 @@ token:
 	docker-compose run --rm pyme python server.py
 
 only_travis_test:
-	docker-compose -f docker-compose.travis.yml run --rm pyme pytest --cov=. --cov-config setup.cfg --disable-pytest-warnings
-
+	# docker-compose -f docker-compose.travis.yml run --rm pyme pytest --cov=. --cov-config setup.cfg --disable-pytest-warnings
+	docker-compose run --rm pyme pytest --cov=. --cov-config setup.cfg --disable-pytest-warnings
 travis-test: pep8 only_travis_test
 
 clean-python:

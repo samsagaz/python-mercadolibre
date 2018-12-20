@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Thu, 20 Dec 2018 02:59:35 GMT']
-      ETag: [00f52ed4ca89b52859c6b3f9ff8c052e]
+      Date: ['Thu, 20 Dec 2018 04:12:46 GMT']
+      ETag: [abc0638c1ba14eeb571c928f935f33c2]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 45c619d59ba7a75beb779018eceed32e.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [KfBLvBHlZiPbmrCApeonw0DlYEvW00Lqc4n1pMktmgnZ7_bEtmA3NA==]
+      Via: [1.1 28a30873e1e5b92657cf0bcd1c7e4c84.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [PHobn4nu1SR3dkAe3I84BB931L98BQD4LCC-60l-2tNqxcFU4sKeJw==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [2b716cc1-f9ae-4506-9290-745a8171934f]
+      X-Request-Id: [68502141-c79b-425a-adf1-95ee085910f0]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -44,7 +44,7 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.21.0]
     method: GET
-    uri: https://api.mercadolibre.com/users/387526028/accepted_payment_methods
+    uri: https://api.mercadolibre.com/users/HIDDEN/accepted_payment_methods
   response:
     body: {string: '[{"id": "HIDDEN", "name": "HIDDEN", "payment_type_id": "credit_card",
         "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/visa.gif", "secure_thumbnail":
@@ -120,14 +120,14 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['5634']
       Content-Type: [application/json; charset=utf-8]
-      Date: ['Thu, 20 Dec 2018 02:59:35 GMT']
+      Date: ['Thu, 20 Dec 2018 04:12:46 GMT']
       Strict-Transport-Security: [max-age=15724800]
-      Via: [1.1 45c619d59ba7a75beb779018eceed32e.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [ZJZ805bKJhbhYyQE80SKUHoAQoek3FEoiNReizqOt9DLRlKmtPn3pg==]
+      Via: [1.1 28a30873e1e5b92657cf0bcd1c7e4c84.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [RJzCwaYdPSQBjZqkTvOzwtSTjLeUHHAV5sLZ1aP2L18aQ4VVp8Btjg==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [b0a9519e-9ac7-4be9-a761-56ba9adbf32d]
+      X-Request-Id: [e0ebd160-2ccc-4a61-928e-22cd6c0a1848]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 version: 1

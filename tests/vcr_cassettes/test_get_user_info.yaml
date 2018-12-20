@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Thu, 20 Dec 2018 02:59:32 GMT']
-      ETag: [0b49c821f2fdf8c6de98b8e71c22c713]
+      Date: ['Thu, 20 Dec 2018 04:12:42 GMT']
+      ETag: [62c9bbc6bdb63b9c15272ed6277a1050]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 78a8ba87cc4ba5641be640d05fbb6791.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [Vn2Ss_5XXx5R7oXb-1X_ytRSWPEvYz2ooJYHkDH6QfCTxBucvEl0Rw==]
+      Via: [1.1 cf70d8c026d257d0d1aeda3d1574f019.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [vWCarCzwAuPl5V9QbC0oMRK_pd4x0dMbrP7uRAiamf5cue_iavVpEw==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [2308edfd-b393-413a-a471-d315c44b9c7c]
+      X-Request-Id: [1954de74-6961-4bb7-9765-2639b29281bc]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -44,7 +44,7 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.21.0]
     method: GET
-    uri: https://api.mercadolibre.com/users/387526028
+    uri: https://api.mercadolibre.com/users/HIDDEN
   response:
     body: {string: '{"id": "HIDDEN", "nickname": "HIDDEN", "registration_date": "2018-12-17T11:12:58.000-04:00",
         "first_name": "Test", "last_name": "HIDDEN", "gender": "", "country_id": "AR",
@@ -81,13 +81,13 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['2116']
       Content-Type: [application/json; charset=utf-8]
-      Date: ['Thu, 20 Dec 2018 02:59:33 GMT']
-      Via: [1.1 78a8ba87cc4ba5641be640d05fbb6791.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [rBkXvB3PqCq0UEOPe1Q3aZr9RKsQBJVUKupZ1HJIiK-KltVxWjqE4A==]
+      Date: ['Thu, 20 Dec 2018 04:12:42 GMT']
+      Via: [1.1 cf70d8c026d257d0d1aeda3d1574f019.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [h5nB675qDVppaStRQ2OBMbe-5vdOUHSuZJ3M0LIPcbKHzGA0rybKkg==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [bab7f23b-ee58-44c9-a072-b594b103afeb]
+      X-Request-Id: [3c12d462-479b-4827-afa2-61e859279a32]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 version: 1

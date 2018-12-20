@@ -7,7 +7,7 @@ services:
     command: ["python", "mercadolibre/pyme.py"]
     volumes:
       - .:/code
-    environment:
-      - CLIENT_ID=foo
-      - CLIENT_SECRET=bar
-      - USER_ID=123456789
+    # environment:
+      # - CLIENT_ID=foo
+      # - CLIENT_SECRET=bar
+      # - USER_ID=123456789

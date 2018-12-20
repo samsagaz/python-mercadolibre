@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Thu, 20 Dec 2018 02:59:34 GMT']
-      ETag: [7fee46146c0353ccbdd8b3380cc71a53]
+      Date: ['Thu, 20 Dec 2018 04:12:45 GMT']
+      ETag: [f124e862bd0dca3c6cf6e37422f475ee]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 af3ec872aa77de6760622a554164a644.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [M3vKbjxGITpMnvogUuu5i40AvwovK62_qKoLV8DuBjO93mGu7YvGOg==]
+      Via: [1.1 ecee0359d5c5ac41b0df518901cd63aa.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [u6CVu9zeNXnpSg0_k42jrXc9klfjZZDodz45Me3PD88Y516xiwApeA==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [608ffe38-90d1-49f2-b2a7-6387d4c3936c]
+      X-Request-Id: [e6ed1130-0fa2-412f-99b0-c794b333645f]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -44,7 +44,7 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.21.0]
     method: GET
-    uri: https://api.mercadolibre.com/users/387526028/addresses
+    uri: https://api.mercadolibre.com/users/HIDDEN/addresses
   response:
     body: {string: '[]'}
     headers:
@@ -55,13 +55,13 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['2']
       Content-Type: [application/json; charset=utf-8]
-      Date: ['Thu, 20 Dec 2018 02:59:34 GMT']
-      Via: [1.1 af3ec872aa77de6760622a554164a644.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [loJn8tf7JbtMQYzdZfAyQB-h5BzaPuD3umv2VktMN-KTNN91IAN2Eg==]
+      Date: ['Thu, 20 Dec 2018 04:12:45 GMT']
+      Via: [1.1 ecee0359d5c5ac41b0df518901cd63aa.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [kOxxVdRllewW4FXcz0KMP7MDie3B-sDmVTMqiWu6E68JXtnvyUrwEA==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [cb5a4086-12e3-4422-b16d-9f022a6c130a]
+      X-Request-Id: [443131a4-fb4b-4555-9ed8-ca5c13d56af5]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 version: 1
