@@ -2,7 +2,11 @@ from .base import PyMe
 
 
 class Project(PyMe):
+    """
+    Mercadolibre API Users Funcionality
+    See: https://api.mercadolibre.com/projects
 
+    """
     def get_user_projects(self):
         """ Get all applications associated to a project """
 

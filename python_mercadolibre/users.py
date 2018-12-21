@@ -3,14 +3,14 @@ from .base import PyMe
 
 class Users(PyMe):
     """
-    Users Funcionality
-    See: https://
+    Mercadolibre API Users Funcionality
+    See: https://api.mercadolibre.com/users
 
     """
     URLS = {
         'myself': '/users/me',
         'test_user': '/test_user',
-        'user_info': '/users/{id}',
+        'user_info': '/users/{user_id}',
     }
 
     def create_test_user(self, site_id):
@@ -31,26 +31,26 @@ class Users(PyMe):
         """
         return self._call_api('get', self.URLS['myself'])
 
-    def get_user_info(self, id):
+    def get_user_info(self, user_id):
         """ Get user information """
-        return self._call_api('get', self.URLS['user_info'].format(id=id))
+        return self._call_api('get', self.URLS['user_info'].format(user_id=user_id))
 
-    def update_user_info(self, id, json_data=None):
+    def update_user_info(self, user_id, json_data=None):
         """ Update user information """
 
-        endpoint = f"/users/{id}"
+        endpoint = f"/users/{user_id}"
         return self._call_api('put', endpoint, json_data)
 
-    def get_user_address(self, id):
+    def get_user_address(self, user_id):
         """ Get user addresses """
 
-        endpoint = f"/users/{id}/addresses"
+        endpoint = f"/users/{user_id}/addresses"
         return self._call_api('get', endpoint)
 
-    def get_user_info_accepted_payment_methods(self, id):
+    def get_user_info_accepted_payment_methods(self, user_id):
         """ Get accepted payment methods by user """
 
-        endpoint = f"/users/{id}/accepted_payment_methods"
+        endpoint = f"/users/{user_id}/accepted_payment_methods"
         return self._call_api('get', endpoint)
 
     def get_user_feeds(self, app_id):
@@ -59,15 +59,15 @@ class Users(PyMe):
         endpoint = f"/myfeeds?app_id={app_id}"
         return self._call_api('get', endpoint)
 
-    def get_user_brands(self, id):
+    def get_user_brands(self, user_id):
         """ Get brands by user """
 
-        endpoint = f"/users/{id}/brands"
+        endpoint = f"/users/{user_id}/brands"
         return self._call_api('get', endpoint)
 
-    def get_user_classifieds_promotion_packs(self, id):
+    def get_user_classifieds_promotion_packs(self, user_id):
         """ Get promotions packs engaged by user """
-        endpoint = f"/users/{id}/classifieds_promotion_packs"
+        endpoint = f"/users/{user_id}/classifieds_promotion_packs"
         return self._call_api('get', endpoint)
 
     def create_user_classifieds_promotion_packs(self, user_id, json_data):
