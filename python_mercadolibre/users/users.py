@@ -1,4 +1,5 @@
-from .base import PyMe
+from python_mercadolibre.base import PyMe
+from .models import Profile
 
 
 class Users(PyMe):
@@ -12,6 +13,13 @@ class Users(PyMe):
         'test_user': '/test_user',
         'user_info': '/users/{user_id}',
     }
+
+    def profile(self):
+        data = self._call_api('get', self.URLS['myself'])
+        return Profile(**data)
+
+    def __str__(self):
+        return f"<Pyme-User>"
 
     def create_test_user(self, site_id):
 
