@@ -1,11 +1,11 @@
 import os
 import pprint
-from mercadolibre.pyme import PyMe
+import python_mercadolibre as pyme
 
 
 def main():
-    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
-    pprint.pprint(pyme.get_myself())
+    applications = pyme.Applications()
+    pprint.pprint(applications.get_details(os.environ.get("CLIENT_ID")))
 
 
 if __name__ == "__main__":
