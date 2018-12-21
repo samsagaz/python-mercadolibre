@@ -14,6 +14,6 @@ def test_user_profile_without_name():
     profile = Profile(**kwargs)
 
     with pytest.raises(AttributeError) as excinfo:
-       profile.nickname
+        profile.nickname
 
     assert "'Profile' object has no attribute 'nickname'" in str(excinfo.value)
