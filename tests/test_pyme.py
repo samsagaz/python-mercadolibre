@@ -13,16 +13,20 @@ def test_env_vars():
 def test_init_pyme(mocker):
     mocked_client = mocker.patch("mercadolibre.pyme.BackendApplicationClient")
     mocked_get_token = mocker.patch.object(PyMe, 'get_token')
-    pyme = PyMe(client_id="test", client_secret="test")
+    pyme = PyMe(
+        client_id=os.environ.get("CLIENT_ID"),
+        client_secret=os.environ.get("CLIENT_ID"))
     assert pyme
     assert mocked_client.called
-    mocked_client.assert_called_with(client_id="test", default_token_placement="query")
+    mocked_client.assert_called_with(
+        client_id=os.environ.get("CLIENT_ID"),
+        default_token_placement="query")
     assert mocked_get_token.called
 
 
 def test_create_test_user():
     """
-        Mercadolibre just allow to create test user from real ones (MOCK)
+        Mercadolibre just allow to create test user from real accounts (MOCK)
     """
     pass
 
@@ -32,7 +36,9 @@ def test_get_myself():
     """
         TODO
     """
-    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    pyme = PyMe(
+        client_id=os.environ.get("CLIENT_ID"),
+        client_secret=os.environ.get("CLIENT_SECRET"))
     response = pyme.get_myself()
     assert isinstance(response, dict)
     assert 'nickname' in response
@@ -43,7 +49,9 @@ def test_get_user_info():
     """
         TODO
     """
-    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    pyme = PyMe(
+        client_id=os.environ.get("CLIENT_ID"),
+        client_secret=os.environ.get("CLIENT_SECRET"))
     response = pyme.get_user_info(os.environ.get("USER_ID"))
     assert isinstance(response, dict)
     assert 'nickname' in response
@@ -54,7 +62,9 @@ def test_update_user_info():
     """
         TODO
     """
-    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    pyme = PyMe(
+        client_id=os.environ.get("CLIENT_ID"),
+        client_secret=os.environ.get("CLIENT_SECRET"))
     json_data = {'last_name': 'new_last_name'}
     response = pyme.update_user_info(os.environ.get("USER_ID"), json_data)
     assert isinstance(response, dict)
@@ -68,7 +78,9 @@ def test_get_user_address():
         need to add address to get full working test
     """
 
-    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    pyme = PyMe(
+        client_id=os.environ.get("CLIENT_ID"),
+        client_secret=os.environ.get("CLIENT_SECRET"))
     response = pyme.get_user_address(os.environ.get("USER_ID"))
     keys = []
     for d in response:
@@ -83,7 +95,9 @@ def test_get_user_info_accepted_payment_methods():
         TODO
     """
 
-    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    pyme = PyMe(
+        client_id=os.environ.get("CLIENT_ID"),
+        client_secret=os.environ.get("CLIENT_SECRET"))
     response = pyme.get_user_info_accepted_payment_methods(os.environ.get("USER_ID"))
     keys = []
     for d in response:
@@ -98,7 +112,9 @@ def test_get_application_details():
     """
         TODO
     """
-    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    pyme = PyMe(
+        client_id=os.environ.get("CLIENT_ID"),
+        client_secret=os.environ.get("CLIENT_SECRET"))
     response = pyme.get_application_details(os.environ.get("CLIENT_ID"))
     assert isinstance(response, dict)
     assert 'certification_status' in response
@@ -109,7 +125,9 @@ def test_get_user_brands():
     """
         TODO
     """
-    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    pyme = PyMe(
+        client_id=os.environ.get("CLIENT_ID"),
+        client_secret=os.environ.get("CLIENT_SECRET"))
     response = pyme.get_user_brands(58715193)
     assert isinstance(response, dict)
     assert 'cust_id' in response
@@ -120,7 +138,9 @@ def test_get_available_listing_types():
     """
         TODO
     """
-    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    pyme = PyMe(
+        client_id=os.environ.get("CLIENT_ID"),
+        client_secret=os.environ.get("CLIENT_SECRET"))
     response = pyme.get_available_listing_types(os.environ.get("USER_ID"))
     assert isinstance(response, dict)
     assert 'available' in response
@@ -131,7 +151,9 @@ def test_get_user_feeds():
     """
         TODO
     """
-    pyme = PyMe(client_id=os.environ.get("CLIENT_ID"), client_secret=os.environ.get("CLIENT_SECRET"))
+    pyme = PyMe(
+        client_id=os.environ.get("CLIENT_ID"),
+        client_secret=os.environ.get("CLIENT_SECRET"))
     response = pyme.get_user_feeds(os.environ.get("CLIENT_ID"))
     assert isinstance(response, dict)
     assert 'messages' in response

@@ -1,4 +1,4 @@
-# PyMe - THE Mercadolibre API Wrapper
-[![Build Status](https://travis-ci.org/samsagaz/PyMe.svg?branch=new-feature)](https://travis-ci.org/samsagaz/PyMe)
-[![codecov](https://codecov.io/gh/samsagaz/PyMe/branch/feature-server/graph/badge.svg)](https://codecov.io/gh/samsagaz/PyMe)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/195e20b170474ef093c3111fb6e2af2c)](https://app.codacy.com/app/samsagaz/PyMe?utm_source=github.com&utm_medium=referral&utm_content=samsagaz/PyMe&utm_campaign=Badge_Grade_Dashboard)
+# Python Mercadolibre - THE Mercadolibre API Wrapper
+[![Build Status](https://travis-ci.org/samsagaz/python-mercadolibre.svg?branch=master)](https://travis-ci.org/samsagaz/python-mercadolibre)
+[![codecov](https://codecov.io/gh/samsagaz/python-mercadolibre/branch/master/graph/badge.svg)](https://codecov.io/gh/samsagaz/python-mercadolibre)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/82b7c8491c5649759b378e1a8ab97043)](https://www.codacy.com/app/samsagaz/Python-Mercadolibre?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=samsagaz/python-mercadolibre&amp;utm_campaign=Badge_Grade)
