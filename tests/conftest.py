@@ -4,7 +4,7 @@ import pytest
 from urllib import parse
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture("module")
 def vcr_config():
     return dict(
             record_mode='none',  # Set to NONE in travis

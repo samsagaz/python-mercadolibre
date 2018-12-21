@@ -13,8 +13,8 @@ interactions:
     uri: https://api.mercadolibre.com/oauth/token
   response:
     body: {string: '{"access_token": "HIDDEN", "token_type": "bearer", "expires_in":
-        21600, "scope": "marketplace_off offline_access read reporting_full wallet-payments
-        write", "user_id": "HIDDEN", "refresh_token": "HIDDEN"}'}
+        21600, "scope": "offline_access read write", "user_id": "HIDDEN", "refresh_token":
+        "HIDDEN"}'}
     headers:
       Access-Control-Allow-Headers: [Content-Type]
       Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Thu, 20 Dec 2018 18:51:23 GMT']
-      ETag: [369ffec845a82e0dc5e936af6ac90748]
+      Date: ['Fri, 21 Dec 2018 07:45:04 GMT']
+      ETag: [4c8500533786b20ef2b971c3622d6cd4]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 3a3e091000919fe5988672b445955964.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [wBgekrAFhGQRKKzF6qsMpu-TjgW08HqnSuBPlkgX3e5YR6btmM29xw==]
+      Via: [1.1 28a30873e1e5b92657cf0bcd1c7e4c84.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [pJLqctnTMjPvMpQSpViwOpVDy5zXujtsqW0LE7xn1VuCM0ROCit2WA==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [eeb80db6-a79d-4b45-bdbd-476c0b4d3d9f]
+      X-Request-Id: [d2732b8d-621f-4b58-bcbf-4de0e0ca1a2c]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -76,107 +76,17 @@ interactions:
       Access-Control-Max-Age: ['86400']
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Thu, 20 Dec 2018 18:51:24 GMT']
+      Date: ['Fri, 21 Dec 2018 07:45:05 GMT']
       ETag: ['"0036b01054610114867ea1fee6a224360"']
       Transfer-Encoding: [chunked]
       Vary: [Accept-Encoding]
-      Via: [1.1 3a3e091000919fe5988672b445955964.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [4eg61o4YhsFOTNLvG8xlAwY_F3JeLvPPgMkj_rxrp_5gGNfoYyqdPw==]
+      Via: [1.1 28a30873e1e5b92657cf0bcd1c7e4c84.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [YUZzszUAHkvMXxmeGNVI1beakXEi7L5InSMgKBdt20iahAktTpZZWQ==]
       X-Application-Context: ['application:prod']
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [f511f578-0bb6-404d-82d8-486c54b77730]
-      X-XSS-Protection: [1; mode=block]
-      content-length: ['2248']
-    status: {code: 200, message: ''}
-- request:
-    body: grant_type=client_credentials&client_id=HIDDEN&client_secret=HIDDEN
-    headers:
-      Accept: [application/json]
-      Accept-Encoding: ['gzip, deflate']
-      Authorization: [HIDDEN]
-      Connection: [keep-alive]
-      Content-Length: ['103']
-      Content-Type: [application/x-www-form-urlencoded;charset=UTF-8]
-      User-Agent: [python-requests/2.21.0]
-    method: POST
-    uri: https://api.mercadolibre.com/oauth/token
-  response:
-    body: {string: '{"access_token": "HIDDEN", "token_type": "bearer", "expires_in":
-        21600, "scope": "marketplace_off offline_access read reporting_full wallet-payments
-        write", "user_id": "HIDDEN", "refresh_token": "HIDDEN"}'}
-    headers:
-      Access-Control-Allow-Headers: [Content-Type]
-      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
-      Access-Control-Allow-Origin: ['*']
-      Access-Control-Max-Age: ['86400']
-      Cache-Control: [max-age=0]
-      Connection: [keep-alive]
-      Content-Type: [application/json;charset=UTF-8]
-      Date: ['Thu, 20 Dec 2018 18:51:35 GMT']
-      ETag: [3fa63a95b2c9dea0e63a99926ccd293f]
-      Strict-Transport-Security: [max-age=15724800]
-      Transfer-Encoding: [chunked]
-      Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 3a3e091000919fe5988672b445955964.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [bJtFaztLdnSWD7VL98tclnHYApfbUt4NGB81XjE7TinTFZixmRR3DQ==]
-      X-Cache: [Miss from cloudfront]
-      X-Content-Type-Options: [nosniff]
-      X-Frame-Options: [DENY]
-      X-Request-Id: [877d2c05-3d4e-47d9-8c7b-ab7c66e60fbf]
-      X-XSS-Protection: [1; mode=block]
-    status: {code: 200, message: OK}
-- request:
-    body: null
-    headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.21.0]
-    method: GET
-    uri: https://api.mercadolibre.com/users/58715193/brands
-  response:
-    body: {string: '{"cust_id": 58715193, "site_id": "MLA", "user_type": "brand",
-        "tags": ["eshop", "large_seller", "user_info_verified", "brand"], "brands":
-        [{"official_store_id": 133, "site_id": "MLA", "name": "Bodega Lanzarini",
-        "fantasy_name": "Bodega Lanzarini", "type": "normal", "status": "active",
-        "permalink": "http://tienda.mercadolibre.com.ar/bodega-lanzarini", "date_created":
-        "2014-08-04T04:00:00Z", "relevance_position": 69, "main_categories": [{"id":
-        "MLA1403"}], "pictures": [{"id": 631, "name": "background", "secure_url":
-        "https://http2.mlstatic.com/static/org-img/apparel/images/bodegalanzarini/58715193-bkg.jpg",
-        "url": "http://http2.mlstatic.com/static/org-img/apparel/images/bodegalanzarini/58715193-bkg.jpg",
-        "size": "1600x750"}, {"id": 632, "name": "big_logo", "secure_url": "https://http2.mlstatic.com/static/org-img/apparel/images/bodegalanzarini/58715193-logo-g.jpg",
-        "url": "http://http2.mlstatic.com/static/org-img/apparel/images/bodegalanzarini/58715193-logo-g.jpg",
-        "size": "174x164"}, {"id": 633, "name": "logo_landing", "secure_url": "https://http2.mlstatic.com/static/org-img/apparel/images/bodegalanzarini/58715193-logo-home.jpg",
-        "url": "http://http2.mlstatic.com/static/org-img/apparel/images/bodegalanzarini/58715193-logo-home.jpg",
-        "size": "160x80"}, {"id": 634, "name": "logo", "secure_url": "https://http2.mlstatic.com/static/org-img/apparel/images/bodegalanzarini/58715193-logo-home.jpg",
-        "url": "http://http2.mlstatic.com/static/org-img/apparel/images/bodegalanzarini/58715193-logo-home.jpg",
-        "size": "160x80"}, {"id": 635, "name": "small_logo", "secure_url": "https://http2.mlstatic.com/static/org-img/apparel/images/bodegalanzarini/58715193-logo-ch2.jpg",
-        "url": "http://http2.mlstatic.com/static/org-img/apparel/images/bodegalanzarini/58715193-logo-ch2.jpg",
-        "size": "96x70"}, {"id": 2474, "name": "facebook_logo", "secure_url": "https://http2.mlstatic.com/static/org-img/apparel/images/mla-fb/58715193-logo-fb.jpg",
-        "url": "http://http2.mlstatic.com/static/org-img/apparel/images/mla-fb/58715193-logo-fb.jpg",
-        "size": "1600x750"}, {"id": 9428, "name": "home_app", "secure_url": "https://http2.mlstatic.com/static/org-img/apparel/bkg_apps/58715193-bkg.jpg",
-        "url": "http://http2.mlstatic.com/static/org-img/apparel/bkg_apps/58715193-bkg.jpg",
-        "size": "270x155"}], "tags": [], "categories_ids": ["MLA1403"], "return_policy":
-        null}]}'}
-    headers:
-      Access-Control-Allow-Headers: [Content-Type]
-      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
-      Access-Control-Allow-Origin: ['*']
-      Access-Control-Max-Age: ['86400']
-      Connection: [keep-alive]
-      Content-Type: [application/json;charset=UTF-8]
-      Date: ['Thu, 20 Dec 2018 18:51:36 GMT']
-      ETag: ['"0036b01054610114867ea1fee6a224360"']
-      Vary: [Accept-Encoding]
-      Via: [1.1 3a3e091000919fe5988672b445955964.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [jYyOtRu8QHQQKO22B2ke83yCc1rndjDHhi1hifttVGaxqcFjMvwluw==]
-      X-Application-Context: ['application:prod']
-      X-Cache: [Miss from cloudfront]
-      X-Content-Type-Options: [nosniff]
-      X-Frame-Options: [DENY]
-      X-Request-Id: [b28c5d56-ec75-4b5b-9e1d-e2fdc4775c12]
+      X-Request-Id: [6b3944af-d07e-4d32-8c34-0a91b42a4118]
       X-XSS-Protection: [1; mode=block]
       content-length: ['2248']
     status: {code: 200, message: ''}
