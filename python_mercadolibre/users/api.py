@@ -2,24 +2,52 @@ from python_mercadolibre.base import PyMe
 from .models import Profile
 
 
-class Users(PyMe):
+class Search(PyMe):
+    search_url = "/sites"
+    search_by_id_url = "/search?id="
+    search_by_nick_url = "/search?nickname="
+
+    def full_url(self, relativ_url, arg, site_id="MLA"):
+        return f"{self.search_url}/{site_id}{relativ_url}{arg}"
+
+    def user(self, user_id=None, nickname=None):
+        if user_id:
+            url = self.full_url(self.search_by_id_url, user_id)
+        if nickname:
+            url = self.full_url(self.search_by_nick_url, nickname)
+
+        data = self._call_api('get', url)
+        if not data:
+            return "User not found"
+
+        return data
+
+
+class User(PyMe):
     """
     Mercadolibre API Users Funcionality
     See: https://api.mercadolibre.com/users
 
     """
+    user_url = "/users"
+    profile_url = "/me"
     URLS = {
         'myself': '/users/me',
         'test_user': '/test_user',
         'user_info': '/users/{user_id}',
     }
 
+    def full_url(self, relativ_url):
+        return f"{self.user_url}{relativ_url}"
+
     def profile(self):
-        data = self._call_api('get', self.URLS['myself'])
+        """ Get information about registered user."""
+        import pdb; pdb.set_trace()
+        data = self._call_api('get', self.full_url(self.profile_url))
         return Profile(**data)
 
-    def __str__(self):
-        return f"<Pyme-User>"
+    def __repr__(self):
+        return "<Pyme-Api-User>"
 
     def create_test_user(self, site_id):
 
@@ -28,16 +56,6 @@ class Users(PyMe):
             'site_id': site_id
             }
         return self._call_api('post', endpoint, json_data=json_data)
-
-    def get_myself(self):
-        """ Get information about registered user
-        Args:
-            None
-
-        Returns:
-            A dict respresentation of the JSON returned from the API.
-        """
-        return self._call_api('get', self.URLS['myself'])
 
     def get_user_info(self, user_id):
         """ Get user information """
