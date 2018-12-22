@@ -15,7 +15,7 @@ def test_create_test_user():
 def test_user_profile():
     user = pyme.User()
     response = user.profile()
-    assert type(response) == Profile
+    assert isinstance(response, Profile)
 
 
 @pytest.mark.vcr()
