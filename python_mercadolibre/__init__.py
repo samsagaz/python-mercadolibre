@@ -21,7 +21,7 @@ __license__ = 'GPLv3'
 import os
 from .applications import Applications
 from .base import PyMe
-from .users.users import Users
+from .users.api import User, Search
 
 
 CLIENT_ID = os.environ.get('CLIENT_ID', None)
