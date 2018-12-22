@@ -42,7 +42,6 @@ class User(PyMe):
 
     def profile(self):
         """ Get information about registered user."""
-        import pdb; pdb.set_trace()
         data = self._call_api('get', self.full_url(self.profile_url))
         return Profile(**data)
 
