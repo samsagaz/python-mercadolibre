@@ -7,7 +7,7 @@ from urllib import parse
 @pytest.fixture("module")
 def vcr_config():
     return dict(
-            record_mode=os.environ.get("TRAVIS") or "once",  # Set to NONE in travis
+            record_mode=os.environ.get("VCR") or "once",  # Set to NONE in travis
             decode_compressed_response=True,
             serializer='yaml',
             filter_post_data_parameters=[
