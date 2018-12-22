@@ -7,7 +7,7 @@ from urllib import parse
 @pytest.fixture("module")
 def vcr_config():
     return dict(
-            record_mode='none',  # Set to NONE in travis
+            record_mode=os.environ.get("TRAVIS") or "once",  # Set to NONE in travis
             decode_compressed_response=True,
             serializer='yaml',
             filter_post_data_parameters=[
@@ -86,6 +86,21 @@ def vcr_custom_response_filter(response):
         body = new_list
     else:
         body = hide_values(body, values_to_hide)
+
+    if "address" in body:
+        body["address"] = {
+            "address": "some address",
+            "city": "some city",
+            "state": "some state",
+            "zip_code": "1234"
+        }
+    if "phone" in body:
+        body["phone"] = {
+            "area_code": "area",
+            "extension": "extension",
+            "number": "number",
+            "verified": False
+        }
 
     response['body']['string'] = json.dumps(body).encode()
     return response

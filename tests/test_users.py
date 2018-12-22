@@ -1,6 +1,7 @@
 import os
 import pytest
 import python_mercadolibre as pyme
+from python_mercadolibre.users.models import Profile
 
 
 def test_create_test_user():
@@ -11,14 +12,10 @@ def test_create_test_user():
 
 
 @pytest.mark.vcr()
-def test_get_myself():
-    """
-        TODO
-    """
+def test_user_profile():
     user = pyme.User()
     response = user.profile()
-    assert isinstance(response, dict)
-    assert 'nickname' in response
+    assert type(response) == Profile
 
 
 @pytest.mark.vcr()
@@ -29,7 +26,7 @@ def test_get_user_info():
     user = pyme.User()
     response = user.get_user_info(os.environ.get("USER_ID"))
     assert isinstance(response, dict)
-    assert 'nickname' in response
+    assert "nickname" in response
 
 
 @pytest.mark.vcr()
@@ -38,10 +35,10 @@ def test_update_user_info():
         TODO
     """
     user = pyme.User()
-    json_data = {'last_name': 'new_last_name'}
+    json_data = {"last_name": "new_last_name"}
     response = user.update_user_info(os.environ.get("USER_ID"), json_data)
     assert isinstance(response, dict)
-    assert 'user_id' in response
+    assert "user_id" in response
 
 
 @pytest.mark.vcr()
@@ -72,7 +69,7 @@ def test_get_user_info_accepted_payment_methods():
     for d in response:
         for k in d.keys():
             keys.append(k)
-    assert 'payment_type_id' in keys
+    assert "payment_type_id" in keys
     assert isinstance(response, list)
 
 
@@ -82,9 +79,9 @@ def test_get_user_brands():
         TODO
     """
     user = pyme.User()
-    response = user.get_user_brands(58715193)
+    response = user.get_user_brands(58_715_193)
     assert isinstance(response, dict)
-    assert 'cust_id' in response
+    assert "cust_id" in response
 
 
 @pytest.mark.vcr()
@@ -95,7 +92,7 @@ def test_get_available_listing_types():
     user = pyme.User()
     response = user.get_available_listing_types(os.environ.get("USER_ID"))
     assert isinstance(response, dict)
-    assert 'available' in response
+    assert "available" in response
 
 
 @pytest.mark.vcr()
@@ -106,4 +103,4 @@ def test_get_user_feeds():
     user = pyme.User()
     response = user.get_user_feeds(os.environ.get("CLIENT_ID"))
     assert isinstance(response, dict)
-    assert 'messages' in response
+    assert "messages" in response
