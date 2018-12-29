@@ -52,8 +52,7 @@ class User(PyMe):
 
     def blacklisted_questions(self, user_id):
         """ Get blacklisted questions from user """
-        url = f"/users/{user_id}/questions_blacklist"
-
+        url = self.full_url(f"/{user_id}/questions_blacklist")
         data = self._call_api('get', url)
         if not data:
             return "Question not found"
