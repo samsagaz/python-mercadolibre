@@ -25,7 +25,7 @@ class Question(PyMe):
         data = self._call_api('get', url)
         if not data:
             return "Question not found"
-        return QuestionModel(**data)
+        return [QuestionModel(**question) for question in data['questions']]
 
     def by_item(self, item_id):
         """ Get questions from item."""
@@ -57,6 +57,15 @@ class Question(PyMe):
         data = self._call_api('get', url)
         if not data:
             return "Question not found"
+        return QuestionModel(**data)
+
+    def create_question(self, item_id, text):
+        data = {
+            'item_id': item_id,
+            'text': text
+            }
+        url = self.full_url(self.question_by_id, item_id)
+        data = self._call_api('post', url, data)
         return QuestionModel(**data)
 
     def __repr__(self):

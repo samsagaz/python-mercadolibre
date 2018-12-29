@@ -1,0 +1,428 @@
+interactions:
+- request:
+    body: grant_type=client_credentials&client_id=HIDDEN&client_secret=HIDDEN
+    headers:
+      Accept: [application/json]
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [HIDDEN]
+      Connection: [keep-alive]
+      Content-Length: ['103']
+      Content-Type: [application/x-www-form-urlencoded;charset=UTF-8]
+      User-Agent: [python-requests/2.21.0]
+    method: POST
+    uri: https://api.mercadolibre.com/oauth/token
+  response:
+    body: {string: '{"access_token": "HIDDEN", "token_type": "bearer", "expires_in":
+        21600, "scope": "offline_access read write", "user_id": "HIDDEN", "refresh_token":
+        "HIDDEN"}'}
+    headers:
+      Access-Control-Allow-Headers: [Content-Type]
+      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Max-Age: ['86400']
+      Cache-Control: [max-age=0]
+      Connection: [keep-alive]
+      Content-Type: [application/json;charset=UTF-8]
+      Date: ['Sat, 29 Dec 2018 23:25:34 GMT']
+      ETag: [47ff71b22348713f53068c3cc310555c]
+      Strict-Transport-Security: [max-age=15724800]
+      Transfer-Encoding: [chunked]
+      Vary: ['Accept,Accept-Encoding']
+      Via: [1.1 2214dfb3e0f8a4f3896446ba34c9d6f5.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [HChyr41Q66y3uQA5i0s7Rmyea2TTiPJ-k57MGe5W3Tn_z_8vmBnXow==]
+      X-Cache: [Miss from cloudfront]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [DENY]
+      X-Request-Id: [b3fc201f-079b-4789-b50b-55dc858e27a7]
+      X-XSS-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.21.0]
+    method: GET
+    uri: https://api.mercadolibre.com/questions/search
+  response:
+    body: {string: '{"total": 2988, "limit": 50, "questions": [{"date_created": "2016-08-01T16:50:15.000-04:00",
+        "item_id": "MLA629530764", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "ok", "id": 4206507153, "deleted_from_listing": false, "hold": false, "answer":
+        {"text": "Publicadas. De todos modos tus calificaciones no ayudan a la venta!
+        De estar interesado necesitas ofertar desde otra cuenta con mejor calificacion.",
+        "status": "ACTIVE", "date_created": "2016-08-01T17:23:55.000-04:00"}, "from":
+        {"id": 69589128, "answered_questions": 6}}, {"date_created": "2016-08-01T17:48:36.000-04:00",
+        "item_id": "MLA629530764", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "se lo puede ver, soy de rosario. Para probarlo con la camara", "id": 4206405709,
+        "deleted_from_listing": false, "hold": false, "answer": {"text": "Si, no habr\u00eda
+        problemas. Tenes alguna cuenta con mejor calificaci\u00f3n.? En que zona estas?
+        Yo estoy en Avellaneda y Alberdi aprox", "status": "ACTIVE", "date_created":
+        "2016-08-01T17:50:19.000-04:00"}, "from": {"id": 69589128, "answered_questions":
+        6}}, {"date_created": "2016-08-01T17:55:16.000-04:00", "item_id": "MLA629530764",
+        "seller_id": 128828674, "status": "ANSWERED", "text": "no soy habitual comprador,
+        estoy buscando un gran angular. Me ofrecieron de Bs As uno similar a 8600.
+        Soy de la zona de fisherton, cordoba y donado", "id": 4206567924, "deleted_from_listing":
+        false, "hold": false, "answer": {"text": "si, te aseguro que no est\u00e1
+        en el estado de este... lamentablemente solo vendo a usuarios con buenas calificaciones
+        (por el tema de la inseguridad). A no ser que el pago sea por anticipado y
+        te lo env\u00edo a donde quieras. Ser\u00e1 en otro momento por lo visto!.",
+        "status": "ACTIVE", "date_created": "2016-08-01T17:58:25.000-04:00"}, "from":
+        {"id": 69589128, "answered_questions": 6}}, {"date_created": "2016-08-01T20:32:13.000-04:00",
+        "item_id": "MLA629530764", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Hola buenas noches. Esta a la venta? Es negociable el precio? Contado? Gracias",
+        "id": 4206775146, "deleted_from_listing": false, "hold": false, "answer":
+        {"text": "Hola sigue a la venta. El precio creo q esta bien por el estado
+        del mismo. No se ha usado. Pueeo publicarlo como nu3vo por el estado. Es verdaderamente
+        una oportunidad para el comprador", "status": "ACTIVE", "date_created": "2016-08-01T21:04:37.000-04:00"},
+        "from": {"id": 223315118, "answered_questions": 1}}, {"date_created": "2016-08-01T18:25:00.000-04:00",
+        "item_id": "MLA629530764", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "trabajo para la joyeria de la esquina, no se si la ubicas, hasta nos podr\u00edamos
+        encontrar ahi.", "id": 4206599074, "deleted_from_listing": false, "hold":
+        false, "answer": {"text": "Cuales son tus horarios?", "status": "ACTIVE",
+        "date_created": "2016-08-01T21:21:19.000-04:00"}, "from": {"id": 69589128,
+        "answered_questions": 6}}, {"date_created": "2016-08-01T23:06:08.000-04:00",
+        "item_id": "MLA629530764", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "El horario de la joyeria es de comercio. Avisame si pasas asi llevo la camara",
+        "id": 4207117013, "deleted_from_listing": true, "hold": false, "answer": {"text":
+        "Paso Ma\u00f1ana por la tarde", "status": "ACTIVE", "date_created": "2016-08-01T23:10:50.000-04:00"},
+        "from": {"id": 210203444, "answered_questions": 2}}, {"date_created": "2016-08-01T23:14:21.000-04:00",
+        "item_id": "MLA629530764", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Manana a la manana estoy. Por la tarde no voy a estar. Sino el miercoles",
+        "id": 4207124951, "deleted_from_listing": true, "hold": false, "answer": {"text":
+        "dale, el mi\u00e9rcoles", "status": "ACTIVE", "date_created": "2016-08-01T23:14:54.000-04:00"},
+        "from": {"id": 210203444, "answered_questions": 2}}, {"date_created": "2016-08-03T17:10:10.000-04:00",
+        "item_id": "MLA630009219", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Hola.Cuanto sale el envio de dos motores hasta Azul centro de la pcia de
+        BsAs?,por que medio seria?Saludos.", "id": 4210532706, "deleted_from_listing":
+        false, "hold": false, "answer": {"text": "Muchas gracias por la consulta te
+        lo puedo despachar por oca o por micro. O correo argentino. No te cobro el
+        traslado al correo o micro.", "status": "ACTIVE", "date_created": "2016-08-03T17:14:29.000-04:00"},
+        "from": {"id": 67626337, "answered_questions": 1}}, {"date_created": "2016-08-03T20:54:25.000-04:00",
+        "item_id": "MLA629867547", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "hola tenes stock?", "id": 4210991757, "deleted_from_listing": false, "hold":
+        false, "answer": {"text": "Si. Espero tu oferta. Lo despacho ma\u00f1ana tengo
+        solo color negro", "status": "ACTIVE", "date_created": "2016-08-03T21:04:32.000-04:00"},
+        "from": {"id": 112171890, "answered_questions": 4}}, {"date_created": "2016-08-03T21:17:15.000-04:00",
+        "item_id": "MLA629867547", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "me gustaria saber tambien tenes los driver para este motor , lo puedo controlar
+        por pwm\u00bf?", "id": 4211135962, "deleted_from_listing": false, "hold":
+        false, "answer": {"text": "Va conectado a una fuente de 48v o menos. ( la
+        tengo)  tengo tambi\u00e9n el driver para controlar la velocidad con Mach
+        3", "status": "ACTIVE", "date_created": "2016-08-03T21:28:38.000-04:00"},
+        "from": {"id": 112171890, "answered_questions": 4}}, {"date_created": "2016-08-03T21:18:30.000-04:00",
+        "item_id": "MLA630011602", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "este motor es bipolar osea de 4 cables?", "id": 4211016386, "deleted_from_listing":
+        false, "hold": false, "answer": {"text": "Si", "status": "ACTIVE", "date_created":
+        "2016-08-03T21:29:02.000-04:00"}, "from": {"id": 112171890, "answered_questions":
+        2}}, {"date_created": "2016-08-04T04:03:32.000-04:00", "item_id": "MLA629867080",
+        "seller_id": 128828674, "status": "ANSWERED", "text": "hola una consulta,
+        a este husillo le conectas la fuente de 48v 300w y comienza a funcionar o
+        hay que ponerle un variador de frecuencia tambien?. gracias", "id": 4211531692,
+        "deleted_from_listing": false, "hold": false, "answer": {"text": "conectas
+        la fuente y funciona. Tengo m\u00f3dulos para mach3 q regulan la velocidad
+        tambien", "status": "ACTIVE", "date_created": "2016-08-04T09:09:25.000-04:00"},
+        "from": {"id": 77769525, "answered_questions": 2}}, {"date_created": "2016-08-04T04:48:05.000-04:00",
+        "item_id": "MLA630069863", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Sirve para un dremel 3000? La quiero utilizar para fabricar pcb sirve no?trnes
+        3 en stock?gracias!", "id": 4211356429, "deleted_from_listing": false, "hold":
+        false, "answer": {"text": "Tengo stock es uno de sus usos. La fabricaci\u00f3n
+        de con. El di\u00e1metro es de 2mm. No se.como es el mandril del dremel",
+        "status": "ACTIVE", "date_created": "2016-08-04T09:12:19.000-04:00"}, "from":
+        {"id": 57801730, "answered_questions": 1}}, {"date_created": "2016-08-04T14:10:56.000-04:00",
+        "item_id": "MLA630072683", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Hola tenes acoples de estos para ejes de 1/2 pulgada a 1/2 pulgada? Saludos.",
+        "id": 4212167675, "deleted_from_listing": false, "hold": false, "answer":
+        {"text": "no, solo las dos medidas publicadas", "status": "ACTIVE", "date_created":
+        "2016-08-04T14:19:43.000-04:00"}, "from": {"id": 68177567, "answered_questions":
+        1}}, {"date_created": "2016-08-04T17:12:25.000-04:00", "item_id": "MLA629701152",
+        "seller_id": 128828674, "status": "ANSWERED", "text": "Hola.El pie esta nuevo
+        sin uso?es identico a la publicacion?seria por mercado pago para enviar a
+        villa dolores cordoba por oca.gracias", "id": 4212525683, "deleted_from_listing":
+        false, "hold": false, "answer": {"text": "Si esta nuevo sin uso. Solo estuvo
+        exhibido con dos platillos que importaba para sacar fotos de ellos. Nunca
+        se uso. Esta en la caja que esta un poco deteriorada por estar guardada con
+        otros productos", "status": "ACTIVE", "date_created": "2016-08-04T17:24:27.000-04:00"},
+        "from": {"id": 161763521, "answered_questions": 2}}, {"date_created": "2016-08-04T17:23:35.000-04:00",
+        "item_id": "MLA629867080", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "hola haces envios por correo argentino? quiero la fuente de 48v 400w q tenes
+        publicada y este husillo. gracias", "id": 4212538061, "deleted_from_listing":
+        false, "hold": false, "answer": {"text": "Si te lo despacho por correo argentino.
+        Necesito ver el costo solamente. No te.conviene por oca? Sale solo 84 pesos
+        y lo podes pagar con la tarjeta", "status": "ACTIVE", "date_created": "2016-08-04T17:26:19.000-04:00"},
+        "from": {"id": 77769525, "answered_questions": 2}}, {"date_created": "2016-08-04T17:25:51.000-04:00",
+        "item_id": "MLA630069820", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Hola. Sirve para dremel 300?. Hacen factura A? Tenes fresas para madera?.
+        Gracias. Saludos.", "id": 4212540201, "deleted_from_listing": false, "hold":
+        false, "answer": {"text": "No tengo fresas para madera. No puedo facturar
+        a soy monotributista", "status": "ACTIVE", "date_created": "2016-08-04T17:27:15.000-04:00"},
+        "from": {"id": 16699017, "answered_questions": 4}}, {"date_created": "2016-08-04T17:28:32.000-04:00",
+        "item_id": "MLA630069820", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Ok. Me mandas varias... 2 o 3 fresas en el mismo env\u00edo?", "id": 4212703764,
+        "deleted_from_listing": false, "hold": false, "answer": {"text": "si, no hay
+        drama. Espero la oferta", "status": "ACTIVE", "date_created": "2016-08-04T17:29:46.000-04:00"},
+        "from": {"id": 16699017, "answered_questions": 4}}, {"date_created": "2016-08-04T17:39:12.000-04:00",
+        "item_id": "MLA630069820", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Pero sirve para el dremel 300?.", "id": 4212552849, "deleted_from_listing":
+        false, "hold": false, "answer": {"text": "Hola es una herramienta de frenado.
+        Si tu dremel acepta v\u00e1stagos de 3mm no vas a tener problemas. Se q vienen
+        adaptadores para los distintos v\u00e1stagos tambi\u00e9n", "status": "ACTIVE",
+        "date_created": "2016-08-04T17:47:15.000-04:00"}, "from": {"id": 16699017,
+        "answered_questions": 4}}, {"date_created": "2016-08-04T17:45:47.000-04:00",
+        "item_id": "MLA629701152", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Bien. Podras republicar en 3000 por favor asi concretamos. yo te pago en
+        efectivo por rapipago ma\u00f1ana, mas el envio a dolores.gracias", "id":
+        4212558338, "deleted_from_listing": false, "hold": false, "answer": {"text":
+        "hola, gracias por la consulta, por q tengo q republicarlo en 3k? perd\u00f3n
+        pero no entiendo. Saludos", "status": "ACTIVE", "date_created": "2016-08-04T17:54:50.000-04:00"},
+        "from": {"id": 161763521, "answered_questions": 2}}, {"date_created": "2016-08-05T09:17:35.000-04:00",
+        "item_id": "MLA629530764", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Hola, lo tenes? saludos", "id": 4213582897, "deleted_from_listing": true,
+        "hold": false, "answer": {"text": "Si. Esperando nuevo due\u00f1o.", "status":
+        "ACTIVE", "date_created": "2016-08-05T09:18:18.000-04:00"}, "from": {"id":
+        137504202, "answered_questions": 2}}, {"date_created": "2016-08-05T09:34:03.000-04:00",
+        "item_id": "MLA629530764", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Hola, en que zona estas para verlo?, seria la semana que viene. Saludos",
+        "id": 4213597596, "deleted_from_listing": true, "hold": false, "answer": {"text":
+        "Avellaneda y Alberdi mas o menos", "status": "ACTIVE", "date_created": "2016-08-05T09:34:49.000-04:00"},
+        "from": {"id": 137504202, "answered_questions": 2}}, {"date_created": "2016-08-05T11:05:35.000-04:00",
+        "item_id": "MLA629867547", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "yo estoy haciendo mi primer cnc hobbista para pcb y mecanizados sensillos
+        en madera creo que este motor estaria bien para la aplicacion te comento que
+        lo estoy armando con arduino por esto preguntaba si el diver es manejado por
+        pwm ...", "id": 4213886161, "deleted_from_listing": false, "hold": false,
+        "answer": {"text": "Este lo usan para esas aplicaciones. Yo tengo un regulador
+        de velocidad para mach3 q es un regulador pwn . Solo desconozco si el arduino
+        es el mismo. Estimo q si.", "status": "ACTIVE", "date_created": "2016-08-05T11:10:48.000-04:00"},
+        "from": {"id": 112171890, "answered_questions": 4}}, {"date_created": "2016-08-05T11:08:43.000-04:00",
+        "item_id": "MLA630011602", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "tengo que comprar 3 driver tenia pensado comprar 3 tb6600 que son de 5 amp
+        vos tendrias algo mejor .. lo estoy armando con arduino y nesesitaria que
+        los driver sean individuales o bueno si me recomendas algo te lo agradeceria",
+        "id": 4213684416, "deleted_from_listing": false, "hold": false, "answer":
+        {"text": "mejor son los m542 http://articulo.mercadolibre.com.ar/MLA-629847626-driver-leadshine-m542-para-cnc-42a-50vdc-_JM
+        y ni hablar de los Am882 http://articulo.mercadolibre.com.ar/MLA-629849309-driver-leadshine-am882-para-cnc-80v-82a-512-microsteps-_JM
+        (igual no creo q necesites tanta performance para tu maquina ya q dijiste
+        q son trabajos sencillos)", "status": "ACTIVE", "date_created": "2016-08-05T11:13:10.000-04:00"},
+        "from": {"id": 112171890, "answered_questions": 2}}, {"date_created": "2016-08-05T11:12:06.000-04:00",
+        "item_id": "MLA629867547", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "me pondrias tu publicacion del driver por aca gracias", "id": 4213687843,
+        "deleted_from_listing": false, "hold": false, "answer": {"text": "ya lo hice
+        :)", "status": "ACTIVE", "date_created": "2016-08-05T11:13:18.000-04:00"},
+        "from": {"id": 112171890, "answered_questions": 4}}, {"date_created": "2016-08-05T21:48:44.000-04:00",
+        "item_id": "MLA629857572", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "hola envias a temperley bs as?", "id": 4214780257, "deleted_from_listing":
+        false, "hold": false, "answer": {"text": "Si, lamentablemente hoy vendi la
+        ultima de 360, me quedan solo de 400, Entran en 15 dias", "status": "ACTIVE",
+        "date_created": "2016-08-05T21:50:43.000-04:00"}, "from": {"id": 91900774,
+        "answered_questions": 1}}, {"date_created": "2016-08-05T23:05:43.000-04:00",
+        "item_id": "MLA629811279", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Hola en paso 5mm tienen?", "id": 4214859265, "deleted_from_listing": false,
+        "hold": false, "answer": {"text": "no solo 10 lo siento.", "status": "ACTIVE",
+        "date_created": "2016-08-05T23:08:00.000-04:00"}, "from": {"id": 23715622,
+        "answered_questions": 1}}, {"date_created": "2016-08-07T17:15:14.000-04:00",
+        "item_id": "MLA630072683", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "el precio es por unidad, o por los 4, gracias", "id": 4216888764, "deleted_from_listing":
+        true, "hold": false, "answer": {"text": "por unidad. Saludos", "status": "ACTIVE",
+        "date_created": "2016-08-07T19:18:26.000-04:00"}, "from": {"id": 136856963,
+        "answered_questions": 1}}, {"date_created": "2016-08-07T17:26:20.000-04:00",
+        "item_id": "MLA629867547", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Hola el husillo hasta que medida de herramienta se puede usar,  tenes stock
+        para ofertar, soy de Rosario retiro en tu domicilio.", "id": 4216803057, "deleted_from_listing":
+        false, "hold": false, "answer": {"text": "hola, me queda uno en stock color
+        negro. Vienen con collect ER 11, de 1/8, o 3.175mm en su defecto", "status":
+        "ACTIVE", "date_created": "2016-08-07T19:21:39.000-04:00"}, "from": {"id":
+        136856963, "answered_questions": 1}}, {"date_created": "2016-08-08T11:45:59.000-04:00",
+        "item_id": "MLA629849309", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "hola, te hago una pregunta, tengo motores nema 42 de 8 amp por fase, este
+        supuestamente tendria que sorportalos. gracias.", "id": 4217858866, "deleted_from_listing":
+        false, "hold": false, "answer": {"text": "Hola te va a funcionar pero un nema42
+        va a necesitar mucho mas voltaje para que funcione bien. Yo te recomendar''ia
+        buscar un driver mas potente, este solo soporta 80v max. . Necesitarias uno
+        de 150 o 220v para aprovecharlo. Por eso no te lo recomiendo .", "status":
+        "ACTIVE", "date_created": "2016-08-08T11:55:15.000-04:00"}, "from": {"id":
+        6616985, "answered_questions": 1}}, {"date_created": "2016-08-08T12:12:56.000-04:00",
+        "item_id": "MLA629847626", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "ok, haces factura A ?", "id": 4218091075, "deleted_from_listing": false,
+        "hold": false, "answer": {"text": "Hola Esteban. No. Podemos traerte uno mas
+        potente. Unos 15 d\u00edas aprox de.demora. necesitamos saber la cantidad
+        q necesitas. Y el modelo exacto del motor para cotizar y traer el ideal para
+        tu aplicaci\u00f3n.", "status": "ACTIVE", "date_created": "2016-08-08T12:18:00.000-04:00"},
+        "from": {"id": 6616985, "answered_questions": 4}}, {"date_created": "2016-08-08T15:39:12.000-04:00",
+        "item_id": "MLA630069863", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Hola tenes en stock de 0.2 mm y distintos \u00e1ngulos?", "id": 4218698400,
+        "deleted_from_listing": false, "hold": false, "answer": {"text": "en 0.2 tengo
+        en 10 20 y 30 grados", "status": "ACTIVE", "date_created": "2016-08-08T15:44:30.000-04:00"},
+        "from": {"id": 179897898, "answered_questions": 2}}, {"date_created": "2016-08-09T09:24:30.000-04:00",
+        "item_id": "MLA630069863", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Dale y micro mechas de 0.7mm para perforar pcb cobre tenes?", "id": 4219760821,
+        "deleted_from_listing": false, "hold": false, "answer": {"text": "Solo .6
+        y .8 tengo. .7 puedo traer en 15 d\u00edas. Previa se\u00f1a. Se puede mejorar
+        el precio por cantidad.", "status": "ACTIVE", "date_created": "2016-08-09T10:24:39.000-04:00"},
+        "from": {"id": 179897898, "answered_questions": 2}}, {"date_created": "2016-08-09T09:34:28.000-04:00",
+        "item_id": "MLA629870494", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "HOLA BUEN D\u00cdA, TENES DATOS DE QUE CANTIDAD DE RODAMIENTO TRAE ? TENES
+        ALGUNA OTRA POTENCIA? . MUCHAS GRACIAS", "id": 4219770681, "deleted_from_listing":
+        false, "hold": false, "answer": {"text": "4 rodamientos. Tengo de 1.5Kw pero
+        tardan 15 d\u00edas aprox en llegar. Son s\u00f3lo con anticipo del 30%. El
+        precio 1500menos q este.aprox", "status": "ACTIVE", "date_created": "2016-08-09T10:58:57.000-04:00"},
+        "from": {"id": 27590781, "answered_questions": 4}}, {"date_created": "2016-08-09T11:07:44.000-04:00",
+        "item_id": "MLA629870494", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "NO ENTIENDO PORQUE ELIMINARON LA PREGUNTA DE CUANTOS \"RODAMIENTOS TIENE
+        EL HUSILLO\" Y SI TIENE ALGUNA OTRA \"POTENCIA DE HUSILLO\"", "id": 4220033305,
+        "deleted_from_listing": false, "hold": false, "answer": {"text": "4 rodamientos
+        trae. traigo a pedido otras potencias. 1.5kw Demora 3semanas . Si te interesa
+        lo publico. No se.por q borraron la respuesta.", "status": "ACTIVE", "date_created":
+        "2016-08-09T11:23:04.000-04:00"}, "from": {"id": 27590781, "answered_questions":
+        4}}, {"date_created": "2016-08-09T09:39:26.000-04:00", "item_id": "MLA629811279",
+        "seller_id": 128828674, "status": "ANSWERED", "text": "HOLA, TENES EL TORNILLO
+        PARA ESTA TUERCA? CUANTO SALDR\u00cdA EL METRO? GRACIAS", "id": 4219775693,
+        "deleted_from_listing": false, "hold": false, "answer": {"text": "Hola, el
+        tornillo sale 1500$ por metro. Te comento que tengo varios q mecanizamos y
+        no los buscaron. Las medidas son 1170mm con puntas ya mecanizadas y tuerca.
+        te puedo bonificar los 17cm y el mecanizado de las puntas en el precio. Pagarias
+        1mt + la tuerca. Lo voy a publicar en breve.", "status": "ACTIVE", "date_created":
+        "2016-08-09T11:38:14.000-04:00"}, "from": {"id": 27590781, "answered_questions":
+        1}}, {"date_created": "2016-08-09T12:32:28.000-04:00", "item_id": "MLA629870494",
+        "seller_id": 128828674, "status": "ANSWERED", "text": "SI TE COMPRO ESTE DE
+        2,2 LO PUEDO RETIRAR PERSONALMENTE EL SABADO POR LA MA\u00d1ANA QUE VOY DE  CORDOBA
+        A BS AS", "id": 4220167171, "deleted_from_listing": false, "hold": false,
+        "answer": {"text": "Estoy en Rosario de todos modos, este sabado imposible
+        por q me voy de viaje. Podemos coordinar para otro dia.", "status": "ACTIVE",
+        "date_created": "2016-08-09T12:38:51.000-04:00"}, "from": {"id": 27590781,
+        "answered_questions": 4}}, {"date_created": "2016-08-09T16:13:00.000-04:00",
+        "item_id": "MLA630069891", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Hola, tenes stock? Me interesa tambi\u00e9n si tenes la de 45grados", "id":
+        4220733164, "deleted_from_listing": false, "hold": false, "answer": {"text":
+        "Tengo st9ck. Solo 10 20 y 30 grados", "status": "ACTIVE", "date_created":
+        "2016-08-09T16:13:46.000-04:00"}, "from": {"id": 90005936, "answered_questions":
+        2}}, {"date_created": "2016-08-09T16:14:50.000-04:00", "item_id": "MLA630069891",
+        "seller_id": 128828674, "status": "ANSWERED", "text": "Gracias por responder
+        tan r\u00e1pido, necesito 10, tenes stock?", "id": 4220615530, "deleted_from_listing":
+        false, "hold": false, "answer": {"text": "Solo 5 en 30 grados. Puedo enviarte
+        5 en 30 y 5 en 20 grados. O sino sino tengo de 0.1 y 0.2mm en 30 grados. Pero
+        5 de.cada.una", "status": "ACTIVE", "date_created": "2016-08-09T16:17:25.000-04:00"},
+        "from": {"id": 90005936, "answered_questions": 2}}, {"date_created": "2016-08-09T18:02:30.000-04:00",
+        "item_id": "MLA630069843", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Ademas de esta tenes otras fresas para cortar madera.? Tenes alguna que sirva
+        para aluminio?", "id": 4220918704, "deleted_from_listing": false, "hold":
+        false, "answer": {"text": "solo tengo 0.1, 0.2, 0.3mm en 10, 20 y 30 grados",
+        "status": "ACTIVE", "date_created": "2016-08-09T18:04:02.000-04:00"}, "from":
+        {"id": 57758733, "answered_questions": 3}}, {"date_created": "2016-08-09T18:04:42.000-04:00",
+        "item_id": "MLA630069843", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Y estas para que trbajos y materiales sirven?", "id": 4220920719, "deleted_from_listing":
+        false, "hold": false, "answer": {"text": "mira, la gente me las compra para
+        realizar fresados en PCB (plaquetas de electronica)", "status": "ACTIVE",
+        "date_created": "2016-08-09T18:06:12.000-04:00"}, "from": {"id": 57758733,
+        "answered_questions": 3}}, {"date_created": "2016-08-09T18:07:58.000-04:00",
+        "item_id": "MLA629867547", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "De que voltage es?  Que vida util tiene? Cuantos hp es?", "id": 4220924969,
+        "deleted_from_listing": false, "hold": false, "answer": {"text": "0,53 HP
+        (convirtiendo los 400W) como dice la publicacion funciona de 12 a 48v", "status":
+        "ACTIVE", "date_created": "2016-08-09T18:12:32.000-04:00"}, "from": {"id":
+        57758733, "answered_questions": 1}}, {"date_created": "2016-08-09T18:07:02.000-04:00",
+        "item_id": "MLA630069843", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Ha si para eso la quiero. Pero prefu taba para ver si servia para otra aplicacion
+        tsmbien...", "id": 4220923887, "deleted_from_listing": false, "hold": false,
+        "answer": {"text": "me mataste, seguro q se pueden usar para otros usos pero
+        no estan disenadas para esos", "status": "ACTIVE", "date_created": "2016-08-09T18:15:13.000-04:00"},
+        "from": {"id": 57758733, "answered_questions": 3}}, {"date_created": "2016-08-09T18:13:56.000-04:00",
+        "item_id": "MLA629867547", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "El motor es de corriente continua?", "id": 4220932201, "deleted_from_listing":
+        false, "hold": false, "answer": {"text": "si", "status": "ACTIVE", "date_created":
+        "2016-08-09T18:15:23.000-04:00"}, "from": {"id": 57758733, "answered_questions":
+        2}}, {"date_created": "2016-08-09T18:13:08.000-04:00", "item_id": "MLA629847626",
+        "seller_id": 128828674, "status": "ANSWERED", "text": "hola, tenes algo mas
+        economico? es para unos motores de 5,8 nm, ma\u00f1ana ando por rosario. si
+        tenes lo paso a buscar, saludos.", "id": 4220931097, "deleted_from_listing":
+        false, "hold": false, "answer": {"text": "No solo este es el mas barato te
+        puedo hacer una anteci\u00f3n por cantidad. No se cuantos necesitas.", "status":
+        "ACTIVE", "date_created": "2016-08-09T18:16:10.000-04:00"}, "from": {"id":
+        6616985, "answered_questions": 4}}, {"date_created": "2016-08-09T18:25:42.000-04:00",
+        "item_id": "MLA629847626", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "por el momento solo 2, en ml esta el mismo publicado un poquito mas caro,
+        pero te hacen factura A, a mi me queda un poco a trasmano donde lo venden,
+        prefiriria compratelo a vos, vos tenes local?", "id": 4220945262, "deleted_from_listing":
+        false, "hold": false, "answer": {"text": "Hola Esteban, no tengo local, lo
+        siento. Ye puedo dejar 1600 cada uno. Pero agradecer\u00eda el pago por mercadopago.
+        Lamentablemente por temas de seguridad intento no aceptar dinero en mi domicilio.
+        Otra cosa que puedo hacer por las dos unidades es bonificarte el env\u00edo
+        por Oca hasta tu ciudad. Solo avisame q los publico con env\u00edo gratis
+        a 3400 los 2. Como quieras. Fijate que mis calificaciones hablan del servicio
+        y calidad de mis productos!", "status": "ACTIVE", "date_created": "2016-08-09T18:44:35.000-04:00"},
+        "from": {"id": 6616985, "answered_questions": 4}}, {"date_created": "2016-08-09T20:20:33.000-04:00",
+        "item_id": "MLA630074629", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Ten\u00e9s un tornillo de 1200 mm para esta rosca ? cuanto me saldr\u00eda
+        todo ?", "id": 4221158140, "deleted_from_listing": false, "hold": false, "answer":
+        {"text": "Te puedo ofrecer uno de 118cm mecanizado con la tuerca. De un cliente
+        q no lo retir\u00f3. Te lo dejo en 5500 . Avisame y lo publico.", "status":
+        "ACTIVE", "date_created": "2016-08-09T20:31:55.000-04:00"}, "from": {"id":
+        191561754, "answered_questions": 3}}, {"date_created": "2016-08-09T21:16:51.000-04:00",
+        "item_id": "MLA630074629", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Necesito un poco de asesoramiento, nunca us\u00e9 esta soluci\u00f3n. La
+        idea es levantar 200 kg (empuje vertical) con una velocidad de entre 10 y
+        20 mm/seg \u00bfqu\u00e9 motor necesitar\u00eda?\u00bfvos me lo pod\u00e9s
+        proveer?", "id": 4221223390, "deleted_from_listing": false, "hold": false,
+        "answer": {"text": "Mira. Si las guias son de buena calidad no vas tener problemas.
+        El tornillo va m\u00e1s q sobrado para eso. Yo muevo horizontalmente 300 kg
+        sin problema con un tornillo de 16 pero usando guias lineales hiwin. El motor
+        por ser vertical y necesitas velocidad usar\u00eda un motor servo. La verdad
+        q no tengo para sacar las cuentas aca. Necesitas mucha precisi\u00f3n? El
+        tema q con un ser o de te encarece much\u00edsimo el costo. Sino un paso a
+        paso pero un nema42 con un dr8ver de 150 o mejor 200v", "status": "ACTIVE",
+        "date_created": "2016-08-09T21:26:29.000-04:00"}, "from": {"id": 191561754,
+        "answered_questions": 3}}, {"date_created": "2016-08-09T21:22:55.000-04:00",
+        "item_id": "MLA629847626", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "ok, bueno vos tb podes ver mis calificaciones y veras que soy de buen comprar,
+        por mp se me complica por que tengo una deuda con ml de una venta que nunca
+        se concreto y estos tipos me quieren cobrar la comision, mi idea es simplificar
+        la operacion, no se alla..pero aca cada vez q vas a oca te perdes medio dia,
+        para mayor tranquilidad tuya si queres te invito a que vengas a mi casa que
+        tengo alla en funes, es muy facil llegar esta sobre la calle mendoza. y sino
+        nos podriamos encontrar en cualquier otro lugar que prefieras, yo ma\u00f1ana
+        voy para alla y me quedo hasta el viernes. entonces seria 3200 las 2 unidades.
+        no?", "id": 4221323786, "deleted_from_listing": false, "hold": false, "answer":
+        {"text": "Si dale. Nos juntamos ma\u00f1ana yo estar\u00e9 desocupado despu\u00e9s
+        de las 17 seguro. Oferta as\u00ed te pasan mis datos y nos comunicamos", "status":
+        "ACTIVE", "date_created": "2016-08-09T21:31:43.000-04:00"}, "from": {"id":
+        6616985, "answered_questions": 4}}, {"date_created": "2016-08-10T12:03:24.000-04:00",
+        "item_id": "MLA630074629", "seller_id": 128828674, "status": "ANSWERED", "text":
+        "Necesito m\u00e1s seguridad que precisi\u00f3n porque se trata de elevar
+        una persona que con el controlador del motor subir\u00eda/bajar\u00eda la
+        plataforma. Me dar\u00edas una idea de costo del motor o las caracter\u00edsticas
+        que me recomendar\u00edas para buscarlo ? podr\u00eda ser el tornillo de m\u00e1s
+        longitud, por ejemplo 1700 mm ? en ese caso la velocidad podr\u00eda ser de
+        30 a 40 mm/seg.", "id": 4222286800, "deleted_from_listing": false, "hold":
+        false, "answer": {"text": "Tendr\u00eda q averiguarlo escr\u00edbeme y en
+        unos d\u00edas te respondo", "status": "ACTIVE", "date_created": "2016-08-10T13:30:47.000-04:00"},
+        "from": {"id": 191561754, "answered_questions": 3}}], "filters": {"limit":
+        50, "offset": 0, "is_admin": false, "sorts": [], "caller": 128828674, "seller":
+        128828674}, "available_filters": [{"id": "item", "name": "Item", "type": "text"},
+        {"id": "from", "name": "From user id", "type": "number"}, {"id": "totalDivisions",
+        "name": "total divisions", "type": "number"}, {"id": "division", "name": "Division",
+        "type": "number"}, {"id": "status", "name": "Status", "type": "text", "values":
+        ["ANSWERED", "BANNED", "CLOSED_UNANSWERED", "DELETED", "DISABLED", "UNANSWERED",
+        "UNDER_REVIEW"]}], "available_sorts": ["item_id", "from_id", "date_created",
+        "seller_id"]}'}
+    headers:
+      Access-Control-Allow-Headers: [Content-Type]
+      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Max-Age: ['86400']
+      Cache-Control: [max-age=0]
+      Connection: [keep-alive]
+      Content-Type: [application/json;charset=UTF-8]
+      Date: ['Sat, 29 Dec 2018 23:25:34 GMT']
+      ETag: [9e80f5253821b914dfb1eb9fa5f7e2c9]
+      Transfer-Encoding: [chunked]
+      Vary: ['Accept,Accept-Encoding,Accept-Encoding']
+      Via: [1.1 2214dfb3e0f8a4f3896446ba34c9d6f5.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [gFjr9EJJcCahJO8UT785wa2Bm_fASeubOPAhPbi9GzODKRKU_7skaA==]
+      X-Cache: [Miss from cloudfront]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [DENY]
+      X-Request-Id: [4c2c038f-60ee-49bb-9bba-46c981b9073f]
+      X-XSS-Protection: [1; mode=block]
+      content-length: ['27498']
+    status: {code: 200, message: ''}
+version: 1
