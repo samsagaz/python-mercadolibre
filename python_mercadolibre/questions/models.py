@@ -1,18 +1,5 @@
 from collections import namedtuple
 
-Questions = namedtuple('Questions', [
-    "date_created",
-    "item_id",
-    "seller_id",
-    "status",
-    "text",
-    "id",
-    "deleted_from_listing",
-    "hold",
-    "answer",
-    "from_customer"
-    ])
-
 Answer = namedtuple("Answer", ["text", "status", "date_created"])
 FromCustomer = namedtuple("From", ["id", "answered_questions"])
 
