@@ -6,9 +6,9 @@ FromCustomer = namedtuple("From", ["id", "answered_questions"])
 
 class QuestionModel:
     def __init__(self, **kwargs):
+        self.raw_data = dict(**kwargs)
         if 'from' in kwargs:
             kwargs['from_customer'] = kwargs.pop('from')
-        self.raw_data = dict(**kwargs)
         self.__dict__.update(kwargs)
         if hasattr(self, 'from_customer'):
             self.from_customer = FromCustomer(**self.from_customer)
@@ -20,6 +20,3 @@ class QuestionModel:
             return self.__dict__ == other.__dict__
         else:
             return NotImplemented
-
-    def __repr__(self):
-        return super().__repr__()
