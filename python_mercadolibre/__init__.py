@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 python-mercadolibre
 ~~~~~~~~~~~~~~~~~~~
@@ -19,10 +17,10 @@ __copyright__ = 'Copyright (c) 2018-2019 Jose Luis Zanotti'
 __license__ = 'GPLv3'
 
 import os
-from .applications import Applications
 from .base import PyMe
+from .applications import Applications
 from .users.api import User, Search
-
+from .questions.api import Question
 
 CLIENT_ID = os.environ.get('CLIENT_ID', None)
 CLIENT_SECRET = os.environ.get('CLIENT_SECRET', None)

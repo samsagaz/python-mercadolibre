@@ -1,5 +1,6 @@
 from python_mercadolibre.base import PyMe
 from .models import Profile
+from python_mercadolibre.questions.models import QuestionModel
 
 
 class Search(PyMe):
@@ -31,11 +32,15 @@ class User(PyMe):
     """
     user_url = "/users"
     profile_url = "/me"
+
     URLS = {
         'myself': '/users/me',
         'test_user': '/test_user',
         'user_info': '/users/{user_id}',
     }
+
+    def __repr__(self):
+        return "<Pyme-Api-User>"
 
     def full_url(self, relativ_url):
         return f"{self.user_url}{relativ_url}"
@@ -45,8 +50,13 @@ class User(PyMe):
         data = self._call_api('get', self.full_url(self.profile_url))
         return Profile(**data)
 
-    def __repr__(self):
-        return "<Pyme-Api-User>"
+    def blacklisted_questions(self, user_id):
+        """ Get blacklisted questions from user """
+        url = self.full_url(f"/{user_id}/questions_blacklist")
+        data = self._call_api('get', url)
+        if not data:
+            return "Question not found"
+        return QuestionModel(**data)
 
     def create_test_user(self, site_id):
 
