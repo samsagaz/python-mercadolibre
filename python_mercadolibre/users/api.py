@@ -46,7 +46,7 @@ class User(PyMe):
         return Profile(**data)
 
     def __repr__(self):
-        return "<Pyme-Api-User>"
+        return "<PyMe-Api-User>"
 
     def create_test_user(self, site_id):
 

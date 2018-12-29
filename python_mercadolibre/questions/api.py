@@ -51,4 +51,4 @@ class Question(PyMe):
         return QuestionModel(**data)
 
     def __repr__(self):
-        return "<Pyme-Api-Question>"
+        return "<PyMe-Api-Question>"
