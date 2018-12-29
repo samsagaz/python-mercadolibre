@@ -12,6 +12,7 @@ class Question(PyMe):
     question_by_id = "/"
     questions_by_seller = "/search?seller_id="
     questions_by_item = "/search?item="
+    my_questions = "/my/received_questions/search"
 
     def full_url(self, relativ_url, *args):
         total_args = '&'.join(args)
@@ -45,6 +46,14 @@ class Question(PyMe):
     def by_question_id(self, question_id):
         """ Get questions by question ID """
         url = self.full_url(self.question_by_id, question_id)
+        data = self._call_api('get', url)
+        if not data:
+            return "Question not found"
+        return QuestionModel(**data)
+
+    def received(self):
+        """ Get questions """
+        url = self.my_questions
         data = self._call_api('get', url)
         if not data:
             return "Question not found"
