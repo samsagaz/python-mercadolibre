@@ -13,7 +13,7 @@ interactions:
     uri: https://api.mercadolibre.com/oauth/token
   response:
     body: {string: '{"access_token": "HIDDEN", "token_type": "bearer", "expires_in":
-        21600, "scope": "offline_access read write", "user_id": "HIDDEN", "refresh_token":
+        21600, "scope": "offline_access read write", "user_id": 123456789, "refresh_token":
         "HIDDEN"}'}
     headers:
       Access-Control-Allow-Headers: [Content-Type]
@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Fri, 21 Dec 2018 07:45:01 GMT']
-      ETag: [220116db9f2288d3d0c6404671a22bd3]
+      Date: ['Sun, 30 Dec 2018 17:10:05 GMT']
+      ETag: [50d98313a22aa2651f51856fb1b474c2]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 8b1c1823a9db474c5721c440e560ca5e.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [5n2HuoaTzwPX6rQeb1VAKaYKFtl4Rmsyk9ogTJsOdqxYoxilhjKZ3g==]
+      Via: [1.1 947c54b45c3c8c597031c85dd8160216.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [WYHArtxZe7Q_dTgA0XWIYh_grbhbcgEyss5ZuqBEXwWS34L1OfcQsg==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [9623593d-1e9e-4663-843f-45ad5d4781c1]
+      X-Request-Id: [482c0385-2abf-4b25-a3ba-b591af231420]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -46,10 +46,12 @@ interactions:
     method: GET
     uri: https://api.mercadolibre.com/users/HIDDEN
   response:
-    body: {string: '{"id": "HIDDEN", "nickname": "HIDDEN", "registration_date": "2012-11-14T02:00:25.000-04:00",
+    body: {string: '{"id": 123456789, "nickname": "HIDDEN", "registration_date": "2012-11-14T02:00:25.000-04:00",
         "first_name": "Jose Luis", "last_name": "HIDDEN", "gender": "", "country_id":
-        "AR", "email": "HIDDEN", "identification": "HIDDEN", "internal_tags": ["developer"],
-        "address": "HIDDEN", "phone": "HIDDEN", "alternative_phone": "HIDDEN", "user_type":
+        "AR", "email": "HIDDEN", "identification": 123456789, "internal_tags": ["developer"],
+        "address": {"address": "some address", "city": "some city", "state": "some
+        state", "zip_code": "1234"}, "phone": {"area_code": "area", "extension": "extension",
+        "number": "number", "verified": false}, "alternative_phone": 123456789, "user_type":
         "normal", "tags": ["normal", "user_info_verified", "credits_priority_3", "credits_profile",
         "eshop", "developer", "messages_as_seller", "messages_as_buyer"], "logo":
         null, "points": 687, "site_id": "MLA", "permalink": "HIDDEN", "shipping_modes":
@@ -71,9 +73,7 @@ interactions:
         "personal", "mercadopago_tc_accepted": true, "required_action": "", "sell":
         {"allow": true, "codes": [], "immediate_payment": {"reasons": [], "required":
         false}}, "site_status": "active", "user_type": "simple_registration"}, "secure_email":
-        "HIDDEN", "company": {"brand_name": "Beol Sae", "city_tax_id": null, "corporate_name":
-        "Jose Luis Zanotti", "identification": null, "state_tax_id": "20277707447",
-        "soft_descriptor": "BEOLSAE"}, "credit": {"consumed": -72.58, "credit_level_id":
+        "HIDDEN", "company": 123456789, "credit": {"consumed": -72.58, "credit_level_id":
         "MLA1", "rank": "premium"}, "context": {}, "thumbnail": {"picture_id": "586705-MLA25080009239_102016",
         "picture_url": "https://mla-s2-p.mlstatic.com/586705-MLA25080009239_102016-O.jpg"}}'}
     headers:
@@ -85,13 +85,13 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['2565']
       Content-Type: [application/json; charset=utf-8]
-      Date: ['Fri, 21 Dec 2018 07:45:01 GMT']
-      Via: [1.1 8b1c1823a9db474c5721c440e560ca5e.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [lcL9-XmKXbgTpFlobJPFOhNZ_59OMxIDTVcNMKNZNjU8JTJLAvcVRQ==]
+      Date: ['Sun, 30 Dec 2018 17:10:05 GMT']
+      Via: [1.1 947c54b45c3c8c597031c85dd8160216.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [IqSK5EijPt-55HJU_QGXRw4Rvv4qkS0-tpUhpX77as-oMvMwFIflIQ==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [d71f06f1-9881-4979-ac6d-9aa4b3e69b5f]
+      X-Request-Id: [bef1315a-3492-4767-a4c5-75372d39acd5]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 version: 1

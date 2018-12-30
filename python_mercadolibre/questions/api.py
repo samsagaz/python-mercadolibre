@@ -1,5 +1,6 @@
 from python_mercadolibre.base import PyMe
 from python_mercadolibre.questions.models import QuestionModel
+from python_mercadolibre.users.models import Profile
 
 
 class Question(PyMe):
@@ -19,9 +20,14 @@ class Question(PyMe):
         url = f"{self.question_url}{relativ_url}{total_args}"
         return url
 
-    def by_seller(self, seller_id):
+    def by_seller(self, seller):
         """ Get questions from registered user."""
-        url = self.full_url(self.questions_by_seller, seller_id)
+        if not isinstance(seller, bool):
+            seller_id = int(seller)
+        else:
+            raise TypeError('Type not allowed in seller')
+
+        url = self.full_url(self.questions_by_seller, str(seller_id))
         data = self._call_api('get', url)
         if not data:
             return "Question not found"
@@ -35,9 +41,13 @@ class Question(PyMe):
             return "Question not found"
         return QuestionModel(**data)
 
-    def by_customer_in_item(self, item_id, customer_id):
+    def by_customer_in_item(self, item_id, seller):
         """ Get questions from item from specific customer """
-        url = self.full_url(self.questions_by_item, item_id, 'from='+customer_id)
+        seller_id = str(seller)
+        if isinstance(seller, Profile):
+            seller_id = str(seller.id)
+
+        url = self.full_url(self.questions_by_item, item_id, 'from='+seller_id)
         data = self._call_api('get', url)
         if not data:
             return "Question not found"

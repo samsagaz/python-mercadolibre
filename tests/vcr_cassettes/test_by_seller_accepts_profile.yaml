@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 17:10:04 GMT']
-      ETag: [a585026df4637e01027d5abd40ad0f2a]
+      Date: ['Sun, 30 Dec 2018 17:10:00 GMT']
+      ETag: [5da3326f7c3780de5f855b4a58b80483]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 a6efb358cc5f88adbf98d58d00ceb387.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [sS73vuMvIhYoZDwfbnX8h3FmtAprfDD_Bmqwfgnso2-mf7kWFRFDhQ==]
+      Via: [1.1 78fa46a1b20cd5013525ca0f9d13e6d8.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [eA0vuvs4Ick6OJQzNlt9ZBmnWPaMCvRM-O0upx03z293uJr0_fS5cA==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [f2084c34-20da-410c-90c3-10d51ee61721]
+      X-Request-Id: [f4ed2486-f65d-4bf3-bcce-38b085265460]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -85,13 +85,93 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['2565']
       Content-Type: [application/json; charset=utf-8]
-      Date: ['Sun, 30 Dec 2018 17:10:04 GMT']
-      Via: [1.1 a6efb358cc5f88adbf98d58d00ceb387.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [skvGENXXLUWO-XUwE5fFbTrZ2v6eKJ3rzJgklsR4h_Q4OSYYSD20_A==]
+      Date: ['Sun, 30 Dec 2018 17:10:00 GMT']
+      Via: [1.1 78fa46a1b20cd5013525ca0f9d13e6d8.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [xEdvZPAmcoaf6QkKXII3wO-bOEBTlbsrZ6Pnkk_lHl1J4RqlFoHDPw==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [71ee2866-9610-4220-94ff-488816b6d2be]
+      X-Request-Id: [d7e0ef3f-dfc3-4d21-bba7-ea6d9270e606]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
+- request:
+    body: grant_type=client_credentials&client_id=HIDDEN&client_secret=HIDDEN
+    headers:
+      Accept: [application/json]
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [HIDDEN]
+      Connection: [keep-alive]
+      Content-Length: ['103']
+      Content-Type: [application/x-www-form-urlencoded;charset=UTF-8]
+      User-Agent: [python-requests/2.21.0]
+    method: POST
+    uri: https://api.mercadolibre.com/oauth/token
+  response:
+    body: {string: '{"access_token": "HIDDEN", "token_type": "bearer", "expires_in":
+        21600, "scope": "offline_access read write", "user_id": 123456789, "refresh_token":
+        "HIDDEN"}'}
+    headers:
+      Access-Control-Allow-Headers: [Content-Type]
+      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Max-Age: ['86400']
+      Cache-Control: [max-age=0]
+      Connection: [keep-alive]
+      Content-Type: [application/json;charset=UTF-8]
+      Date: ['Sun, 30 Dec 2018 17:10:00 GMT']
+      ETag: [1853418cbb4961be317ea66e53144edf]
+      Strict-Transport-Security: [max-age=15724800]
+      Transfer-Encoding: [chunked]
+      Vary: ['Accept,Accept-Encoding']
+      Via: [1.1 fc198c119db4c566efbf9edf1d8df38f.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [CcrDlhkkZDmjoimYucXa_W2kEzDm7Mp1gk15P4z57caT6nwVt3rjtw==]
+      X-Cache: [Miss from cloudfront]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [DENY]
+      X-Request-Id: [0ad3707f-cec8-4389-809d-2d1fd294012f]
+      X-XSS-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.21.0]
+    method: GET
+    uri: https://api.mercadolibre.com/questions/search
+  response:
+    body: {string: '{"total": 2994, "limit": 50, "questions": [{"date_created": "2016-08-01T16:50:15.000-04:00",
+        "item_id": "MLA12312123", "seller_id": 123456789, "status": "ANSWERED", "text":
+        "ok", "id": 123123123123, "deleted_from_listing": false, "hold": false, "answer":
+        {"text": "Publicadas!!!.", "status": "ACTIVE", "date_created": "2016-08-01T17:23:55.000-04:00"},
+        "from": {"id": 123456789, "answered_questions": 6}}], "filters": 123456789,
+        "available_filters": [{"id": "item", "name": "Item", "type": "text"}, {"id":
+        "from", "name": "From user id", "type": "number"}, {"id": "totalDivisions",
+        "name": "total divisions", "type": "number"}, {"id": "division", "name": "Division",
+        "type": "number"}, {"id": "status", "name": "Status", "type": "text", "values":
+        ["ANSWERED", "BANNED", "CLOSED_UNANSWERED", "DELETED", "DISABLED", "UNANSWERED",
+        "UNDER_REVIEW"]}], "available_sorts": ["item_id", "from_id", "date_created",
+        "seller_id"]}'}
+    headers:
+      Access-Control-Allow-Headers: [Content-Type]
+      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Max-Age: ['86400']
+      Cache-Control: [max-age=0]
+      Connection: [keep-alive]
+      Content-Type: [application/json;charset=UTF-8]
+      Date: ['Sun, 30 Dec 2018 17:10:01 GMT']
+      ETag: [f4e2cc8efdd999f4fa645ce26cb76687]
+      Transfer-Encoding: [chunked]
+      Vary: ['Accept,Accept-Encoding,Accept-Encoding']
+      Via: [1.1 fc198c119db4c566efbf9edf1d8df38f.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [NFKTTIwERpVs2Q7HO340iaHeRSzySiQ598Y38ngfS81cI44goca5cQ==]
+      X-Cache: [Miss from cloudfront]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [DENY]
+      X-Request-Id: [70e14c13-c4e8-4c66-aeaf-9ddd908862b6]
+      X-XSS-Protection: [1; mode=block]
+      content-length: ['27498']
+    status: {code: 200, message: ''}
 version: 1
