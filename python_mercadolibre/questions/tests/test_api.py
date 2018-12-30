@@ -14,18 +14,21 @@ def test_by_seller_accepts_profile():
     assert isinstance(questions_by_seller, QuestionModel)
 
 
+@pytest.mark.vcr()
 def test_by_seller_accepts_integer():
     question = Question()
     questions_by_seller = question.by_seller(int(os.environ.get("USER_ID")))
     assert isinstance(questions_by_seller, QuestionModel)
 
 
+@pytest.mark.vcr()
 def test_by_seller_accepts_string():
     question = Question()
     questions_by_seller = question.by_seller(str(os.environ.get("USER_ID")))
     assert isinstance(questions_by_seller, QuestionModel)
 
 
+@pytest.mark.vcr()
 def test_by_seller_accepts_boolean():
     question = Question()
     with pytest.raises(TypeError):
