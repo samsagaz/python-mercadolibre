@@ -13,7 +13,7 @@ interactions:
     uri: https://api.mercadolibre.com/oauth/token
   response:
     body: {string: '{"access_token": "HIDDEN", "token_type": "bearer", "expires_in":
-        21600, "scope": "offline_access read write", "user_id": "HIDDEN", "refresh_token":
+        21600, "scope": "offline_access read write", "user_id": 123456789, "refresh_token":
         "HIDDEN"}'}
     headers:
       Access-Control-Allow-Headers: [Content-Type]
@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Fri, 21 Dec 2018 07:45:04 GMT']
-      ETag: [4c8500533786b20ef2b971c3622d6cd4]
+      Date: ['Sun, 30 Dec 2018 17:00:43 GMT']
+      ETag: [05445efd838611c9bd2a6e78c71e50d2]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 28a30873e1e5b92657cf0bcd1c7e4c84.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [pJLqctnTMjPvMpQSpViwOpVDy5zXujtsqW0LE7xn1VuCM0ROCit2WA==]
+      Via: [1.1 2cfe839fdaca43d6534effad9e19b353.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [MOqxjE5CQNvLVVLGyZGp5LqkNY82ziSDhLTMWcH8U_DehZfuVLc7yw==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [d2732b8d-621f-4b58-bcbf-4de0e0ca1a2c]
+      X-Request-Id: [a18506de-cfc8-463b-b2d5-ddb5b62b71fe]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -76,17 +76,16 @@ interactions:
       Access-Control-Max-Age: ['86400']
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Fri, 21 Dec 2018 07:45:05 GMT']
+      Date: ['Sun, 30 Dec 2018 17:00:44 GMT']
       ETag: ['"0036b01054610114867ea1fee6a224360"']
-      Transfer-Encoding: [chunked]
       Vary: [Accept-Encoding]
-      Via: [1.1 28a30873e1e5b92657cf0bcd1c7e4c84.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [YUZzszUAHkvMXxmeGNVI1beakXEi7L5InSMgKBdt20iahAktTpZZWQ==]
+      Via: [1.1 2cfe839fdaca43d6534effad9e19b353.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [KDVjwjaOSWGNGqdwQPyC62b6nDF528mx5x-aj6Q3HxSq5F-f8lyyfA==]
       X-Application-Context: ['application:prod']
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [6b3944af-d07e-4d32-8c34-0a91b42a4118]
+      X-Request-Id: [c6fa7dcf-b1de-4f87-a09a-17155167dfee]
       X-XSS-Protection: [1; mode=block]
       content-length: ['2248']
     status: {code: 200, message: ''}

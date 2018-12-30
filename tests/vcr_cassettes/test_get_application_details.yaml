@@ -13,7 +13,7 @@ interactions:
     uri: https://api.mercadolibre.com/oauth/token
   response:
     body: {string: '{"access_token": "HIDDEN", "token_type": "bearer", "expires_in":
-        21600, "scope": "offline_access read write", "user_id": "HIDDEN", "refresh_token":
+        21600, "scope": "offline_access read write", "user_id": 123456789, "refresh_token":
         "HIDDEN"}'}
     headers:
       Access-Control-Allow-Headers: [Content-Type]
@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Fri, 21 Dec 2018 07:44:59 GMT']
-      ETag: [6e890525ab474339e27fb8fa51119420]
+      Date: ['Sun, 30 Dec 2018 17:00:39 GMT']
+      ETag: [d0e1c40749342553c25d9f195abac1c0]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 48c98e6b03793ade760da023d3cecb03.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [Lbe9qsJ7fHrGlzhrU_d38bQG6CDfCXj02XPEVkdt12NaMeaNqgTgNQ==]
+      Via: [1.1 1fd7f1e10a887febe671a5af6cee08c6.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [geOP-lEax-6CEQeQH71uPsxoYzcSYBuAp0-J1r2cMuxI8SUhKRy4-A==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [e5fd56f6-7365-46f8-a1f3-58cc2c5c8e20]
+      X-Request-Id: [c783d7b0-614f-499c-acd4-0af217f20044]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -46,12 +46,12 @@ interactions:
     method: GET
     uri: https://api.mercadolibre.com/applications/HIDDEN
   response:
-    body: {string: '{"id": "HIDDEN", "site_id": "MLA", "name": "HIDDEN", "description":
-        "mercadeo", "thumbnail": null, "owner_id": "HIDDEN", "catalog_product_id":
-        null, "item_id": null, "price": null, "currency_id": null, "need_authorization":
+    body: {string: '{"id": 123456789, "site_id": "MLA", "name": "HIDDEN", "description":
+        "mercadeo", "thumbnail": null, "owner_id": 123456789, "catalog_product_id":
+        null, "item_id": 123456789, "price": null, "currency_id": null, "need_authorization":
         true, "short_name": "HIDDEN", "url": "HIDDEN", "callback_url": "https://localhost:8000/auth",
         "sandbox_mode": false, "is_public": true, "project_id": 0, "active": true,
-        "max_requests_per_hour": 18000, "scopes": ["read", "write", "offline_access"],
+        "max_requests_per_hour": 18000, "scopes": ["write", "offline_access", "read"],
         "notifications_callback_url": "https://localhost:8000/auth", "notifications_topics":
         ["claims", "quotations", "orders_v2", "items", "shipments", "payments", "pictures",
         "questions", "orders", "invoices", "created_orders", "messages"], "access_token":
@@ -68,17 +68,17 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['790']
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Fri, 21 Dec 2018 07:45:00 GMT']
-      ETag: [3b3c9efc748f0fc8da7671bd01af7eec]
+      Date: ['Sun, 30 Dec 2018 17:00:39 GMT']
+      ETag: [31c7624125d8258851748fda35523456]
       Vary: ['Accept,Accept-Encoding']
-      X-Amz-Cf-Id: [_fuiDV4Kg2cz3h35dWv_SEWKnodJG9TnDoECSoyRszBJw2PxCK7Hmg==]
+      X-Amz-Cf-Id: [Y3oupAbJt0WPVn_-jrDmi5OH9DsFV9lbZ9DjCkweqNHR4HVvPYAYSw==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [d5eacc34-442b-41ba-b451-394debdb2a79]
-      X-Varnish: ['3612275126']
+      X-Request-Id: [910560c4-56f6-4b1a-a524-476ef15d8035]
+      X-Varnish: ['1109639076']
       X-XSS-Protection: [1; mode=block]
-      via: ['Varnish (e-0001e842), 1.1 48c98e6b03793ade760da023d3cecb03.cloudfront.net
+      via: ['Varnish (e-00010065), 1.1 1fd7f1e10a887febe671a5af6cee08c6.cloudfront.net
           (CloudFront)']
     status: {code: 200, message: OK}
 version: 1
