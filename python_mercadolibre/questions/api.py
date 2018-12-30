@@ -8,7 +8,8 @@ class Question(PyMe):
     See: https://api.mercadolibre.com/questions
 
     """
-    question_url = '/questions'
+    question_url = "/questions"
+    answers_url = "/answers"
     question_by_id = "/"
     questions_by_seller = "/search?seller_id="
     questions_by_item = "/search?item="
@@ -28,9 +29,13 @@ class Question(PyMe):
         return [QuestionModel(**question) for question in data['questions']]
 
     def by_item(self, item_id):
-        """ Get questions from item."""
+        """ Get questions from item
+            Only Display questions with status = UNANSWERED
+        """
         url = self.full_url(self.questions_by_item, item_id)
+        print(url)
         data = self._call_api('get', url)
+        print(data)
         if not data:
             return "Question not found"
         return [QuestionModel(**question) for question in data['questions']]
@@ -68,6 +73,16 @@ class Question(PyMe):
         url = self.full_url(self.question_by_id, item_id)
         data = self._call_api('post', url, data)
         return QuestionPostModel(**data)
+
+    def answer_question(self, question_id, text):
+        data = {
+            'question_id': question_id,
+            'text': text
+            }
+        url = f"{self.answers_url}"
+        data = self._call_api('post', url, data)
+        print(data)
+        return [QuestionModel(**data)]
 
     def __repr__(self):
         return "<PyMe-Api-Question>"

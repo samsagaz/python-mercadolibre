@@ -46,3 +46,10 @@ def test_create_question():
     questions = pyme.Question()
     response = questions.create_question('MLA716819109', 'Tienen Stock?')
     assert isinstance(response, QuestionPostModel)
+
+
+@pytest.mark.vcr()
+def test_answer_question():
+    questions = pyme.Question()
+    response = questions.answer_question('6019488162', 'En Arroyito')
+    assert all(isinstance(question, QuestionModel) for question in response)

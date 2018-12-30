@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: grant_type=client_credentials&client_id=HIDDEN&client_secret=HIDDEN
+    headers:
+      Accept: [application/json]
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [HIDDEN]
+      Connection: [keep-alive]
+      Content-Length: ['103']
+      Content-Type: [application/x-www-form-urlencoded;charset=UTF-8]
+      User-Agent: [python-requests/2.21.0]
+    method: POST
+    uri: https://api.mercadolibre.com/oauth/token
+  response:
+    body: {string: '{"access_token": "HIDDEN", "token_type": "bearer", "expires_in":
+        21600, "scope": "offline_access read write", "user_id": "HIDDEN", "refresh_token":
+        "HIDDEN"}'}
+    headers:
+      Access-Control-Allow-Headers: [Content-Type]
+      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Max-Age: ['86400']
+      Cache-Control: [max-age=0]
+      Connection: [keep-alive]
+      Content-Type: [application/json;charset=UTF-8]
+      Date: ['Sun, 30 Dec 2018 03:19:32 GMT']
+      ETag: [94f01b79aa6cdeaf1196af12c4de69c3]
+      Strict-Transport-Security: [max-age=15724800]
+      Transfer-Encoding: [chunked]
+      Vary: ['Accept,Accept-Encoding']
+      Via: [1.1 d9d399cce883562921e673d4481304e5.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [dEFCWIHwWPEqGQAg85UyGn-IYElrIZez8EfIzHUAJQ-b1MKuOIohiA==]
+      X-Cache: [Miss from cloudfront]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [DENY]
+      X-Request-Id: [0a4e962f-f96d-4f1e-b420-3ac59cc82593]
+      X-XSS-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"question_id": "6019488162", "text": "En Arroyito"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['52']
+      User-Agent: [python-requests/2.21.0]
+    method: POST
+    uri: https://api.mercadolibre.com/answers
+  response:
+    body: {string: '{"id": "HIDDEN", "seller_id": "HIDDEN", "text": "en que zona estas?",
+        "status": "ANSWERED", "item_id": "HIDDEN", "date_created": "2018-12-29T23:16:15.000-04:00",
+        "hold": false, "deleted_from_listing": false, "answer": {"text": "En Arroyito",
+        "status": "ACTIVE", "date_created": "2018-12-29T23:19:32.694-04:00"}, "from":
+        {"id": "some id", "answered_questions": 1}}'}
+    headers:
+      Access-Control-Allow-Headers: [Content-Type]
+      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Max-Age: ['86400']
+      Connection: [keep-alive]
+      Content-Length: ['344']
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Sun, 30 Dec 2018 03:19:32 GMT']
+      Via: [1.1 d9d399cce883562921e673d4481304e5.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [MiXTxnU60KJUR_xTYN4OVqbyh8_-DolnrVq1sHG5THVOWTsu0DCxSQ==]
+      X-Cache: [Miss from cloudfront]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [DENY]
+      X-Request-Id: [7fc9fa34-2236-4f1e-83da-5d81f0153272]
+      X-XSS-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+version: 1
