@@ -13,7 +13,7 @@ interactions:
     uri: https://api.mercadolibre.com/oauth/token
   response:
     body: {string: '{"access_token": "HIDDEN", "token_type": "bearer", "expires_in":
-        21600, "scope": "offline_access read write", "user_id": "HIDDEN", "refresh_token":
+        21600, "scope": "offline_access read write", "user_id": 123456789, "refresh_token":
         "HIDDEN"}'}
     headers:
       Access-Control-Allow-Headers: [Content-Type]
@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Fri, 21 Dec 2018 07:45:03 GMT']
-      ETag: [082b39938d8cf62fa6c73edf3de52d65]
+      Date: ['Sun, 30 Dec 2018 16:38:09 GMT']
+      ETag: [35901396d00829898093c0292e4dd4ad]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 66c01028c5299e8340febd355d63ed58.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [lMIcHWAkWcv63GwxniltZCjYeL1KFyxlXIo_iSphsGiKzuz_j3bbJQ==]
+      Via: [1.1 2f2046a202f7d2913f91aad8900aab8e.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [mPLr7V_aw9lTxlFVUHQvYN_n8wOky9msKwU7D1EFgFzbyHZmB7AsLw==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [a035891a-39b6-49d8-a3ca-a660110e3b15]
+      X-Request-Id: [6cf2c6c1-1b99-46a8-a4f3-17708060c336]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -46,17 +46,17 @@ interactions:
     method: GET
     uri: https://api.mercadolibre.com/users/HIDDEN/addresses
   response:
-    body: {string: '[{"id": "HIDDEN", "user_id": "HIDDEN", "contact": "Jose Luis Zanotti",
-        "phone": "HIDDEN", "address_line": "HIDDEN", "floor": null, "apartment": null,
-        "street_number": "HIDDEN", "street_name": "HIDDEN", "zip_code": "2000", "city":
-        "HIDDEN", "state": "HIDDEN", "country": {"id": "AR", "name": "Argentina"},
+    body: {string: '[{"id": 123456789, "user_id": 123456789, "contact": "Jose Luis
+        Zanotti", "phone": "HIDDEN", "address_line": "HIDDEN", "floor": null, "apartment":
+        null, "street_number": "HIDDEN", "street_name": "HIDDEN", "zip_code": "2000",
+        "city": 123456789, "state": 123456789, "country": {"id": "AR", "name": "Argentina"},
         "neighborhood": {"id": null, "name": null}, "municipality": {"id": null, "name":
         null}, "search_location": {"state": {"id": "TUxBUFNBTmU5Nzk2", "name": "Santa
         Fe"}, "city": {"id": "TUxBQ1JPUzg1Yjg3", "name": "Rosario"}, "neighborhood":
         {"id": null, "name": null}}, "types": ["billing", "default_buying_address",
         "default_selling_address", "shipping"], "comment": "", "between": null, "references":
         null, "aditional_info": null, "geolocation_type": "RANGE_INTERPOLATED", "latitude":
-        "HIDDEN", "longitude": "HIDDEN", "status": "active", "date_created": "2015-10-19T21:37:23.000-04:00",
+        123456789, "longitude": 123456789, "status": "active", "date_created": "2015-10-19T21:37:23.000-04:00",
         "normalized": true, "open_hours": {"on_holidays": {"hours": [], "status":
         "closed"}}}]'}
     headers:
@@ -67,13 +67,13 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['977']
       Content-Type: [application/json; charset=utf-8]
-      Date: ['Fri, 21 Dec 2018 07:45:03 GMT']
-      Via: [1.1 66c01028c5299e8340febd355d63ed58.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [9Az00eltZ0k9CBdw78iLmym4SRTUjP1zr3mg8JobhpIEugfXXXtRag==]
+      Date: ['Sun, 30 Dec 2018 16:38:09 GMT']
+      Via: [1.1 2f2046a202f7d2913f91aad8900aab8e.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [s9A15InpOk41shYYEwg6jE3r41GE9C1syFHlVJhn0Th5GpzgDA67Mw==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [bb931d68-aab2-4ead-930b-454dc80cb832]
+      X-Request-Id: [fa151fd2-a71b-41e1-95e2-3571d9916cf0]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 version: 1
