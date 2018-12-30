@@ -1,5 +1,5 @@
 from python_mercadolibre.base import PyMe
-from python_mercadolibre.questions.models import QuestionModel
+from python_mercadolibre.questions.models import QuestionModel, QuestionPostModel
 
 
 class Question(PyMe):
@@ -47,7 +47,7 @@ class Question(PyMe):
         """ Get questions by question ID """
         url = self.full_url(self.question_by_id, question_id)
         data = self._call_api('get', url)
-        print(data)
+        print('123123123 ---- ' + str(data))
         if not data:
             return "Question not found"
         return [QuestionModel(**data)]
@@ -58,7 +58,7 @@ class Question(PyMe):
         data = self._call_api('get', url)
         if not data:
             return "Question not found"
-        return QuestionModel(**data)
+        return [QuestionModel(**question) for question in data['questions']]
 
     def create_question(self, item_id, text):
         data = {
@@ -67,7 +67,7 @@ class Question(PyMe):
             }
         url = self.full_url(self.question_by_id, item_id)
         data = self._call_api('post', url, data)
-        return QuestionModel(**data)
+        return QuestionPostModel(**data)
 
     def __repr__(self):
         return "<PyMe-Api-Question>"

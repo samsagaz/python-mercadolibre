@@ -20,3 +20,15 @@ class QuestionModel:
             return self.__dict__ == other.__dict__
         else:
             return NotImplemented
+
+
+class QuestionPostModel:
+    def __init__(self, **kwargs):
+        self.raw_data = dict(**kwargs)
+        self.__dict__.update(kwargs)
+
+    def __eq__(self, other):
+        if isinstance(other, QuestionModel):
+            return self.__dict__ == other.__dict__
+        else:
+            return NotImplemented

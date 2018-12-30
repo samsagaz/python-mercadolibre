@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sat, 22 Dec 2018 21:32:01 GMT']
-      ETag: [09d70f9115dd8101bcbc0eca3cfdb895]
+      Date: ['Sun, 30 Dec 2018 01:01:26 GMT']
+      ETag: [c9b8afba035795a7001dedd0f51e9d79]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 1f96356180bf9ca55995a3ddb74bbc36.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [m6khfFUVLuLVTm0f14b4aPuKUFGJgJhZ_2XrGqAf5kUVOBRdMTCndQ==]
+      Via: [1.1 7669d6d3fe12522f9fd169a6ce6587ea.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [5M0Nsc8pGxEDUZMYu5BurWEf3znVBFOe15q-zhOzy3DT2LoSvJeu5g==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [7622754c-aba8-458e-9b98-e5cabad902f3]
+      X-Request-Id: [692910d8-e120-47d3-96fe-15ccd6a19604]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -46,32 +46,38 @@ interactions:
     method: GET
     uri: https://api.mercadolibre.com/users/me
   response:
-    body: {string: '{"id": "HIDDEN", "nickname": "HIDDEN", "registration_date": "2011-04-01T07:42:50.000-04:00",
-        "first_name": "Eduardo Arturo", "last_name": "HIDDEN", "gender": "", "country_id":
+    body: {string: '{"id": "HIDDEN", "nickname": "HIDDEN", "registration_date": "2012-11-14T02:00:25.000-04:00",
+        "first_name": "Jose Luis", "last_name": "HIDDEN", "gender": "", "country_id":
         "AR", "email": "HIDDEN", "identification": "HIDDEN", "internal_tags": ["developer"],
-        "address": "HIDDEN", "phone": "HIDDEN", "alternative_phone": "HIDDEN", "user_type":
-        "normal", "tags": ["normal", "user_info_verified", "messages_as_seller", "messages_as_buyer"],
-        "logo": null, "points": 76, "site_id": "MLA", "permalink": "HIDDEN", "shipping_modes":
+        "address": {"address": "some address", "city": "some city", "state": "some
+        state", "zip_code": "1234"}, "phone": {"area_code": "area", "extension": "extension",
+        "number": "number", "verified": false}, "alternative_phone": "HIDDEN", "user_type":
+        "normal", "tags": ["normal", "user_info_verified", "credits_priority_3", "credits_profile",
+        "eshop", "developer", "messages_as_seller", "messages_as_buyer"], "logo":
+        null, "points": 687, "site_id": "MLA", "permalink": "HIDDEN", "shipping_modes":
         ["custom", "not_specified", "me2"], "seller_experience": "ADVANCED", "bill_data":
-        {"accept_credit_note": null}, "seller_reputation": {"level_id": "5_green",
-        "power_seller_status": null, "transactions": {"canceled": 0, "completed":
-        11, "period": "historic", "ratings": {"negative": 0, "neutral": 0, "positive":
-        1}, "total": 11}, "metrics": {"sales": {"period": "60 months", "completed":
-        11}, "claims": {"period": "60 months", "rate": 0}, "delayed_handling_time":
-        {"period": "60 months", "rate": 0}}}, "buyer_reputation": {"canceled_transactions":
-        0, "tags": [], "transactions": {"canceled": {"paid": 0, "total": 0}, "completed":
-        3, "not_yet_rated": {"paid": 0, "total": 1, "units": 1}, "period": "historic",
-        "total": 4, "unrated": {"paid": 0, "total": 0}}}, "status": {"billing": {"allow":
-        true, "codes": []}, "buy": {"allow": true, "codes": [], "immediate_payment":
-        {"reasons": [], "required": false}}, "confirmed_email": true, "shopping_cart":
-        {"buy": "allowed", "sell": "allowed"}, "immediate_payment": false, "list":
-        {"allow": true, "codes": [], "immediate_payment": {"reasons": [], "required":
-        false}}, "mercadoenvios": "not_accepted", "mercadopago_account_type": "personal",
-        "mercadopago_tc_accepted": true, "required_action": "", "sell": {"allow":
+        {"accept_credit_note": null}, "seller_reputation": {"level_id": "4_light_green",
+        "power_seller_status": null, "transactions": {"canceled": 13, "completed":
+        721, "period": "historic", "ratings": {"negative": 0, "neutral": 0, "positive":
+        1}, "total": 734}, "metrics": {"sales": {"period": "60 months", "completed":
+        721}, "claims": {"period": "60 months", "rate": 0.0095}, "delayed_handling_time":
+        {"period": "60 months", "rate": 0.0738}}}, "buyer_reputation": {"canceled_transactions":
+        0, "tags": [], "transactions": {"canceled": {"paid": null, "total": null},
+        "completed": null, "not_yet_rated": {"paid": null, "total": null, "units":
+        null}, "period": "historic", "total": null, "unrated": {"paid": null, "total":
+        null}}}, "status": {"billing": {"allow": true, "codes": []}, "buy": {"allow":
         true, "codes": [], "immediate_payment": {"reasons": [], "required": false}},
-        "site_status": "active", "user_type": "simple_registration"}, "secure_email":
-        "HIDDEN", "credit": {"consumed": 0, "credit_level_id": "MLA1", "rank": "premium"},
-        "context": {}}'}
+        "confirmed_email": true, "shopping_cart": {"buy": "allowed", "sell": "allowed"},
+        "immediate_payment": false, "list": {"allow": true, "codes": [], "immediate_payment":
+        {"reasons": [], "required": false}}, "mercadoenvios": "not_accepted", "mercadopago_account_type":
+        "personal", "mercadopago_tc_accepted": true, "required_action": "", "sell":
+        {"allow": true, "codes": [], "immediate_payment": {"reasons": [], "required":
+        false}}, "site_status": "active", "user_type": "simple_registration"}, "secure_email":
+        "HIDDEN", "company": {"brand_name": "Beol Sae", "city_tax_id": null, "corporate_name":
+        "Jose Luis Zanotti", "identification": null, "state_tax_id": "20277707447",
+        "soft_descriptor": "BEOLSAE"}, "credit": {"consumed": -72.58, "credit_level_id":
+        "MLA1", "rank": "premium"}, "context": {}, "thumbnail": {"picture_id": "586705-MLA25080009239_102016",
+        "picture_url": "https://mla-s2-p.mlstatic.com/586705-MLA25080009239_102016-O.jpg"}}'}
     headers:
       Access-Control-Allow-Headers: [Content-Type]
       Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
@@ -79,15 +85,15 @@ interactions:
       Access-Control-Max-Age: ['86400']
       Cache-Control: ['max-age=60,stale-while-revalidate=30, stale-if-error=120']
       Connection: [keep-alive]
-      Content-Length: ['2173']
+      Content-Length: ['2565']
       Content-Type: [application/json; charset=utf-8]
-      Date: ['Sat, 22 Dec 2018 21:32:03 GMT']
-      Via: [1.1 1f96356180bf9ca55995a3ddb74bbc36.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [cNhoWJBTEB71LDuIAdqwIi9JA484fUazaM_SmjQjlg75kHwQywVa0g==]
+      Date: ['Sun, 30 Dec 2018 01:01:26 GMT']
+      Via: [1.1 7669d6d3fe12522f9fd169a6ce6587ea.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [EqtGFByOb_lPm9VE-4mEsAXW4jq5X7C7MC4_9lE0kkkMaIwll2fl-w==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [1872b3ab-1d66-4aec-a4b2-4e637879fc1d]
+      X-Request-Id: [4509bb94-153c-4575-a6d3-6cde90174e36]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 version: 1

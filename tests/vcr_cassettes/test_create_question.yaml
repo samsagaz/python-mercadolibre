@@ -23,54 +23,52 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 01:01:23 GMT']
-      ETag: [b3e59d36f4275a7a45f843f58f16c72b]
+      Date: ['Sun, 30 Dec 2018 01:01:24 GMT']
+      ETag: [b0dd1a109fbc82e6ad9221fd5f3a40c7]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 34d8c70792917ad3716e29ddd7eb18fb.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [zL8Hj3HPIJWxS6-nZIz1MEWGjoTnaBLxn9ynu3d75ug_BlQzeh1aLA==]
+      Via: [1.1 2e55cece113d228d3967805a56664e6b.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [f35VMWYn2gLDwOFiWZNCEEUnuhkD8cQG89MCpFVh3gQKyXZvAIfnBg==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [0ea39ccc-e48e-4054-a605-91e6785ae668]
+      X-Request-Id: [b328af91-64bc-4669-9e6c-22056758a9bd]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
-    body: null
+    body: '{"item_id": "MLA716819109", "text": "Tienen Stock?"}'
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
+      Content-Length: ['52']
       User-Agent: [python-requests/2.21.0]
-    method: GET
-    uri: https://api.mercadolibre.com/questions/HIDDEN
+    method: POST
+    uri: https://api.mercadolibre.com/questions/MLA716819109
   response:
-    body: {string: '{"id": "HIDDEN", "seller_id": "HIDDEN", "text": "Necesito m\u00e1s
-        seguridad que precisi\u00f3n porque se trata de elevar una persona que con
-        el controlador del motor subir\u00eda/bajar\u00eda la plataforma. Me dar\u00edas
-        una idea de costo del motor o las caracter\u00edsticas que me recomendar\u00edas
-        para buscarlo ? podr\u00eda ser el tornillo de m\u00e1s longitud, por ejemplo
-        1700 mm ? en ese caso la velocidad podr\u00eda ser de 30 a 40 mm/seg.", "status":
-        "ANSWERED", "item_id": "HIDDEN", "date_created": "2016-08-10T12:03:24.000-04:00",
-        "hold": false, "deleted_from_listing": false, "answer": {"text": "Tendr\u00eda
-        q averiguarlo escr\u00edbeme y en unos d\u00edas te respondo", "status": "ACTIVE",
-        "date_created": "2016-08-10T13:30:47.000-04:00"}, "from": {"id": "some id"}}'}
+    body: {string: '{"id": "HIDDEN", "answer": null, "date_created": "2018-12-29T21:01:25.118-04:00",
+        "item_id": "HIDDEN", "seller_id": "HIDDEN", "status": "UNANSWERED", "text":
+        "Tienen Stock?", "from": {"id": "some id"}}'}
     headers:
       Access-Control-Allow-Headers: [Content-Type]
       Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
       Access-Control-Allow-Origin: ['*']
       Access-Control-Max-Age: ['86400']
+      Cache-Control: [max-age=0]
       Connection: [keep-alive]
-      Content-Length: ['739']
-      Content-Type: [application/json; charset=utf-8]
-      Date: ['Sun, 30 Dec 2018 01:01:23 GMT']
-      Via: [1.1 34d8c70792917ad3716e29ddd7eb18fb.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [zq24CDm0fK5pTnf7Pb3SYgGEBs6iaTAuW3dV5d69qsFqloyTAfUeNg==]
+      Content-Type: [application/json;charset=UTF-8]
+      Date: ['Sun, 30 Dec 2018 01:01:25 GMT']
+      ETag: [350380c17674b0570afd7a0c776d8a5a]
+      Location: ['https://api.mercadolibre.com/questions/6019166888']
+      Transfer-Encoding: [chunked]
+      Vary: ['Accept,Accept-Encoding']
+      Via: [1.1 2e55cece113d228d3967805a56664e6b.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [2dYB1fJmLHNWPW4sJFnQIbIpdme56hmAf7COJ3RvpJo5q8EocCFBEA==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [ffc93d4f-b982-4a6b-a990-bf78e866905d]
+      X-Request-Id: [a3a5a81f-d2d7-499d-8522-466c5d921597]
       X-XSS-Protection: [1; mode=block]
-    status: {code: 200, message: OK}
+    status: {code: 201, message: Created}
 version: 1

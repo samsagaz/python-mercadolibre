@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Fri, 21 Dec 2018 07:45:06 GMT']
-      ETag: [de0251160f5bec09228cc72fe579a67f]
+      Date: ['Sun, 30 Dec 2018 01:01:31 GMT']
+      ETag: [e857792a50e0c15133328f0ec7a6faf8]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 af3ec872aa77de6760622a554164a644.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [lpQhABHSLHsSHQ8YvZjP8hPvrK-RWSfBIlrXfVOs2h_UWFZ0Uov5pA==]
+      Via: [1.1 e9cb8d3aaac8aa81ce192c6c5a3ac921.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [uCG_Qe_h461MNZLbgWVVl0oMPBho-Azoh2iH8QgtAWNar4N-vZC14A==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [aa4065ce-24d9-4993-9be7-bf0afca977a7]
+      X-Request-Id: [084fa915-cd25-4d68-8940-06c2a01142ed]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -46,20 +46,34 @@ interactions:
     method: GET
     uri: https://api.mercadolibre.com/myfeeds
   response:
-    body: {string: '{"messages": [{"_id": "5c181060d42441b1716c9adb", "resource":
-        "/questions/5995837548", "user_id": "128828674", "topic": "questions", "application_id":
-        4607298613855815, "attempts": 1, "sent": "2018-12-17T21:08:48.586Z", "received":
-        "2018-12-17T21:08:48.527Z", "request": {"url": "https://localhost:8000/auth",
+    body: {string: '{"messages": [{"_id": "5c279d923f631b345f972dc2", "resource":
+        "/questions/6016804002", "user_id": "63947924", "topic": "questions", "application_id":
+        4607298613855815, "attempts": 1, "sent": "2018-12-29T16:15:14.033Z", "received":
+        "2018-12-29T16:15:13.956Z", "request": {"url": "https://localhost:8000/auth",
         "headers": {"host": "localhost:8000", "accept": "application/json", "content-type":
-        "application/json", "content-length": 197}, "data": "{\"resource\":\"/questions/5995837548\",\"user_id\":\"128828674\",\"topic\":\"questions\",\"application_id\":4607298613855815,\"attempts\":1,\"sent\":\"2018-12-17T21:08:48.586Z\",\"received\":\"2018-12-17T21:08:48.527Z\"}"},
-        "response": {"req_time": 1, "error": {"code": "ECONNREFUSED", "errno": "ECONNREFUSED",
-        "syscall": "connect"}}}, {"_id": "5c145ab77a8021a8442608ed", "resource": "/items/MLA670377063",
-        "user_id": 128828674, "topic": "items", "application_id": 4607298613855815,
-        "attempts": 1, "sent": "2018-12-15T01:36:55.132Z", "received": "2018-12-15T01:36:55.062Z",
+        "application/json", "content-length": 196}, "data": "{\"resource\":\"/questions/6016804002\",\"user_id\":\"63947924\",\"topic\":\"questions\",\"application_id\":4607298613855815,\"attempts\":1,\"sent\":\"2018-12-29T16:15:14.033Z\",\"received\":\"2018-12-29T16:15:13.956Z\"}"},
+        "response": {"req_time": 2, "error": {"code": "ECONNREFUSED", "errno": "ECONNREFUSED",
+        "syscall": "connect"}}}, {"_id": "5c275cdd0f5f094663daf028", "resource": "/questions/6017024676",
+        "user_id": "63947924", "topic": "questions", "application_id": 4607298613855815,
+        "attempts": 1, "sent": "2018-12-29T11:39:09.803Z", "received": "2018-12-29T11:39:09.728Z",
         "request": {"url": "https://localhost:8000/auth", "headers": {"host": "localhost:8000",
         "accept": "application/json", "content-type": "application/json", "content-length":
-        189}, "data": "{\"resource\":\"/items/MLA670377063\",\"user_id\":128828674,\"topic\":\"items\",\"application_id\":4607298613855815,\"attempts\":1,\"sent\":\"2018-12-15T01:36:55.132Z\",\"received\":\"2018-12-15T01:36:55.062Z\"}"},
-        "response": {"req_time": 2, "error": {"code": "ECONNREFUSED", "errno": "ECONNREFUSED",
+        196}, "data": "{\"resource\":\"/questions/6017024676\",\"user_id\":\"63947924\",\"topic\":\"questions\",\"application_id\":4607298613855815,\"attempts\":1,\"sent\":\"2018-12-29T11:39:09.803Z\",\"received\":\"2018-12-29T11:39:09.728Z\"}"},
+        "response": {"req_time": 3, "error": {"code": "ECONNREFUSED", "errno": "ECONNREFUSED",
+        "syscall": "connect"}}}, {"_id": "5c26ac7c6a4f65955182a0d3", "resource": "/questions/6017025307",
+        "user_id": "63947924", "topic": "questions", "application_id": 4607298613855815,
+        "attempts": 1, "sent": "2018-12-28T23:06:36.544Z", "received": "2018-12-28T23:06:36.475Z",
+        "request": {"url": "https://localhost:8000/auth", "headers": {"host": "localhost:8000",
+        "accept": "application/json", "content-type": "application/json", "content-length":
+        196}, "data": "{\"resource\":\"/questions/6017025307\",\"user_id\":\"63947924\",\"topic\":\"questions\",\"application_id\":4607298613855815,\"attempts\":1,\"sent\":\"2018-12-28T23:06:36.544Z\",\"received\":\"2018-12-28T23:06:36.475Z\"}"},
+        "response": {"req_time": 3, "error": {"code": "ECONNREFUSED", "errno": "ECONNREFUSED",
+        "syscall": "connect"}}}, {"_id": "5c26771d3f631b345f883b6a", "resource": "/questions/6017024630",
+        "user_id": "63947924", "topic": "questions", "application_id": 4607298613855815,
+        "attempts": 1, "sent": "2018-12-28T19:18:53.517Z", "received": "2018-12-28T19:18:53.406Z",
+        "request": {"url": "https://localhost:8000/auth", "headers": {"host": "localhost:8000",
+        "accept": "application/json", "content-type": "application/json", "content-length":
+        196}, "data": "{\"resource\":\"/questions/6017024630\",\"user_id\":\"63947924\",\"topic\":\"questions\",\"application_id\":4607298613855815,\"attempts\":1,\"sent\":\"2018-12-28T19:18:53.517Z\",\"received\":\"2018-12-28T19:18:53.406Z\"}"},
+        "response": {"req_time": 3, "error": {"code": "ECONNREFUSED", "errno": "ECONNREFUSED",
         "syscall": "connect"}}}]}'}
     headers:
       Access-Control-Allow-Headers: [Content-Type]
@@ -67,16 +81,16 @@ interactions:
       Access-Control-Allow-Origin: ['*']
       Access-Control-Max-Age: ['86400']
       Connection: [keep-alive]
-      Content-Length: ['1456']
+      Content-Length: ['2926']
       Content-Type: [application/json; charset=utf-8]
-      Date: ['Fri, 21 Dec 2018 07:45:06 GMT']
-      ETag: [W/"bwbnsqQTwV5BbxclfWOMBQ=="]
-      Via: [1.1 af3ec872aa77de6760622a554164a644.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [bLVScnKfk4Xy-T51RDzwNbsmuoi0jsb7mTjkPTyaXi2PQfgVdhkgwQ==]
+      Date: ['Sun, 30 Dec 2018 01:01:31 GMT']
+      ETag: [W/"fKb2RCfxjuJrvWi5lJY/Og=="]
+      Via: [1.1 e9cb8d3aaac8aa81ce192c6c5a3ac921.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [tUXI-MQkZWHV8E0Bm8FU4sK27u5LzsrIvSrVLWuRE3W3757mYXug4A==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [45cac509-d858-4012-bf87-fb468a24030e]
+      X-Request-Id: [f4d8326e-7fe8-4257-9a4c-582002f01d06]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 version: 1

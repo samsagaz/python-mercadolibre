@@ -102,6 +102,7 @@ def vcr_custom_response_filter(response):
             "state": "some state",
             "zip_code": "1234"
         }
+
     if "phone" in body:
         body["phone"] = {
             "area_code": "area",
@@ -128,6 +129,12 @@ def vcr_custom_response_filter(response):
                 "id": 123456789,
                 "answered_questions": 6}
             }]
+
+    if "from" in body:
+        body["from"] = {
+            "id": "some id",
+            "answered_questions": 1,
+        }
 
     response['body']['string'] = json.dumps(body).encode()
     return response

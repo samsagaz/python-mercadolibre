@@ -1,7 +1,7 @@
 import os
 import pytest
 import python_mercadolibre as pyme
-from python_mercadolibre.questions.models import QuestionModel
+from python_mercadolibre.questions.models import QuestionModel, QuestionPostModel
 
 
 @pytest.mark.vcr()
@@ -32,3 +32,17 @@ def test_by_question():
     questions = pyme.Question()
     response = questions.by_question(os.environ.get("QUESTION_ID"))
     assert all(isinstance(question, QuestionModel) for question in response)
+
+
+@pytest.mark.vcr()
+def test_received():
+    questions = pyme.Question()
+    response = questions.received()
+    assert all(isinstance(question, QuestionModel) for question in response)
+
+
+@pytest.mark.vcr()
+def test_create_question():
+    questions = pyme.Question()
+    response = questions.create_question('MLA716819109', 'Tienen Stock?')
+    assert isinstance(response, QuestionPostModel)
