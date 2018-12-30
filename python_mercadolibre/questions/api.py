@@ -40,9 +40,13 @@ class Question(PyMe):
             return "Question not found"
         return QuestionModel(**data)
 
-    def by_customer_in_item(self, item_id, customer_id):
+    def by_customer_in_item(self, item_id, seller):
         """ Get questions from item from specific customer """
-        url = self.full_url(self.questions_by_item, item_id, 'from='+customer_id)
+        seller_id = str(seller)
+        if isinstance(seller, Profile):
+            seller_id = str(seller.id)
+
+        url = self.full_url(self.questions_by_item, item_id, 'from='+seller_id)
         data = self._call_api('get', url)
         if not data:
             return "Question not found"
