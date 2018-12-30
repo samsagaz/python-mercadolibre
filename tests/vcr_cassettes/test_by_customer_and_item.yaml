@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 00:20:30 GMT']
-      ETag: [2ec46c5429f51f39de2347c8dc41de1b]
+      Date: ['Sun, 30 Dec 2018 00:20:32 GMT']
+      ETag: [f34b0b4bc7ecebc909ac3ba5bba6b827]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 92f892199bcce7a13a5283e1376fa0e8.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [J6BvnWLAGFhMOTGIwgLj_IaQJL87hJt71IwoOadBltA0wSlhRZjmsA==]
+      Via: [1.1 947c54b45c3c8c597031c85dd8160216.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [a8MV9BiLL8jM5xRubyUGqaApmeDQEEdjH8kEPMd3ZupOUfDBg6zryA==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [1aed3d3f-cbe1-4638-8616-c4206e972ebd]
+      X-Request-Id: [3b4ea41d-f736-4a4e-85ac-b4de49f47f27]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -46,18 +46,17 @@ interactions:
     method: GET
     uri: https://api.mercadolibre.com/questions/search
   response:
-    body: {string: '{"total": 2988, "limit": 50, "questions": [{"date_created": "2016-08-01T16:50:15.000-04:00",
+    body: {string: '{"total": 0, "limit": 50, "questions": [{"date_created": "2016-08-01T16:50:15.000-04:00",
         "item_id": "MLA12312123", "seller_id": 123456789, "status": "ANSWERED", "text":
         "ok", "id": 123123123123, "deleted_from_listing": false, "hold": false, "answer":
         {"text": "Publicadas!!!.", "status": "ACTIVE", "date_created": "2016-08-01T17:23:55.000-04:00"},
         "from": {"id": 123456789, "answered_questions": 6}}], "filters": "HIDDEN",
-        "available_filters": [{"id": "item", "name": "Item", "type": "text"}, {"id":
-        "from", "name": "From user id", "type": "number"}, {"id": "totalDivisions",
-        "name": "total divisions", "type": "number"}, {"id": "division", "name": "Division",
-        "type": "number"}, {"id": "status", "name": "Status", "type": "text", "values":
-        ["ANSWERED", "BANNED", "CLOSED_UNANSWERED", "DELETED", "DISABLED", "UNANSWERED",
-        "UNDER_REVIEW"]}], "available_sorts": ["item_id", "from_id", "date_created",
-        "seller_id"]}'}
+        "available_filters": [{"id": "seller", "name": "Seller id", "type": "number"},
+        {"id": "totalDivisions", "name": "total divisions", "type": "number"}, {"id":
+        "division", "name": "Division", "type": "number"}, {"id": "status", "name":
+        "Status", "type": "text", "values": ["ANSWERED", "BANNED", "CLOSED_UNANSWERED",
+        "DELETED", "DISABLED", "UNANSWERED", "UNDER_REVIEW"]}], "available_sorts":
+        ["item_id", "from_id", "date_created", "seller_id"]}'}
     headers:
       Access-Control-Allow-Headers: [Content-Type]
       Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
@@ -66,17 +65,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 00:20:31 GMT']
-      ETag: [9e80f5253821b914dfb1eb9fa5f7e2c9]
+      Date: ['Sun, 30 Dec 2018 00:20:32 GMT']
+      ETag: [dab511b6f5a3507b399b1e43863b6268]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding,Accept-Encoding']
-      Via: [1.1 92f892199bcce7a13a5283e1376fa0e8.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [qRLsvmSeMoeNBunUuIkE3TxpiGgyk7LEw2_zz2wkaqWG9qwW87tNdw==]
+      Via: [1.1 947c54b45c3c8c597031c85dd8160216.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [gKiCweYIt5HM06-MNYXCrUzsQnc3REZOEdv6-V59f35ZheAKs7_RIg==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [7bed0350-b813-430c-aae6-83f7d4c81619]
+      X-Request-Id: [ff0bcb7f-fb2d-4f9b-bf98-8e8edc51dee5]
       X-XSS-Protection: [1; mode=block]
-      content-length: ['27498']
+      content-length: ['560']
     status: {code: 200, message: ''}
 version: 1

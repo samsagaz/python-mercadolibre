@@ -33,23 +33,24 @@ class Question(PyMe):
         data = self._call_api('get', url)
         if not data:
             return "Question not found"
-        return QuestionModel(**data)
+        return [QuestionModel(**question) for question in data['questions']]
 
-    def by_customer_in_item(self, item_id, customer_id):
+    def by_customer_and_item(self, customer_id, item_id):
         """ Get questions from item from specific customer """
         url = self.full_url(self.questions_by_item, item_id, 'from='+customer_id)
         data = self._call_api('get', url)
         if not data:
             return "Question not found"
-        return QuestionModel(**data)
+        return [QuestionModel(**question) for question in data['questions']]
 
-    def by_question_id(self, question_id):
+    def by_question(self, question_id):
         """ Get questions by question ID """
         url = self.full_url(self.question_by_id, question_id)
         data = self._call_api('get', url)
+        print(data)
         if not data:
             return "Question not found"
-        return QuestionModel(**data)
+        return [QuestionModel(**data)]
 
     def received(self):
         """ Get questions """
