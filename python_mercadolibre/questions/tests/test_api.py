@@ -53,3 +53,10 @@ def test_answer_question():
     questions = pyme.Question()
     response = questions.answer_question('6019488162', 'En Arroyito')
     assert all(isinstance(question, QuestionModel) for question in response)
+
+
+@pytest.mark.vcr()
+def test_delete_question():
+    questions = pyme.Question()
+    response = questions.delete_question('6019497398')
+    assert "Question deleted" in response.text

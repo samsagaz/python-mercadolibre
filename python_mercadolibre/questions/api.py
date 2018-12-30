@@ -81,8 +81,12 @@ class Question(PyMe):
             }
         url = f"{self.answers_url}"
         data = self._call_api('post', url, data)
-        print(data)
         return [QuestionModel(**data)]
+
+    def delete_question(self, question_id):
+        url = f"{self.question_url}/{question_id}"
+        data = self._call_api('delete', url)
+        return data
 
     def __repr__(self):
         return "<PyMe-Api-Question>"

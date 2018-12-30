@@ -134,3 +134,15 @@ class User(PyMe):
 
         endpoint = f"/users/{user_id}/applications/{app_id}"
         return self._call_api('delete', endpoint)
+
+    def add_user_to_blacklist(self, user_id):
+        """ Blacklist users to disallow to make questions """
+        pass
+
+    def list_users_from_blacklist(self, user_id):
+        """ Get list of Blacklisted users """
+        pass
+
+    def remove_user_from_blacklist(self, user_id):
+        """ Blacklist users to disallow to make questions """
+        pass
