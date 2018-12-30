@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Fri, 21 Dec 2018 07:45:01 GMT']
-      ETag: [220116db9f2288d3d0c6404671a22bd3]
+      Date: ['Fri, 21 Dec 2018 07:45:00 GMT']
+      ETag: [e36da9c6f0a0a4fa4b9fec8993afe920]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
       Via: [1.1 8b1c1823a9db474c5721c440e560ca5e.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [5n2HuoaTzwPX6rQeb1VAKaYKFtl4Rmsyk9ogTJsOdqxYoxilhjKZ3g==]
+      X-Amz-Cf-Id: [M2_1EUdqUwVBlS8VagYVj2wV32X5cnUNnkMFc42giC6DdzTq32RUpA==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [9623593d-1e9e-4663-843f-45ad5d4781c1]
+      X-Request-Id: [b8f0b6f7-4c30-454d-a89f-e86f4a6f9a2f]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -44,7 +44,7 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.21.0]
     method: GET
-    uri: https://api.mercadolibre.com/users/HIDDEN
+    uri: https://api.mercadolibre.com/users/me
   response:
     body: {string: '{"id": "HIDDEN", "nickname": "HIDDEN", "registration_date": "2012-11-14T02:00:25.000-04:00",
         "first_name": "Jose Luis", "last_name": "HIDDEN", "gender": "", "country_id":
@@ -85,13 +85,13 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['2565']
       Content-Type: [application/json; charset=utf-8]
-      Date: ['Fri, 21 Dec 2018 07:45:01 GMT']
+      Date: ['Fri, 21 Dec 2018 07:45:00 GMT']
       Via: [1.1 8b1c1823a9db474c5721c440e560ca5e.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [lcL9-XmKXbgTpFlobJPFOhNZ_59OMxIDTVcNMKNZNjU8JTJLAvcVRQ==]
+      X-Amz-Cf-Id: [SMLnJEMQbK4HWUREQuG6VGILEUMCGgqqdoBL9w27HTVmtJyO0dKJ2A==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [d71f06f1-9881-4979-ac6d-9aa4b3e69b5f]
+      X-Request-Id: [cee34736-314d-4106-918d-9353202e4caa]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 version: 1

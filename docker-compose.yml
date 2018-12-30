@@ -11,5 +11,3 @@ services:
       - CLIENT_ID=${CLIENT_ID}
       - CLIENT_SECRET=${CLIENT_SECRET}
       - USER_ID=${USER_ID}
-      - ITEM_ID=${ITEM_ID}
-      - QUESTION_ID=${QUESTION_ID}

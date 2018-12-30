@@ -19,9 +19,6 @@ class Profile:
         else:
             return NotImplemented
 
-    def __int__(self):
-        return self.id
-
     def __repr__(self):
         if hasattr(self, 'nickname'):
             cls_name = self.__class__.__name__
