@@ -8,7 +8,9 @@ services:
     volumes:
       - .:/code
     environment:
+      - VCR=none
       - CLIENT_ID=foo
       - CLIENT_SECRET=bar
       - USER_ID=123456789
-      - VCR=none
+      - ITEM_ID=MLA123123123
+      - QUESTION_ID=123123123

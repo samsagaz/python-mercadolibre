@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 01:01:25 GMT']
-      ETag: [a53acf5a8dd8663d3bd130aafb8df1e8]
+      Date: ['Sun, 30 Dec 2018 01:01:22 GMT']
+      ETag: [d6e6f0dd1cb08c29b7a5b8da11fbedf7]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 439257b5e6d98715175dd92e647f0e94.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [6bBrt5UXQrKD-qr6eg4Hsd8lAjMGuH2l4_Ay4-XNdV0malJ-16EURA==]
+      Via: [1.1 34a8e3d78c972f89006ed003d05de4aa.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [4Uqfw3ve6xqc51OIvBEa4eqvpF_VCix838Sr8Za_oMESO7k_qt3oog==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [909e595d-3d34-4a3d-901f-405b007679cd]
+      X-Request-Id: [0c65df14-1674-4659-8fa2-14af601c4933]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -44,41 +44,38 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.21.0]
     method: GET
-    uri: https://api.mercadolibre.com/applications/HIDDEN
+    uri: https://api.mercadolibre.com/questions/search
   response:
-    body: {string: '{"id": "HIDDEN", "site_id": "MLA", "name": "HIDDEN", "description":
-        "mercadeo", "thumbnail": null, "owner_id": "HIDDEN", "catalog_product_id":
-        null, "item_id": "HIDDEN", "price": null, "currency_id": null, "need_authorization":
-        true, "short_name": "HIDDEN", "url": "HIDDEN", "callback_url": "https://localhost:8000/auth",
-        "sandbox_mode": false, "is_public": true, "project_id": 0, "active": true,
-        "max_requests_per_hour": 18000, "scopes": ["write", "read", "offline_access"],
-        "notifications_callback_url": "https://localhost:8000/auth", "notifications_topics":
-        ["claims", "quotations", "orders_v2", "items", "shipments", "payments", "pictures",
-        "questions", "orders", "invoices", "created_orders", "messages"], "access_token":
-        "HIDDEN", "test_access_token": "HIDDEN", "domains": [], "certification_status":
-        "not_certified"}'}
+    body: {string: '{"total": 0, "limit": 50, "questions": [{"date_created": "2016-08-01T16:50:15.000-04:00",
+        "item_id": "MLA12312123", "seller_id": 123456789, "status": "ANSWERED", "text":
+        "ok", "id": 123123123123, "deleted_from_listing": false, "hold": false, "answer":
+        {"text": "Publicadas!!!.", "status": "ACTIVE", "date_created": "2016-08-01T17:23:55.000-04:00"},
+        "from": {"id": 123456789, "answered_questions": 6}}], "filters": "HIDDEN",
+        "available_filters": [{"id": "seller", "name": "Seller id", "type": "number"},
+        {"id": "totalDivisions", "name": "total divisions", "type": "number"}, {"id":
+        "division", "name": "Division", "type": "number"}, {"id": "status", "name":
+        "Status", "type": "text", "values": ["ANSWERED", "BANNED", "CLOSED_UNANSWERED",
+        "DELETED", "DISABLED", "UNANSWERED", "UNDER_REVIEW"]}], "available_sorts":
+        ["item_id", "from_id", "date_created", "seller_id"]}'}
     headers:
-      Accept-Ranges: [bytes]
       Access-Control-Allow-Headers: [Content-Type]
       Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
       Access-Control-Allow-Origin: ['*']
       Access-Control-Max-Age: ['86400']
-      Age: ['0']
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
-      Content-Length: ['790']
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 01:01:25 GMT']
-      ETag: [eab299b5a7593589beee90ad6e32b022]
-      Vary: ['Accept,Accept-Encoding']
-      X-Amz-Cf-Id: [s2NKprpFz8Jo8OgsEtg-a7ioQCtztapiUlx4g8YvlaD8V32xPL6XbA==]
+      Date: ['Sun, 30 Dec 2018 01:01:22 GMT']
+      ETag: [dab511b6f5a3507b399b1e43863b6268]
+      Transfer-Encoding: [chunked]
+      Vary: ['Accept,Accept-Encoding,Accept-Encoding']
+      Via: [1.1 34a8e3d78c972f89006ed003d05de4aa.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [AySP-Om9VMs6pZFvrS9jX_9hTV5RFksaAAfGuxE1UfqtgGQCeSmtCg==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [f0477e07-947a-4255-a107-ae77595658c8]
-      X-Varnish: ['3720336767']
+      X-Request-Id: [a859aa87-0b83-4b51-9de8-a6feeffe7f00]
       X-XSS-Protection: [1; mode=block]
-      via: ['Varnish (e-00010063), 1.1 439257b5e6d98715175dd92e647f0e94.cloudfront.net
-          (CloudFront)']
-    status: {code: 200, message: OK}
+      content-length: ['560']
+    status: {code: 200, message: ''}
 version: 1

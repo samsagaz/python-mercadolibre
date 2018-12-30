@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 01:01:25 GMT']
-      ETag: [a53acf5a8dd8663d3bd130aafb8df1e8]
+      Date: ['Sun, 30 Dec 2018 03:37:17 GMT']
+      ETag: [2e32871c65b7ebf98a59191c5a517f06]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 439257b5e6d98715175dd92e647f0e94.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [6bBrt5UXQrKD-qr6eg4Hsd8lAjMGuH2l4_Ay4-XNdV0malJ-16EURA==]
+      Via: [1.1 f2e2a7eca4778c8776461616fad77017.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [z64r8oMpCdgZmpLbx-vpgxn51E1ZM7eYk7NRnd0TUPxZKPXwGJI0Tw==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [909e595d-3d34-4a3d-901f-405b007679cd]
+      X-Request-Id: [024a0e24-1b0b-4070-b56a-ee74ccfb737e]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -42,43 +42,27 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
+      Content-Length: ['0']
       User-Agent: [python-requests/2.21.0]
-    method: GET
-    uri: https://api.mercadolibre.com/applications/HIDDEN
+    method: DELETE
+    uri: https://api.mercadolibre.com/questions/6019497398
   response:
-    body: {string: '{"id": "HIDDEN", "site_id": "MLA", "name": "HIDDEN", "description":
-        "mercadeo", "thumbnail": null, "owner_id": "HIDDEN", "catalog_product_id":
-        null, "item_id": "HIDDEN", "price": null, "currency_id": null, "need_authorization":
-        true, "short_name": "HIDDEN", "url": "HIDDEN", "callback_url": "https://localhost:8000/auth",
-        "sandbox_mode": false, "is_public": true, "project_id": 0, "active": true,
-        "max_requests_per_hour": 18000, "scopes": ["write", "read", "offline_access"],
-        "notifications_callback_url": "https://localhost:8000/auth", "notifications_topics":
-        ["claims", "quotations", "orders_v2", "items", "shipments", "payments", "pictures",
-        "questions", "orders", "invoices", "created_orders", "messages"], "access_token":
-        "HIDDEN", "test_access_token": "HIDDEN", "domains": [], "certification_status":
-        "not_certified"}'}
+    body: {string: '["Question deleted."]'}
     headers:
-      Accept-Ranges: [bytes]
       Access-Control-Allow-Headers: [Content-Type]
       Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
       Access-Control-Allow-Origin: ['*']
       Access-Control-Max-Age: ['86400']
-      Age: ['0']
-      Cache-Control: [max-age=0]
       Connection: [keep-alive]
-      Content-Length: ['790']
-      Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 01:01:25 GMT']
-      ETag: [eab299b5a7593589beee90ad6e32b022]
-      Vary: ['Accept,Accept-Encoding']
-      X-Amz-Cf-Id: [s2NKprpFz8Jo8OgsEtg-a7ioQCtztapiUlx4g8YvlaD8V32xPL6XbA==]
+      Content-Length: ['21']
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Sun, 30 Dec 2018 03:37:18 GMT']
+      Via: [1.1 f2e2a7eca4778c8776461616fad77017.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [3tbY3XrO4t-E4yP6xrzKPMe2g5wY27SPcfsrT6HOCbcnromYLsy8gw==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [f0477e07-947a-4255-a107-ae77595658c8]
-      X-Varnish: ['3720336767']
+      X-Request-Id: [244469a9-1a89-4dea-b0ec-0ff39ee000a2]
       X-XSS-Protection: [1; mode=block]
-      via: ['Varnish (e-00010063), 1.1 439257b5e6d98715175dd92e647f0e94.cloudfront.net
-          (CloudFront)']
     status: {code: 200, message: OK}
 version: 1

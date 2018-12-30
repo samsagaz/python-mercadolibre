@@ -34,6 +34,8 @@ def vcr_custom_request_filter(request):
         (os.environ.get("CLIENT_ID")),
         (os.environ.get("CLIENT_SECRET")),
         (os.environ.get("USER_ID")),
+        (os.environ.get("ITEM_ID")),
+        (os.environ.get("QUESTION_ID")),
     ]
     new_url, _ = parse.splitquery(request.uri)
 
@@ -49,6 +51,8 @@ def vcr_custom_response_filter(response):
         os.environ.get("CLIENT_ID"),
         os.environ.get("CLIENT_SECRET"),
         os.environ.get("USER_ID"),
+        os.environ.get("ITEM_ID"),
+        os.environ.get("QUESTION_ID"),
         'access_token',
         'user_id',
         'refresh_token',
@@ -75,6 +79,10 @@ def vcr_custom_response_filter(response):
         'short_name',
         'url',
         'test_access_token',
+        'seller_id',
+        'item_id',
+        'caller',
+        'filters',
     ]
 
     string = response['body']['string'].decode()
@@ -94,12 +102,38 @@ def vcr_custom_response_filter(response):
             "state": "some state",
             "zip_code": "1234"
         }
+
     if "phone" in body:
         body["phone"] = {
             "area_code": "area",
             "extension": "extension",
             "number": "number",
             "verified": False
+        }
+
+    if "questions" in body:
+        body["questions"] = [{
+            "date_created": "2016-08-01T16:50:15.000-04:00",
+            "item_id": "MLA12312123",
+            "seller_id": 123456789,
+            "status": "ANSWERED",
+            "text": "ok",
+            "id": 123123123123,
+            "deleted_from_listing": False,
+            "hold": False,
+            "answer": {
+                "text": "Publicadas!!!.",
+                "status": "ACTIVE",
+                "date_created": "2016-08-01T17:23:55.000-04:00"},
+            "from": {
+                "id": 123456789,
+                "answered_questions": 6}
+            }]
+
+    if "from" in body:
+        body["from"] = {
+            "id": "some id",
+            "answered_questions": 1,
         }
 
     response['body']['string'] = json.dumps(body).encode()

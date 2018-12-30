@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Fri, 21 Dec 2018 07:45:01 GMT']
-      ETag: [220116db9f2288d3d0c6404671a22bd3]
+      Date: ['Sun, 30 Dec 2018 01:01:26 GMT']
+      ETag: [28cd1befc56ad255a102c9eb31d440a4]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 8b1c1823a9db474c5721c440e560ca5e.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [5n2HuoaTzwPX6rQeb1VAKaYKFtl4Rmsyk9ogTJsOdqxYoxilhjKZ3g==]
+      Via: [1.1 20c853d869457474bbc755009f594cf7.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [TFDSxv_OaR3-kzmoZUZI1Dx8fdKS2t38D1pDXIahbvU5LyDSqb-vGQ==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [9623593d-1e9e-4663-843f-45ad5d4781c1]
+      X-Request-Id: [86533d46-fa09-4684-ad74-aa6dfc671a5b]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -49,7 +49,9 @@ interactions:
     body: {string: '{"id": "HIDDEN", "nickname": "HIDDEN", "registration_date": "2012-11-14T02:00:25.000-04:00",
         "first_name": "Jose Luis", "last_name": "HIDDEN", "gender": "", "country_id":
         "AR", "email": "HIDDEN", "identification": "HIDDEN", "internal_tags": ["developer"],
-        "address": "HIDDEN", "phone": "HIDDEN", "alternative_phone": "HIDDEN", "user_type":
+        "address": {"address": "some address", "city": "some city", "state": "some
+        state", "zip_code": "1234"}, "phone": {"area_code": "area", "extension": "extension",
+        "number": "number", "verified": false}, "alternative_phone": "HIDDEN", "user_type":
         "normal", "tags": ["normal", "user_info_verified", "credits_priority_3", "credits_profile",
         "eshop", "developer", "messages_as_seller", "messages_as_buyer"], "logo":
         null, "points": 687, "site_id": "MLA", "permalink": "HIDDEN", "shipping_modes":
@@ -85,13 +87,13 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['2565']
       Content-Type: [application/json; charset=utf-8]
-      Date: ['Fri, 21 Dec 2018 07:45:01 GMT']
-      Via: [1.1 8b1c1823a9db474c5721c440e560ca5e.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [lcL9-XmKXbgTpFlobJPFOhNZ_59OMxIDTVcNMKNZNjU8JTJLAvcVRQ==]
+      Date: ['Sun, 30 Dec 2018 01:01:27 GMT']
+      Via: [1.1 20c853d869457474bbc755009f594cf7.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [o9bGotdsqZsqbi1jPXUccLACmTxf98WYWxytXbe3BCWujr59fHVtuQ==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [d71f06f1-9881-4979-ac6d-9aa4b3e69b5f]
+      X-Request-Id: [2d397a30-c223-4410-b871-370178a5b2ac]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 version: 1

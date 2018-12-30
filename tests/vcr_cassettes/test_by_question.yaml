@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 01:01:25 GMT']
-      ETag: [a53acf5a8dd8663d3bd130aafb8df1e8]
+      Date: ['Sun, 30 Dec 2018 01:01:23 GMT']
+      ETag: [b3e59d36f4275a7a45f843f58f16c72b]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 439257b5e6d98715175dd92e647f0e94.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [6bBrt5UXQrKD-qr6eg4Hsd8lAjMGuH2l4_Ay4-XNdV0malJ-16EURA==]
+      Via: [1.1 34d8c70792917ad3716e29ddd7eb18fb.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [zL8Hj3HPIJWxS6-nZIz1MEWGjoTnaBLxn9ynu3d75ug_BlQzeh1aLA==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [909e595d-3d34-4a3d-901f-405b007679cd]
+      X-Request-Id: [0ea39ccc-e48e-4054-a605-91e6785ae668]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -44,41 +44,33 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.21.0]
     method: GET
-    uri: https://api.mercadolibre.com/applications/HIDDEN
+    uri: https://api.mercadolibre.com/questions/HIDDEN
   response:
-    body: {string: '{"id": "HIDDEN", "site_id": "MLA", "name": "HIDDEN", "description":
-        "mercadeo", "thumbnail": null, "owner_id": "HIDDEN", "catalog_product_id":
-        null, "item_id": "HIDDEN", "price": null, "currency_id": null, "need_authorization":
-        true, "short_name": "HIDDEN", "url": "HIDDEN", "callback_url": "https://localhost:8000/auth",
-        "sandbox_mode": false, "is_public": true, "project_id": 0, "active": true,
-        "max_requests_per_hour": 18000, "scopes": ["write", "read", "offline_access"],
-        "notifications_callback_url": "https://localhost:8000/auth", "notifications_topics":
-        ["claims", "quotations", "orders_v2", "items", "shipments", "payments", "pictures",
-        "questions", "orders", "invoices", "created_orders", "messages"], "access_token":
-        "HIDDEN", "test_access_token": "HIDDEN", "domains": [], "certification_status":
-        "not_certified"}'}
+    body: {string: '{"id": "HIDDEN", "seller_id": "HIDDEN", "text": "Necesito m\u00e1s
+        seguridad que precisi\u00f3n porque se trata de elevar una persona que con
+        el controlador del motor subir\u00eda/bajar\u00eda la plataforma. Me dar\u00edas
+        una idea de costo del motor o las caracter\u00edsticas que me recomendar\u00edas
+        para buscarlo ? podr\u00eda ser el tornillo de m\u00e1s longitud, por ejemplo
+        1700 mm ? en ese caso la velocidad podr\u00eda ser de 30 a 40 mm/seg.", "status":
+        "ANSWERED", "item_id": "HIDDEN", "date_created": "2016-08-10T12:03:24.000-04:00",
+        "hold": false, "deleted_from_listing": false, "answer": {"text": "Tendr\u00eda
+        q averiguarlo escr\u00edbeme y en unos d\u00edas te respondo", "status": "ACTIVE",
+        "date_created": "2016-08-10T13:30:47.000-04:00"}, "from": {"id": "some id"}}'}
     headers:
-      Accept-Ranges: [bytes]
       Access-Control-Allow-Headers: [Content-Type]
       Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
       Access-Control-Allow-Origin: ['*']
       Access-Control-Max-Age: ['86400']
-      Age: ['0']
-      Cache-Control: [max-age=0]
       Connection: [keep-alive]
-      Content-Length: ['790']
-      Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 01:01:25 GMT']
-      ETag: [eab299b5a7593589beee90ad6e32b022]
-      Vary: ['Accept,Accept-Encoding']
-      X-Amz-Cf-Id: [s2NKprpFz8Jo8OgsEtg-a7ioQCtztapiUlx4g8YvlaD8V32xPL6XbA==]
+      Content-Length: ['739']
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Sun, 30 Dec 2018 01:01:23 GMT']
+      Via: [1.1 34d8c70792917ad3716e29ddd7eb18fb.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [zq24CDm0fK5pTnf7Pb3SYgGEBs6iaTAuW3dV5d69qsFqloyTAfUeNg==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [f0477e07-947a-4255-a107-ae77595658c8]
-      X-Varnish: ['3720336767']
+      X-Request-Id: [ffc93d4f-b982-4a6b-a990-bf78e866905d]
       X-XSS-Protection: [1; mode=block]
-      via: ['Varnish (e-00010063), 1.1 439257b5e6d98715175dd92e647f0e94.cloudfront.net
-          (CloudFront)']
     status: {code: 200, message: OK}
 version: 1

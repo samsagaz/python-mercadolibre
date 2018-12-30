@@ -23,62 +23,52 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 01:01:25 GMT']
-      ETag: [a53acf5a8dd8663d3bd130aafb8df1e8]
+      Date: ['Sun, 30 Dec 2018 01:01:24 GMT']
+      ETag: [b0dd1a109fbc82e6ad9221fd5f3a40c7]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 439257b5e6d98715175dd92e647f0e94.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [6bBrt5UXQrKD-qr6eg4Hsd8lAjMGuH2l4_Ay4-XNdV0malJ-16EURA==]
+      Via: [1.1 2e55cece113d228d3967805a56664e6b.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [f35VMWYn2gLDwOFiWZNCEEUnuhkD8cQG89MCpFVh3gQKyXZvAIfnBg==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [909e595d-3d34-4a3d-901f-405b007679cd]
+      X-Request-Id: [b328af91-64bc-4669-9e6c-22056758a9bd]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
-    body: null
+    body: '{"item_id": "MLA716819109", "text": "Tienen Stock?"}'
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
+      Content-Length: ['52']
       User-Agent: [python-requests/2.21.0]
-    method: GET
-    uri: https://api.mercadolibre.com/applications/HIDDEN
+    method: POST
+    uri: https://api.mercadolibre.com/questions/MLA716819109
   response:
-    body: {string: '{"id": "HIDDEN", "site_id": "MLA", "name": "HIDDEN", "description":
-        "mercadeo", "thumbnail": null, "owner_id": "HIDDEN", "catalog_product_id":
-        null, "item_id": "HIDDEN", "price": null, "currency_id": null, "need_authorization":
-        true, "short_name": "HIDDEN", "url": "HIDDEN", "callback_url": "https://localhost:8000/auth",
-        "sandbox_mode": false, "is_public": true, "project_id": 0, "active": true,
-        "max_requests_per_hour": 18000, "scopes": ["write", "read", "offline_access"],
-        "notifications_callback_url": "https://localhost:8000/auth", "notifications_topics":
-        ["claims", "quotations", "orders_v2", "items", "shipments", "payments", "pictures",
-        "questions", "orders", "invoices", "created_orders", "messages"], "access_token":
-        "HIDDEN", "test_access_token": "HIDDEN", "domains": [], "certification_status":
-        "not_certified"}'}
+    body: {string: '{"id": "HIDDEN", "answer": null, "date_created": "2018-12-29T21:01:25.118-04:00",
+        "item_id": "HIDDEN", "seller_id": "HIDDEN", "status": "UNANSWERED", "text":
+        "Tienen Stock?", "from": {"id": "some id"}}'}
     headers:
-      Accept-Ranges: [bytes]
       Access-Control-Allow-Headers: [Content-Type]
       Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
       Access-Control-Allow-Origin: ['*']
       Access-Control-Max-Age: ['86400']
-      Age: ['0']
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
-      Content-Length: ['790']
       Content-Type: [application/json;charset=UTF-8]
       Date: ['Sun, 30 Dec 2018 01:01:25 GMT']
-      ETag: [eab299b5a7593589beee90ad6e32b022]
+      ETag: [350380c17674b0570afd7a0c776d8a5a]
+      Location: ['https://api.mercadolibre.com/questions/6019166888']
+      Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      X-Amz-Cf-Id: [s2NKprpFz8Jo8OgsEtg-a7ioQCtztapiUlx4g8YvlaD8V32xPL6XbA==]
+      Via: [1.1 2e55cece113d228d3967805a56664e6b.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [2dYB1fJmLHNWPW4sJFnQIbIpdme56hmAf7COJ3RvpJo5q8EocCFBEA==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [f0477e07-947a-4255-a107-ae77595658c8]
-      X-Varnish: ['3720336767']
+      X-Request-Id: [a3a5a81f-d2d7-499d-8522-466c5d921597]
       X-XSS-Protection: [1; mode=block]
-      via: ['Varnish (e-00010063), 1.1 439257b5e6d98715175dd92e647f0e94.cloudfront.net
-          (CloudFront)']
-    status: {code: 200, message: OK}
+    status: {code: 201, message: Created}
 version: 1
