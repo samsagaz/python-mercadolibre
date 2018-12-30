@@ -1,6 +1,6 @@
 from python_mercadolibre.base import PyMe
 from python_mercadolibre.questions.models import QuestionModel
-
+from python_mercadolibre.users.models import Profile
 
 class Question(PyMe):
     """
@@ -19,8 +19,12 @@ class Question(PyMe):
         url = f"{self.question_url}{relativ_url}{total_args}"
         return url
 
-    def by_seller(self, seller_id):
+    def by_seller(self, seller):
         """ Get questions from registered user."""
+        seller_id = str(seller)
+        if isinstance(seller, Profile):
+            seller_id = str(seller.id)
+
         url = self.full_url(self.questions_by_seller, seller_id)
         data = self._call_api('get', url)
         if not data:
