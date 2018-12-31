@@ -1,5 +1,6 @@
 # Configuration file for ipython.
 c = get_config()
+c.InteractiveShell.deep_reload = True
 
 #------------------------------------------------------------------------------
 # InteractiveShellApp(Configurable) configuration
@@ -92,6 +93,7 @@ c.InteractiveShellApp.extensions = ['autoreload']
 ## Set the log level by value or name.
 #c.Application.log_level = 30
 c.InteractiveShellApp.log_level = 20
+c.TerminalInteractiveShell.logstart = True
 
 #------------------------------------------------------------------------------
 # BaseIPythonApplication(Application) configuration
@@ -286,6 +288,7 @@ c.InteractiveShellApp.log_level = 20
 #  Control-Z/Enter in Windows). By typing 'exit' or 'quit', you can force a
 #  direct exit without any confirmation.
 #c.TerminalInteractiveShell.confirm_exit = True
+c.TerminalInteractiveShell.confirm_exit = False
 
 ## Options for displaying tab completions, 'column', 'multicolumn', and
 #  'readlinelike'. These options are for `prompt_toolkit`, see `prompt_toolkit`
