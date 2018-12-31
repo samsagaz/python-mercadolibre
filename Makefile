@@ -44,7 +44,7 @@ dockershell:
 	docker-compose run --rm pyme /bin/bash
 
 shell_plus:
-	docker-compose run --rm pyme ipython
+	docker-compose run --rm pyme ipython --ipython-dir=.ipython
 
 main:
 	docker-compose run --rm pyme python __main__.py

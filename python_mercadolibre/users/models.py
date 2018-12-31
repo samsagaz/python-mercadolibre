@@ -1,23 +1,19 @@
 from collections import namedtuple
 
+from python_mercadolibre.core.models.base import ModelBase
+
 Address = namedtuple('Address', ["address", "city", "state", "zip_code"])
 Phone = namedtuple("Phone", ["area_code", "extension", "number", "verified"])
 
 
-class Profile:
+class Profile(ModelBase):
+
     def __init__(self, **kwargs):
-        self.raw_data = dict(**kwargs)
-        self.__dict__.update(kwargs)
+        super().__init__(**kwargs)
         if hasattr(self, 'address'):
             self.address = Address(**self.address)
         if hasattr(self, 'phone'):
             self.phone = Phone(**self.phone)
-
-    def __eq__(self, other):
-        if isinstance(other, Profile):
-            return self.__dict__ == other.__dict__
-        else:
-            return NotImplemented
 
     def __repr__(self):
         if hasattr(self, 'nickname'):
