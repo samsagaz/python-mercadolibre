@@ -1,7 +1,17 @@
 ---
 engines:
- pylint:
-   enabled: true
-   python_version: 3.6
-   disable: B101,C0111
-   ignore: migrations
+  pylint:
+    enabled: true
+    python_version: 3.6
+    disable: B101,C0111
+    ignore: migrations, .ipython
+    skip-file: ipython_log.py, .ipython/*
+
+  bandit:
+    skips: ['B101', 'E1101']
+    exclude: ['tests', '.ipython', 'ipython_log.py']
+
+exclude_paths:
+  - 'tests/*'
+  - '.ipython/*'
+  - 'ipython_log.py'
