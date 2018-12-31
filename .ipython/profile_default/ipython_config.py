@@ -93,7 +93,6 @@ c.InteractiveShellApp.extensions = ['autoreload']
 ## Set the log level by value or name.
 #c.Application.log_level = 30
 c.InteractiveShellApp.log_level = 20
-c.TerminalInteractiveShell.logstart = True
 
 #------------------------------------------------------------------------------
 # BaseIPythonApplication(Application) configuration

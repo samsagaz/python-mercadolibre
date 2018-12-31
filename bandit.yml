@@ -1,1 +1,2 @@
 skips: ['B101', 'E1101']
+exclude: ['tests', '.ipython']

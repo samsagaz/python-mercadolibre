@@ -1,7 +1,10 @@
 ---
 engines:
- pylint:
-   enabled: true
-   python_version: 3.6
-   disable: B101,C0111
-   ignore: migrations, .ipython
+  pylint:
+    enabled: true
+    python_version: 3.6
+    disable: B101,C0111
+    ignore: migrations, .ipython
+  bandit:
+    skips: ['B101', 'E1101']
+    exclude: ['tests', '.ipython']
