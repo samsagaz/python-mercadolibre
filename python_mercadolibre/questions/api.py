@@ -38,7 +38,7 @@ class Question(PyMe):
 
     def by_customer_in_item(self, item_id, customer_id):
         """ Get questions from item from specific customer """
-        url = self.full_url(self.questions_by_item, item_id, "from=" + customer_id)
+        url = self.full_url(self.questions_by_item, item_id, f"from={customer_id}")
         data = self._call_api("get", url)
         if not data:
             return "Question not found"
