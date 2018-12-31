@@ -35,10 +35,13 @@ only_test:
 covered_test:
 	docker-compose run --rm pyme pytest --cov=. --cov-config setup.cfg --disable-pytest-warnings
 
+bandit:
+	docker-compose run --rm pyme bandit -s B101 . -r
+
 pep8:
 	docker-compose run --rm pyme flake8
 
-test: pep8 covered_test
+test: pep8 bandit covered_test
 
 dockershell:
 	docker-compose run --rm pyme /bin/bash

@@ -8,21 +8,22 @@ class Question(PyMe):
     See: https://api.mercadolibre.com/questions
 
     """
-    question_url = '/questions'
+
+    question_url = "/questions"
     question_by_id = "/"
     questions_by_seller = "/search?seller_id="
     questions_by_item = "/search?item="
     my_questions = "/my/received_questions/search"
 
     def full_url(self, relativ_url, *args):
-        total_args = '&'.join(args)
+        total_args = "&".join(args)
         url = f"{self.question_url}{relativ_url}{total_args}"
         return url
 
     def by_seller(self, seller_id):
         """ Get questions from registered user."""
         url = self.full_url(self.questions_by_seller, seller_id)
-        data = self._call_api('get', url)
+        data = self._call_api("get", url)
         if not data:
             return "Question not found"
         return QuestionModel(**data)
@@ -30,15 +31,15 @@ class Question(PyMe):
     def by_item(self, item_id):
         """ Get questions from item."""
         url = self.full_url(self.questions_by_item, item_id)
-        data = self._call_api('get', url)
+        data = self._call_api("get", url)
         if not data:
             return "Question not found"
         return QuestionModel(**data)
 
     def by_customer_in_item(self, item_id, customer_id):
         """ Get questions from item from specific customer """
-        url = self.full_url(self.questions_by_item, item_id, 'from='+customer_id)
-        data = self._call_api('get', url)
+        url = self.full_url(self.questions_by_item, item_id, "from=" + customer_id)
+        data = self._call_api("get", url)
         if not data:
             return "Question not found"
         return QuestionModel(**data)
@@ -46,7 +47,7 @@ class Question(PyMe):
     def by_question_id(self, question_id):
         """ Get questions by question ID """
         url = self.full_url(self.question_by_id, question_id)
-        data = self._call_api('get', url)
+        data = self._call_api("get", url)
         if not data:
             return "Question not found"
         return QuestionModel(**data)
@@ -54,7 +55,7 @@ class Question(PyMe):
     def received(self):
         """ Get questions """
         url = self.my_questions
-        data = self._call_api('get', url)
+        data = self._call_api("get", url)
         if not data:
             return "Question not found"
         return QuestionModel(**data)

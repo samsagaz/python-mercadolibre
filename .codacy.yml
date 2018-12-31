@@ -7,4 +7,4 @@ engines:
     ignore: migrations, .ipython
   bandit:
     skips: ['B101', 'E1101']
-    exclude: ['tests', '.ipython']
+    exclude: ['tests', '.ipython', 'ipython_log.py']

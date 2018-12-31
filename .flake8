@@ -1,3 +1,4 @@
 [flake8]
+ignore=E1101, B101,
 max-line-length=119
-exclude=migrations, .git, build.sh, .yml, __init__.py, .ipython
+exclude=migrations, .git, build.sh, .yml, __init__.py, .ipython, ipython_log.py
