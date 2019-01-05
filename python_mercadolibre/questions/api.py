@@ -22,11 +22,7 @@ class Question(PyMe):
 
     def by_seller(self, seller):
         """ Get questions from registered user."""
-        if not isinstance(seller, bool):
-            seller_id = int(seller)
-        else:
-            raise TypeError('Type not allowed in seller')
-
+        seller_id = int(seller)
         url = self.full_url(self.questions_by_seller, str(seller_id))
         data = self._call_api('get', url)
         if not data:
