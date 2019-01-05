@@ -14,6 +14,6 @@ def test_by_seller_inputs():
 
 
 @pytest.mark.parametrize("input", [profile, user, str, [], {}, (), bool])
-def test_by_seller_invalid_inputs(input):
+def test_invalid_by_seller_inputs(input):
     with pytest.raises(Exception):
         question.by_seller(input)
