@@ -23,17 +23,17 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 17:10:03 GMT']
-      ETag: [714c2a7e4e24ebe9e6cdd0736ebacd24]
+      Date: ['Sat, 05 Jan 2019 18:51:44 GMT']
+      ETag: [6b962d13c2573e96010864c1f52fbf0f]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 a6efb358cc5f88adbf98d58d00ceb387.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [xq0ANj4s_yRAVwBFDop8NHfUPT9TEH2uDfi7MWPgfqzip7Nh6AJ7BQ==]
+      Via: [1.1 a04b1236ff94001be4997024a95202fd.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [0xMFRng3snyaidik0hY8zurLNwMhpAAtOJUmbYwIpVrTryOvnM3CmQ==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [a2ef332a-1512-477d-b178-37d3023dbcef]
+      X-Request-Id: [6501aeac-d5d8-4603-8821-45631958efb7]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -51,7 +51,7 @@ interactions:
         null, "item_id": 123456789, "price": null, "currency_id": null, "need_authorization":
         true, "short_name": "HIDDEN", "url": "HIDDEN", "callback_url": "https://localhost:8000/auth",
         "sandbox_mode": false, "is_public": true, "project_id": 0, "active": true,
-        "max_requests_per_hour": 18000, "scopes": ["write", "read", "offline_access"],
+        "max_requests_per_hour": 18000, "scopes": ["read", "offline_access", "write"],
         "notifications_callback_url": "https://localhost:8000/auth", "notifications_topics":
         ["claims", "quotations", "orders_v2", "items", "shipments", "payments", "pictures",
         "questions", "orders", "invoices", "created_orders", "messages"], "access_token":
@@ -68,17 +68,17 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['790']
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 17:10:03 GMT']
-      ETag: [eab299b5a7593589beee90ad6e32b022]
+      Date: ['Sat, 05 Jan 2019 18:51:44 GMT']
+      ETag: [10675eb3f51eecbf55c11320d9b2d0a4]
       Vary: ['Accept,Accept-Encoding']
-      X-Amz-Cf-Id: [jXM6DOJZMkx1IhKYeHsAUfhtlcJvcgSy6nlmDeZdNPD0gCAkM5eR3Q==]
+      X-Amz-Cf-Id: [CFcCCQkagZTd1MrZ3C8yIiZDGUoH94bv2Doi9vFb2o5RRJ1VufBISg==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [8095328b-91c0-4f86-b2dc-a827bf7c0cce]
-      X-Varnish: ['4060146725']
+      X-Request-Id: [2e6552dc-7559-4c3d-a40a-cb4a7fe20d4b]
+      X-Varnish: ['1426192159']
       X-XSS-Protection: [1; mode=block]
-      via: ['Varnish (e-0001e842), 1.1 a6efb358cc5f88adbf98d58d00ceb387.cloudfront.net
+      via: ['Varnish (e-00010065), 1.1 a04b1236ff94001be4997024a95202fd.cloudfront.net
           (CloudFront)']
     status: {code: 200, message: OK}
 version: 1

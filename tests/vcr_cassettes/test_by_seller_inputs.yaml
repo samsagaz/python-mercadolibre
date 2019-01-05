@@ -23,17 +23,54 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 17:10:00 GMT']
-      ETag: [5da3326f7c3780de5f855b4a58b80483]
+      Date: ['Sat, 05 Jan 2019 19:17:29 GMT']
+      ETag: [52daaaa68acae64856930851a0d4064c]
       Strict-Transport-Security: [max-age=15724800]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 78fa46a1b20cd5013525ca0f9d13e6d8.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [eA0vuvs4Ick6OJQzNlt9ZBmnWPaMCvRM-O0upx03z293uJr0_fS5cA==]
+      Via: [1.1 ee70312564b1ccd144e6421d6ed89810.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [GeytU4SJlogonrxc9KUBM4YSpNp7t5sIBDAaXvHdw1zq7E1JyvLVRw==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [f4ed2486-f65d-4bf3-bcce-38b085265460]
+      X-Request-Id: [6acbfad2-ae90-43ed-93ed-35fd870943dd]
+      X-XSS-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: grant_type=client_credentials&client_id=HIDDEN&client_secret=HIDDEN
+    headers:
+      Accept: [application/json]
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [HIDDEN]
+      Connection: [keep-alive]
+      Content-Length: ['103']
+      Content-Type: [application/x-www-form-urlencoded;charset=UTF-8]
+      User-Agent: [python-requests/2.21.0]
+    method: POST
+    uri: https://api.mercadolibre.com/oauth/token
+  response:
+    body: {string: '{"access_token": "HIDDEN", "token_type": "bearer", "expires_in":
+        21600, "scope": "offline_access read write", "user_id": 123456789, "refresh_token":
+        "HIDDEN"}'}
+    headers:
+      Access-Control-Allow-Headers: [Content-Type]
+      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Max-Age: ['86400']
+      Cache-Control: [max-age=0]
+      Connection: [keep-alive]
+      Content-Type: [application/json;charset=UTF-8]
+      Date: ['Sat, 05 Jan 2019 19:17:29 GMT']
+      ETag: [227633af4e47dd7962636d4da6b881b2]
+      Strict-Transport-Security: [max-age=15724800]
+      Transfer-Encoding: [chunked]
+      Vary: ['Accept,Accept-Encoding']
+      Via: [1.1 53faaacb326a494fb5358ee1ef39edad.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [aP3SizuTVGAllb49FM_XFejl0MI2KRKPbpOpaNHGVN0katBp3dVxtA==]
+      X-Cache: [Miss from cloudfront]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [DENY]
+      X-Request-Id: [daf0ef26-afab-4a47-a303-cf73e157ab99]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -85,50 +122,13 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['2565']
       Content-Type: [application/json; charset=utf-8]
-      Date: ['Sun, 30 Dec 2018 17:10:00 GMT']
-      Via: [1.1 78fa46a1b20cd5013525ca0f9d13e6d8.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [xEdvZPAmcoaf6QkKXII3wO-bOEBTlbsrZ6Pnkk_lHl1J4RqlFoHDPw==]
+      Date: ['Sat, 05 Jan 2019 19:17:29 GMT']
+      Via: [1.1 53faaacb326a494fb5358ee1ef39edad.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [qv21J-evrSIjuIlc-OJ4f0CkYjMoa61PNcJUQLR5e_4tj_q9qmBW0g==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [d7e0ef3f-dfc3-4d21-bba7-ea6d9270e606]
-      X-XSS-Protection: [1; mode=block]
-    status: {code: 200, message: OK}
-- request:
-    body: grant_type=client_credentials&client_id=HIDDEN&client_secret=HIDDEN
-    headers:
-      Accept: [application/json]
-      Accept-Encoding: ['gzip, deflate']
-      Authorization: [HIDDEN]
-      Connection: [keep-alive]
-      Content-Length: ['103']
-      Content-Type: [application/x-www-form-urlencoded;charset=UTF-8]
-      User-Agent: [python-requests/2.21.0]
-    method: POST
-    uri: https://api.mercadolibre.com/oauth/token
-  response:
-    body: {string: '{"access_token": "HIDDEN", "token_type": "bearer", "expires_in":
-        21600, "scope": "offline_access read write", "user_id": 123456789, "refresh_token":
-        "HIDDEN"}'}
-    headers:
-      Access-Control-Allow-Headers: [Content-Type]
-      Access-Control-Allow-Methods: ['PUT, GET, POST, DELETE, OPTIONS']
-      Access-Control-Allow-Origin: ['*']
-      Access-Control-Max-Age: ['86400']
-      Cache-Control: [max-age=0]
-      Connection: [keep-alive]
-      Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 17:10:00 GMT']
-      ETag: [1853418cbb4961be317ea66e53144edf]
-      Strict-Transport-Security: [max-age=15724800]
-      Transfer-Encoding: [chunked]
-      Vary: ['Accept,Accept-Encoding']
-      Via: [1.1 fc198c119db4c566efbf9edf1d8df38f.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [CcrDlhkkZDmjoimYucXa_W2kEzDm7Mp1gk15P4z57caT6nwVt3rjtw==]
-      X-Cache: [Miss from cloudfront]
-      X-Content-Type-Options: [nosniff]
-      X-Frame-Options: [DENY]
-      X-Request-Id: [0ad3707f-cec8-4389-809d-2d1fd294012f]
+      X-Request-Id: [ccec7d94-5956-4f58-ab30-72cdc2b5559f]
       X-XSS-Protection: [1; mode=block]
     status: {code: 200, message: OK}
 - request:
@@ -161,16 +161,16 @@ interactions:
       Cache-Control: [max-age=0]
       Connection: [keep-alive]
       Content-Type: [application/json;charset=UTF-8]
-      Date: ['Sun, 30 Dec 2018 17:10:01 GMT']
+      Date: ['Sat, 05 Jan 2019 19:17:29 GMT']
       ETag: [f4e2cc8efdd999f4fa645ce26cb76687]
       Transfer-Encoding: [chunked]
       Vary: ['Accept,Accept-Encoding,Accept-Encoding']
-      Via: [1.1 fc198c119db4c566efbf9edf1d8df38f.cloudfront.net (CloudFront)]
-      X-Amz-Cf-Id: [NFKTTIwERpVs2Q7HO340iaHeRSzySiQ598Y38ngfS81cI44goca5cQ==]
+      Via: [1.1 ee70312564b1ccd144e6421d6ed89810.cloudfront.net (CloudFront)]
+      X-Amz-Cf-Id: [lZW9A7sImGjylzEcAZkh1WL28Aao9aDw9knR_YpMaZFHsb0h00MgXw==]
       X-Cache: [Miss from cloudfront]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [DENY]
-      X-Request-Id: [70e14c13-c4e8-4c66-aeaf-9ddd908862b6]
+      X-Request-Id: [26157527-37eb-40e8-89a0-dda1b0b51b3e]
       X-XSS-Protection: [1; mode=block]
       content-length: ['27498']
     status: {code: 200, message: ''}
