@@ -22,12 +22,15 @@ class Question(PyMe):
 
     def by_seller(self, seller):
         """ Get questions from registered user."""
-        seller_id = int(seller)
-        url = self.full_url(self.questions_by_seller, str(seller_id))
-        data = self._call_api('get', url)
-        if not data:
-            return "Question not found"
-        return QuestionModel(**data)
+        if isinstance(seller, Profile):
+            seller_id = seller.id
+            url = self.full_url(self.questions_by_seller, str(seller_id))
+            data = self._call_api('get', url)
+            if not data:
+                return "Question not found"
+            return QuestionModel(**data)
+        else:
+            raise Exception('Just Profile object is allowed')
 
     def by_item(self, item_id):
         """ Get questions from item."""
