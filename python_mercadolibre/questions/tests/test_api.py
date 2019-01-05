@@ -9,11 +9,11 @@ question = Question()
 
 
 def test_by_seller_inputs():
-    questions_by_seller = question.by_seller(profile)
+    questions_by_seller = question.by_seller(profile.id)
     assert isinstance(questions_by_seller, QuestionModel)
 
 
-@pytest.mark.parametrize("input", [int, str, [], {}, (), bool])
+@pytest.mark.parametrize("input", [profile, user, str, [], {}, (), bool])
 def test_by_seller_invalid_inputs(input):
     with pytest.raises(Exception):
         question.by_seller(input)
